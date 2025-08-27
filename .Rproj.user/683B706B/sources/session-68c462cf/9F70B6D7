@@ -1,0 +1,31 @@
+{
+    "id": "9F70B6D7",
+    "path": "~/Desktop/bachelor-gis-course/index.qmd",
+    "project_path": "index.qmd",
+    "type": "quarto_markdown",
+    "hash": "3504827444",
+    "contents": "",
+    "dirty": false,
+    "created": 1756115670897.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "rmdVisualMode": "false",
+        "rmdVisualWrapConfigured": "true",
+        "source_window_id": "",
+        "Source": "Source",
+        "docOutlineVisible": "0",
+        "rmdVisualCollapsedChunks": "",
+        "rmdVisualModeLocation": "619:154.5",
+        "cursorPosition": "22,88",
+        "scrollLine": "3"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1756294573,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1756294573645,
+    "read_only": false,
+    "read_only_alternatives": []
+}
