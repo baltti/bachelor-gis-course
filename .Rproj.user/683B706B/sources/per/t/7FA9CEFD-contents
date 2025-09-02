@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Геоинформационные системы"
+  page-footer: |
+        © 2025, Татьяна Балтыжакова, Институт дизайна и урбанистики, Университет ИТМО
+  navbar:
+    left:
+      - href: index.qmd
+        text: Лекции
+      
+      
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+    
+lang: ru-RU    
+language: custom.yml
+
+editor: visual
+
