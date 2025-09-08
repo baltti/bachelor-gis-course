@@ -7,7 +7,7 @@ format:
     slide-number: true
     theme: [default, custom.css]
     footer: "Балтыжакова Т.И. Геоинформационные системы: курс лекций"
-    margin: 0.2
+    margin: 0.1
     reference-location: document
     width: 1800
     height: 1000
@@ -63,7 +63,7 @@ format:
 
 ::::: columns
 ::: {.column width="50%"}
-![Mappa mundi (Карта из Лондонской псалтыри)](images/Psalter_world_map.jpg){alt="Mappa mundi (Карта из Лондонской псалтыри)" fig-align="center" width="493"}
+![Mappa mundi (Карта из Лондонской псалтыри)](images/Psalter_world_map.jpg){alt="Mappa mundi (Карта из Лондонской псалтыри)" fig-align="center" width="563"}
 :::
 
 ::: {.column width="50%"}
@@ -87,7 +87,7 @@ format:
 :::
 
 ::: {.column width="50%"}
-![карта Джона Сноу, которая положила начало пространственному анализу, тематическому картографированию, ГИС, кластеризации и современной эпидемиологии, но на самом деле история не совсем такая, как ее обычно рассказывают. https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/something-in-the-water-the-mythology-of-snows-map-of-cholera/](images/clipboard-1022425034.png){alt="карта Джона Сноу, которая положила начало пространственному анализу, тематическому картографированию, ГИС, кластеризации и современной эпидемиологии, но на самом деле история не совсем такая, как ее обычно рассказывают. https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/something-in-the-water-the-mythology-of-snows-map-of-cholera/" width="853"}
+![Карта Джона Сноу. https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/something-in-the-water-the-mythology-of-snows-map-of-cholera/](images/clipboard-1022425034.png){alt="карта Джона Сноу, которая положила начало пространственному анализу, тематическому картографированию, ГИС, кластеризации и современной эпидемиологии, но на самом деле история не совсем такая, как ее обычно рассказывают. https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/something-in-the-water-the-mythology-of-snows-map-of-cholera/" width="853"}
 :::
 :::::
 
@@ -103,7 +103,7 @@ format:
 ::: {.column width="40%"}
 ![](images/clipboard-4221707290.png){width="609"}
 
-![](images/clipboard-1552688214.png){width="518"}
+![](images/clipboard-1552688214.png){width="648"}
 :::
 :::::
 
@@ -111,13 +111,13 @@ format:
 
 ::::: columns
 ::: {.column width="50%"}
-Позже последовали аналогичные исследования в других странах, например, **Hull House Maps and Papers**[^5]**, подготовленные под руководством Флоренс Келли.** В рамках этого исследования были созданы карты заработной платы для одного из районов Чикаго.
+**Hull House Maps and Papers**[^5]**, подготовленные под руководством Флоренс Келли.** В рамках этого исследования были созданы карты заработной платы для одного из районов Чикаго.
 
-![](images/clipboard-2707149906.png){fig-align="center" width="542"}
+![](images/clipboard-2707149906.png){fig-align="center" width="465"}
 :::
 
 ::: {.column width="50%"}
-Также следует упомянуть важное для социологии исследование **У. Э. Б. Дюбуа́ ([W. E. B. Du Bois](https://en.wikipedia.org/wiki/W._E._B._Du_Bois)) - The Seventh Ward of Philadelphia. Distribution of Negro inhabitants throughout the Ward and their social conditions**[^6].
+**У. Э. Б. Дюбуа́ ([W. E. B. Du Bois](https://en.wikipedia.org/wiki/W._E._B._Du_Bois)) - The Seventh Ward of Philadelphia. Distribution of Negro inhabitants throughout the Ward and their social conditions**[^6].
 
 ![](images/clipboard-680008198.png)
 :::
@@ -126,6 +126,34 @@ format:
 [^5]: <https://florencekelley.northwestern.edu/historical/hullhouse/>
 
 [^6]: <https://en.wikipedia.org/wiki/The_Philadelphia_Negro>
+
+---
+
+::::: columns
+::: {.column width="50%"}
+![«Разработка методологии выявления вернакулярных районов для оптимизации управления городскими территориями»Николаева Елена (выпуск 2023)](images/clipboard-1221985348.png){fig-align="center" width="1176"}
+:::
+
+::: {.column width="50%"}
+![«Разработка метода построения сети центральных мест расселения в городе» Арсеньева Инна (выпуск 2024)](images/clipboard-900721542.png){fig-align="center" width="581"}
+:::
+:::::
+
+---
+
+::::: columns
+::: {.column width="50%"}
+![](images/clipboard-665885585.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](images/clipboard-9003126.png){fig-align="center" width="903"}
+:::
+:::::
+
+---
+
+![Тедикова А.А., Климоченков М.Д., Мельниченко И.А., Красноцветов М.А., Ус С.С., Кутлыев И.И., Щёкина М.В. История зарождения и развития геоинформатики как науки. Горная промышленность. 2024;(3):90–99. https://doi.org/10.30686/1609-9192-2024-3-90-99](images/clipboard-1881460735.png){alt="Тедикова А.А., Климоченков М.Д., Мельниченко И.А., Красноцветов М.А., Ус С.С., Кутлыев И.И., Щёкина М.В. История зарождения и развития геоинформатики как науки. Горная промышленность. 2024;(3):90–99. https://doi.org/10.30686/1609-9192-2024-3-90-99Источник: https://mining-media.ru/ru/article/newtech/18769-istoriya-zarozhdeniya-i-razvitiya-geoinformatiki-kak-nauki" fig-align="center"}
 
 ---
 
@@ -140,10 +168,6 @@ format:
 -   увеличение вычислительной мощности мэйнфреймов.
 
 Первые геоинформационные системы появились в 60-х годах прошлого века в Швеции и Канаде. Эти геоинформационные системы были узко специализированными и создавались для управления земельными ресурсами.
-
-------------------------------------------------------------------------
-
-[![Тедикова А.А., Климоченков М.Д., Мельниченко И.А., Красноцветов М.А., Ус С.С., Кутлыев И.И., Щёкина М.В. История зарождения и развития геоинформатики как науки. Горная промышленность. 2024;(3):90–99. https://doi.org/10.30686/1609-9192-2024-3-90-99](images/clipboard-1881460735.png)](https://mining-media.ru/ru/article/newtech/18769-istoriya-zarozhdeniya-i-razvitiya-geoinformatiki-kak-nauki)
 
 # Первая ГИС
 
@@ -200,7 +224,7 @@ SYMAP была создана после ознакомления Фишера �
 # Основание компании **Esri**
 
 ::::: columns
-::: {.column width="60%"}
+::: {.column width="40%"}
 В **1969** **Джек Дэнджермонд (Jack Dangermond)**, сотрудник Гарвадской лаборатории компьютерной графики, и его жена Лаура основали **Институт исследований экологических систем (Environmental Systems Research Institute), Inc. (Esri)**.
 
 > I had some notion of applying computer mapping to my profession
@@ -208,7 +232,7 @@ SYMAP была создана после ознакомления Фишера �
 В настоящее время ESRI около 40% рынка[^7] геоинформационных систем.
 :::
 
-::: {.column width="40%"}
+::: {.column width="60%"}
 ![Джек Дэнджермонд](images/clipboard-2513105924.png)
 :::
 :::::
@@ -267,7 +291,7 @@ SYMAP была создана после ознакомления Фишера �
 
 ---
 
-ArcGIS Pro, мощное однопользовательское настольное приложение ГИС, представляет собой многофункциональное программное обеспечение, разработанное с учетом усовершенствований и идей сообщества пользователей ArcGIS Pro. ArcGIS Pro поддерживает визуализацию данных; расширенный анализ; и авторитетное ведение данных в 2D, 3D и 4D. Оно поддерживает совместное использование данных в наборе продуктов ArcGIS, таких как ArcGIS Online и ArcGIS Enterprise, и позволяет пользователям работать на разных платформах через Веб-ГИС.
+ArcGIS Pro поддерживает визуализацию данных; расширенный анализ; и авторитетное ведение данных в 2D, 3D и 4D. Оно поддерживает совместное использование данных в наборе продуктов ArcGIS, таких как ArcGIS Online и ArcGIS Enterprise, и позволяет пользователям работать на разных платформах через Веб-ГИС.
 
 Своему широкому распространению эта система отчасти обязана тем, что компания-разработчик поставляла (и продолжает поставлять) систему на льготных условиях для учебных заведений, поэтому существует целое поколение специалистов, для которых она является основным ПО.
 

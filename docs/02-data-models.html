@@ -338,14 +338,106 @@
 </div>
 
 </section>
+<section>
+<section id="что-такое-эти-самые-пространственные-данные" class="title-slide slide level1 center">
+<h1>Что такое эти самые пространственные данные?</h1>
+<p>Фактически любые данные, которые содержат сведения о местоположении объекта.</p>
+<p>Но, если говорить формально</p>
+<div class="fragment">
+<p><strong>пространственные данные</strong> (spatial data): <em>Данные о пространственных объектах, включающие сведения об их форме, местоположении и свойствах, в том числе представленные с использованием координат.</em><a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a></p>
+</div>
+<aside></aside></section>
 <section class="slide level2">
 
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>пространственный объект</strong> (feature): Цифровая модель материального или абстрактного объекта реального или виртуального мира с указанием его идентификатора, координатных и атрибутивных данных.</p>
+<p><strong>атрибут пространственного объекта</strong> (feature attribute): Характеристика пространственного объекта.</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/clipboard-531483221.png"></p>
+</div></div>
+</section></section>
+<section id="способы-указания-координат" class="title-slide slide level1 center">
+<h1>Способы указания координат</h1>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><strong>Абсолютное местоположение</strong>:</p>
+<ul>
+<li><p><em>координаты</em> - 59.94 с.ш., 30.29 в.д.</p></li>
+<li><p><em>адрес</em> - Санкт-Петербург, Биржевая линия д. 14</p></li>
+<li><p><em>объект</em> - корпус ИТМО</p></li>
+<li><p><em>почтовый индекс</em> - 199034</p></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/Снимок экрана 2025-08-27 в 16.03.36.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+</section>
+
+<section id="способы-указания-координат-1" class="title-slide slide level1 center">
+<h1>Способы указания координат</h1>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><strong>Относительное местоположение</strong>:</p>
+<ul>
+<li><p><em>Пространственные отношения</em></p>
+<ul>
+<li><p>метрические - в 600 метрах от стрелки Васильевского острова;</p></li>
+<li><p>топологические - рядом с музеем-квартиров Куинджи;</p></li>
+<li><p>дирекционные - на запад от стрелки Васильевского острова</p></li>
+</ul></li>
+<li><p><em>Временные отношения -</em> в 15 минутах ходьбы от вестибюля Спортивная-2</p></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/Снимок экрана 2025-08-27 в 16.03.36.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+</section>
+
+<section>
+<section id="дискретные-и-непрерывные-данные" class="title-slide slide level1 center">
+<h1>Дискретные и непрерывные данные</h1>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Дискретные пространственные объекты имеют четко определенные границы.</p>
+<p>Например, административные границы, здания, точки притяжения, земельные участки.</p>
+</div><div class="column" style="width:50%;">
+<p>Непрерывные данные представляют собой поверхность (или поле), в каждой точке которой известно значение параметра и не имеющая четких границ.</p>
+<p>Например, рельеф, значение гравитационного поля</p>
+</div></div>
+<p>Это и определяет два основных типа пространственных данных - векторные и растровые.</p>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/clipboard-659462666.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="images/clipboard-1959405377.png" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://rsgislearn.blogspot.com/2007/05/vector-data-vs-raster-data.html</p></section></section>
+<section id="растровые-данные" class="title-slide slide level1 center">
+<h1>Растровые данные</h1>
+
+<img data-src="images/clipboard-202558759.png" class="r-stretch"><p>Информация в растровых данных содержится в пикселях - от английского <em>picture element</em> или <em>pix element</em>. Одним из ранних названий было <code>pel</code> (им в основном пользовались в <strong>Bell labs - Лабораториях Белла</strong>).</p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p>Балтыжакова Т.И. Геоинформационные системы: курс лекций</p>
 </div>
 </div>
+</section>
+
+<section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Сноски</h2>
+
+<ol>
+<li id="fn1"><p>ГОСТ Р 57657-2017 (ИСО 19131:2007) Пространственные данные. Спецификация информационного продукта</p></li>
+</ol>
 </section>
     </div>
   </div>
@@ -523,9 +615,9 @@
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1800,
 
-        height: 700,
+        height: 1000,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
