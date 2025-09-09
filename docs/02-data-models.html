@@ -404,11 +404,11 @@
 <section id="дискретные-и-непрерывные-данные" class="title-slide slide level1 center">
 <h1>Дискретные и непрерывные данные</h1>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p>Дискретные пространственные объекты имеют четко определенные границы.</p>
+<div class="column" style="width:45%;">
+<p><strong><em>Дискретные пространственные объекты имеют четко определенные границы.</em></strong></p>
 <p>Например, административные границы, здания, точки притяжения, земельные участки.</p>
-</div><div class="column" style="width:50%;">
-<p>Непрерывные данные представляют собой поверхность (или поле), в каждой точке которой известно значение параметра и не имеющая четких границ.</p>
+</div><div class="column" style="width:45%;">
+<p><strong><em>Непрерывные данные представляют собой поверхность (или поле), в каждой точке которой известно значение параметра и не имеющая четких границ.</em></strong></p>
 <p>Например, рельеф, значение гравитационного поля</p>
 </div></div>
 <p>Это и определяет два основных типа пространственных данных - векторные и растровые.</p>
@@ -416,27 +416,321 @@
 <section class="slide level2">
 
 
-<img data-src="images/clipboard-659462666.png" class="r-stretch"></section>
+<img data-src="images/clipboard-659462666.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section class="slide level2">
 
 
 <img data-src="images/clipboard-1959405377.png" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://rsgislearn.blogspot.com/2007/05/vector-data-vs-raster-data.html</p></section></section>
+<section>
 <section id="растровые-данные" class="title-slide slide level1 center">
 <h1>Растровые данные</h1>
 
-<img data-src="images/clipboard-202558759.png" class="r-stretch"><p>Информация в растровых данных содержится в пикселях - от английского <em>picture element</em> или <em>pix element</em>. Одним из ранних названий было <code>pel</code> (им в основном пользовались в <strong>Bell labs - Лабораториях Белла</strong>).</p>
+<img data-src="images/clipboard-202558759.png" class="quarto-figure quarto-figure-center r-stretch"><p>Информация в растровых данных содержится в пикселях - от английского <em>picture element</em> или <em>pix element</em>. Одним из ранних названий было <code>pel</code> (им в основном пользовались в <strong>Bell labs - Лабораториях Белла</strong>).</p>
+</section>
+<section class="slide level2">
 
-<div class="quarto-auto-generated-content">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Факт</strong></p>
+</div>
+<div class="callout-content">
+<p>Первый ГИС использовали только растровые данные, так как на тот момент это был единственный способ отображения чего-либо на экране. Векторные специализированные форматы появились только в 80-х годах.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Важно</strong></p>
+</div>
+<div class="callout-content">
+<p>Точность растровых данных ограничена их разрешением, то есть размером пикселя: чем меньше пиксель, тем более качественным будет изображение. При этом с уменьшением размера пикселя возрастает размер файла, в среднем размер файла будет возрастать в геометрической прогрессии (то есть при уменьшении пикселя в 2 раза, размер файла возрастет примерно в 4 раза).</p>
+<p>Но здесь, как правило, стараются найти компромисс между качеством данных и размером файла.</p>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="geotiff" class="title-slide slide level1 center">
+<h1>GeoTIFF</h1>
+<p><a href="https://ru.wikipedia.org/wiki/GeoTIFF"><strong>GeoTIFF</strong></a> - открытый формат представления растровых данных в формате TIFF совместно с метаданными о географической привязке (геореференцированный растр).</p>
+<p>Использует спецификации TIFF 6.0, в которую добавляет несколько видов геотегов, которые определяют вид картографической проекции, систему географических координат, модель геоида, датум и любую другую информацию, необходимую для точного пространственного ориентирования изображения.<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a></p>
+<p>Приложения, поддерживающие только формат TIFF 6.0, но не GeoTIFF, могут открывать изображения, получая базовый растр без метаинформации.</p>
+<aside></aside></section>
+<section class="slide level2">
+
+<p>В тегах GeoTIFF может задаваться:</p>
+<ul>
+<li><p>Вид картографической проекции или систему географических координат</p></li>
+<li><p>Параметры (датум) земного геоида</p></li>
+<li><p>Дискреты разрешения изображения</p></li>
+<li><p>Матрицу полиномиального, сплайнового или аффинного преобразования</p></li>
+<li><p>Характерные параметры изображения</p></li>
+</ul>
+</section></section>
+<section id="web-map-service-wms" class="title-slide slide level1 center">
+<h1>Web map service (WMS)</h1>
+<p><strong>WMS (Web map service)</strong> - это протокол получения через Интернет географически привязанных изображений, которые генерируются картографическим сервером на основе базы данных.<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clipboard-200864657.png" width="1132"></p>
+<figcaption>Источник: https://community.digitalparos.com/d/11-digitalparos-development-updates-2</figcaption>
+</figure>
+</div>
+<aside></aside></section>
+
+<section>
+<section id="векторные-данные" class="title-slide slide level1 center">
+<h1>Векторные данные</h1>
+<p>В векторных данных для задания местоположения используются координаты объектов и математические формулы для задания формы.</p>
+<p>Специализированные форматы, предназначеннные для ГИС, разработаны так, чтобы они могли <strong><em>совмещать в себе сразу и геометрию, и атрибутивные данные (непространственные характеристики)</em></strong>.</p>
+</section>
+<section class="slide level2">
+
+<p>Главная особенность векторных форматов данных, используемых в ГИС в том, что они позволяют не только определять местоположение и геометрию обьектов, но и также их описательные непространственные характеристики (то, что, как правило, называют атрибутивными данными). Кроме того, большинство из этих форматов поддерживают работу с различными картографическими проекциями и системами координат.</p>
+<p>Например, системы автоматизированного проектирования (AutoCAD, NanoCAD и подобные им) также могут работать с геометрическими характеристиками объектов и их местоположением, но работа в них осуществляется только в плоской прямоугольной системе координат, а возможность работы с атрибутивными данными отсутствует.</p>
+</section></section>
+<section>
+<section id="wkt" class="title-slide slide level1 center">
+<h1>WKT</h1>
+<p><strong>WKT (Well-known text)</strong> —&nbsp;текстовый формат&nbsp;представления векторной геометрии и описания систем координат<a href="#/footnotes" class="footnote-ref" id="fnref4" role="doc-noteref" data-footnote-href="#/fn4" onclick=""><sup>4</sup></a>.</p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Важно</strong></p>
+</div>
+<div class="callout-content">
+<p>Этот формат может использоваться как для описания геометрии объектов, так и для задания параметров систем координат (об этом мы поговорим в более поздних темах).</p>
+</div>
+</div>
+</div>
+<aside></aside></section>
+<section class="slide level2">
+
+<p>WKT может представлять следующие геометрические объекты:</p>
+<ul>
+<li><p>Point, MultiPoint</p></li>
+<li><p>LineString, MultiLineString</p></li>
+<li><p>Polygon, MultiPolygon</p></li>
+<li><p>CircularString</p></li>
+<li><p>Curve, MultiCurve, CompoundCurve</p></li>
+<li><p>CurvePolygon</p></li>
+<li><p>Surface, MultiSurface</p></li>
+<li><p>TIN (<a href="https://ru.wikipedia.org/w/index.php?title=Triangulated_irregular_network&amp;action=edit&amp;redlink=1" title="Triangulated irregular network (страница отсутствует)">Triangulated irregular network</a>)</p></li>
+<li><p>GeometryCollection</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/clipboard-368845347.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
+<section>
+<section id="geojson" class="title-slide slide level1 center">
+<h1>GeoJSON</h1>
+<p><strong>GeoJSON</strong>&nbsp;- формат представления различных структур географических данных, основанный на <a href="https://ru.wikipedia.org/wiki/JSON">JavaScript object notation (JSON)</a>.</p>
+<p>В GeoJSON&nbsp;объект состоит из набора пар <em>ключ/значение</em>, также называемых свойствами. Имя каждого свойства – строка. Значение свойства может представлять собой строку, число, объект, массив или один из литералов: «true», «false» и «null». Массив состоит из элементов, где каждый элемент может принимать одно из значений, описанных выше.</p>
+</section>
+<section class="slide level2">
+
+<p>Пример GeoJSON:</p>
+<pre><code>{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [125.6, 10.1]
+  },
+  "properties": {
+    "name": "Dinagat Islands"
+  }
+}</code></pre>
+</section>
+<section class="slide level2">
+
+<p>Формат поддерживает следующие типы объектов <code>Point</code>, <code>LineString</code>, <code>Polygon</code>, <code>MultiPoint</code>, <code>MultiLineString</code>, and <code>MultiPolygon</code>.</p>
+<p>Геометрические объекты с атрибутивными характеристиками составляют <code>Feature</code> объекты. Наборы объектов хранятся как <code>FeatureCollection</code> объекты<a href="#/footnotes" class="footnote-ref" id="fnref5" role="doc-noteref" data-footnote-href="#/fn5" onclick=""><sup>5</sup></a>. Полное описание формата представлено <a href="https://datatracker.ietf.org/doc/html/rfc7946">здесь</a>.</p>
+<p>Для проверки и валидации geojson файлов можно пользоваться сервисом <a href="https://geojson.io/">geojson.io</a></p>
+<p>Существует еще дополненная версия <strong>topojson</strong>, в котором учитываются топологические отношения между объектами. В этом формате вместо того, чтобы представлять геометрию дискретно, геометрия в файлах TopoJSON сшивается из общих линейных сегментов, называемых <em>дугами</em><a href="#/footnotes" class="footnote-ref" id="fnref6" role="doc-noteref" data-footnote-href="#/fn6" onclick=""><sup>6</sup></a>.</p>
+<aside></aside></section></section>
+<section>
+<section id="shapefile" class="title-slide slide level1 center">
+<h1>Shapefile</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clipboard-1672673853.png" class="quarto-figure quarto-figure-center" width="641"></p>
+</figure>
+</div>
+<p>Наиболее часто используемым форматом векторных данных в ГИС является <strong>shapefile</strong><a href="#/footnotes" class="footnote-ref" id="fnref7" role="doc-noteref" data-footnote-href="#/fn7" onclick=""><sup>7</sup></a>. Этот проприетарный формат данных от компании ESRI, который был разработан ими в 90-х годах прошлого века. Это был первый формат векторых данных, созданный специально для работы в ГИС.</p>
+<aside></aside></section>
+<section class="slide level2">
+
+<p>При использовании этого формата данные хранятся в нескольких файлах с разными расширениями, обязательными из которых являются:</p>
+<p>- <strong>.shp</strong>&nbsp;- геометрия объектов;</p>
+<p>- <strong>.shx</strong>&nbsp;- файл индексов необходим для ускорения расчетов и связи геометрии и атрибутов;</p>
+<p>- <strong>.dbf</strong>&nbsp;- таблица атрибутов:</p>
+<p>- <strong>.prj</strong>&nbsp;- сведения о проекции и системе координат.</p>
+<div class="callout callout-caution callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Предупреждение</strong></p>
+</div>
+<div class="callout-content">
+<p>Как минимум для корректной работы необходимы первые три файла. Файл .prj формально не является обязательным, но без него ГИС не сможет определить, какая система координат используется.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/clipboard-3571769684.png" class="quarto-figure quarto-figure-center r-stretch" width="666"></section>
+<section class="slide level2">
+
+<p>Недостатки работы с shape файлами<a href="#/footnotes" class="footnote-ref" id="fnref8" role="doc-noteref" data-footnote-href="#/fn8" onclick=""><sup>8</sup></a>:</p>
+<ul>
+<li><p>в файле не задается система координат;</p></li>
+<li><p>состоит из нескольких файлов;</p></li>
+<li><p>названия атрибутов должны быть не длинее 10 букв;</p></li>
+<li><p>всего можно добавить не более 255 атрибутов;</p></li>
+<li><p>ограниченное количество типов данных в атрибутах;</p></li>
+<li><p>файл должен быть не более 2 Гигабайт;</p></li>
+<li><p>не описываются топологические отношения объектов;</p></li>
+<li><p>в файле могут быть только объекты с одним типом геометрии;</p></li>
+<li><p>и прочие.</p></li>
+</ul>
+<p>Вот здесь еще можно посмотреть презентацию про shape файлы и их альтернативы <a href="https://www.slideshare.net/jachym/switch-from-shapefile" class="uri">https://www.slideshare.net/jachym/switch-from-shapefile</a></p>
+<aside></aside></section></section>
+<section>
+<section id="geopackage" class="title-slide slide level1 center">
+<h1>GeoPackage</h1>
+<p><strong>GeoPackage</strong><a href="#/footnotes" class="footnote-ref" id="fnref9" role="doc-noteref" data-footnote-href="#/fn9" onclick=""><sup>9</sup></a> - это <em>контейнер SQLite</em>, а стандарт кодирования GeoPackage определяет правила и требования к контенту, хранящемуся в контейнере.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clipboard-625967847.png" class="quarto-figure quarto-figure-center" width="422"></p>
+</figure>
+</div>
+<aside></aside></section>
+<section class="slide level2">
+
+<p>Стандарт GeoPackage определяет схему, включая определения таблиц, утверждения целостности, ограничения формата и ограничения содержимого. Требуемый и поддерживаемый контент GeoPackage полностью определен в стандарте. Эти возможности построены на общей основе, и механизм расширения предоставляет разработчикам возможность включить дополнительные функции в свои GeoPackages.</p>
+<p>Стандарт кодирования GeoPackage описывает набор соглашений для хранения следующего в базе данных SQLite:</p>
+<ul>
+<li><p>векторные объекты;</p></li>
+<li><p>наборы тайловых матриц изображений и растровых карт в различных масштабах;</p></li>
+<li><p>атрибуты (непространственные данные);</p></li>
+<li><p>дополнения.</p></li>
+</ul>
+</section></section>
+<section>
+<section id="kml" class="title-slide slide level1 center">
+<h1>KML</h1>
+<p><strong>KML</strong>&nbsp;- это формат файлов, который используется для отображения географических данных в геобраузерах, таких как Google Планета Земля, Google Карты и Google Карты для мобильных устройств. KML создан на основе стандарта XML и использует основанную на тегах структуру с вложенными элементами и атрибутами<a href="#/footnotes" class="footnote-ref" id="fnref10" role="doc-noteref" data-footnote-href="#/fn10" onclick=""><sup>10</sup></a>.</p>
+<div class="fragment">
+<p><em>Заголовок XML</em>: с него начинается каждый KML-файл. Перед заголовком не должно быть никаких символов или пробелов.</p>
+<p><em>Декларация пространства имен KML</em>: вторая строка каждого файла формата KML&nbsp;2.2.</p>
+<p><em>Объект Placemark</em>, содержащий следующие элементы: name&nbsp;- имя, которое используется в качестве ярлыка метки;</p>
+<p><em>description</em>&nbsp;- описание, которое отображается во всплывающем окне, привязанном к метке;</p>
+<p><em>Point</em>&nbsp;- координаты, определяющие положение метки на земной поверхности (долгота и широта, иногда также&nbsp;высота).</p>
+</div>
+<aside></aside></section>
+<section class="slide level2">
+
+<pre><code>KML-код простой метки. 
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+      &lt;kml xmlns="http://www.opengis.net/kml/2.2"&gt; &lt;Placemark&gt;
+      &lt;name&gt;Простая метка&lt;/name&gt;
+      description&gt;Привязана к земной поверхности. Приспосабливается к рельефу местности.&lt;/description&gt;
+      &lt;Point&gt;
+      &lt;coordinates&gt;-122.0822035425683,37.42228990140251,0&lt;/coordinates&gt;
+      &lt;/Point&gt;
+      &lt;/Placemark&gt; &lt;/kml&gt;</code></pre>
+</section></section>
+<section>
+<section id="gpx" class="title-slide slide level1 center">
+<h1>GPX</h1>
+<p><a href="https://ru.wikipedia.org/wiki/GPX"><strong>GPX</strong></a> <strong>(англ. GPS eXchange Format)</strong> - свободный текстовый формат хранения и обмена данными GPS, основанный на XML.</p>
+<p>Формат позволяет хранить информацию об <em>ориентирах (waypoints), маршрутах (routes) и треках (tracklogs)</em>.</p>
+<div class="fragment">
+<p>Для каждой точки хранятся её <strong><em>долгота, широта и высота над уровнем моря</em></strong> (если имеется информация о высоте). Для точек трека хранится также время прохождения точки.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<p>XML-схема предусматривает также хранение <em>произвольной пользовательской информации</em> по каждой точке, обязательными являются только долгота и широта.</p>
+<div class="fragment">
+<p>Широта и долгота в GPX указывается в градусах в общегеографической системе координат.</p>
+<p>Высота указывается в метрах над уровнем моря.</p>
+<p>Примером пользовательской информации может быть <em>высота местности (ele), скорость, частота пульса (hr), число шагов, темп вращения педалей (каденс, cad)</em>, температура и им подобные параметры.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;gpx version="1.0"&gt;
+    &lt;name&gt;Example gpx&lt;/name&gt;
+    &lt;wpt lat="46.57638889" lon="8.89263889"&gt;
+        &lt;ele&gt;2372&lt;/ele&gt;
+        &lt;name&gt;LAGORETICO&lt;/name&gt;
+    &lt;/wpt&gt;
+    &lt;trk&gt;&lt;name&gt;Example gpx&lt;/name&gt;&lt;number&gt;1&lt;/number&gt;&lt;trkseg&gt;
+        &lt;trkpt lat="46.57608333" lon="8.89241667"&gt;&lt;ele&gt;2376&lt;/ele&gt;&lt;time&gt;2007-10-14T10:09:57Z&lt;/time&gt;&lt;/trkpt&gt;
+        &lt;trkpt lat="46.57619444" lon="8.89252778"&gt;&lt;ele&gt;2375&lt;/ele&gt;&lt;time&gt;2007-10-14T10:10:52Z&lt;/time&gt;&lt;/trkpt&gt;
+        &lt;trkpt lat="46.57641667" lon="8.89266667"&gt;&lt;ele&gt;2372&lt;/ele&gt;&lt;time&gt;2007-10-14T10:12:39Z&lt;/time&gt;&lt;/trkpt&gt;
+        &lt;trkpt lat="46.57650000" lon="8.89280556"&gt;&lt;ele&gt;2373&lt;/ele&gt;&lt;time&gt;2007-10-14T10:13:12Z&lt;/time&gt;&lt;/trkpt&gt;
+        &lt;trkpt lat="46.57638889" lon="8.89302778"&gt;&lt;ele&gt;2374&lt;/ele&gt;&lt;time&gt;2007-10-14T10:13:20Z&lt;/time&gt;&lt;/trkpt&gt;
+        &lt;trkpt lat="46.57652778" lon="8.89322222"&gt;&lt;ele&gt;2375&lt;/ele&gt;&lt;time&gt;2007-10-14T10:13:48Z&lt;/time&gt;&lt;/trkpt&gt;
+        &lt;trkpt lat="46.57661111" lon="8.89344444"&gt;&lt;ele&gt;2376&lt;/ele&gt;&lt;time&gt;2007-10-14T10:14:08Z&lt;/time&gt;&lt;/trkpt&gt;
+    &lt;/trkseg&gt;&lt;/trk&gt;
+&lt;/gpx&gt;</code></pre>
+</section></section>
+<section id="web-feature-service-wfs" class="title-slide slide level1 center">
+<h1>Web feature service (WFS)</h1>
+<p><strong>Web Feature Service (WFS)</strong> — стандарт, который позволяет возвращать векторные геометрии и их атрибуты.</p>
+</section>
+
+<section>
+<section id="векторные-тайлы" class="title-slide slide level1 center">
+<h1>Векторные тайлы</h1>
+<p>В отличие от растровых тайлов, векторные представляют собой не изображения, а двоичные файлы в формате PBF (protobuf, бинарная альтернатива XML; хотя более современные стандарты поддерживают формат JSON). Они содержат всю необходимую информацию для генерации карты на стороне клиента. В стиле карты также указывается, следует ли вообще отображать элемент веб-карты, и какой шрифт и язык использовать для надписей<a href="#/footnotes" class="footnote-ref" id="fnref11" role="doc-noteref" data-footnote-href="#/fn11" onclick=""><sup>11</sup></a>.</p>
+<p>Как правило, векторные тайлы менее ресурсоемки, чем растровые, так как передаваемые файлы меньше. На их загрузку нужно меньше времени, достаточно меньшей пропускной способности.</p>
+<p>Кроме того, как и любой векторный формат представления данных они предполагают лучшее качество, чем растры, при меньшем размере файлов.</p>
+<aside></aside></section>
+<section class="slide level2">
+
+
+
+<img data-src="images/clipboard-2787109949.png" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://www.esri.com/arcgis-blog/products/developers/developers/arcgis-hosted-services-explained-feature-vector-map-tiles-services</p><div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p>Балтыжакова Т.И. Геоинформационные системы: курс лекций</p>
 </div>
 </div>
-</section>
-
+</section></section>
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Сноски</h2>
 
 <ol>
 <li id="fn1"><p>ГОСТ Р 57657-2017 (ИСО 19131:2007) Пространственные данные. Спецификация информационного продукта</p></li>
+<li id="fn2"><p>Описание стандарта OCG GeoTIFF <a href="https://www.ogc.org/standards/geotiff/" class="uri">https://www.ogc.org/standards/geotiff/</a></p></li>
+<li id="fn3"><p>Описание стандарта и спецификация протокола <a href="https://www.ogc.org/standards/wms/" class="uri">https://www.ogc.org/standards/wms/</a></p></li>
+<li id="fn4"><p><a href="https://ru.wikipedia.org/wiki/WKT" class="uri">https://ru.wikipedia.org/wiki/WKT</a></p></li>
+<li id="fn5"><p><a href="https://geojson.org/" class="uri">https://geojson.org/</a></p></li>
+<li id="fn6"><p><a href="https://github.com/topojson/topojson" class="uri">https://github.com/topojson/topojson</a></p></li>
+<li id="fn7"><p>ESRI Shapefile Technical Description — Электрон. дан. — <a href="https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf" class="uri">https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf</a></p></li>
+<li id="fn8"><p>Switch from Shapefile <a href="http://switchfromshapefile.org/" class="uri">http://switchfromshapefile.org/</a></p></li>
+<li id="fn9"><p>Getting Started With GeoPackage — Электрон. дан. — <a href="http://www.geopackage.org/guidance/getting-started.html" class="uri">http://www.geopackage.org/guidance/getting-started.html</a></p></li>
+<li id="fn10"><p>О формате KML <a href="https://cartetika.ru/tpost/jl4hk9a1r1-o-formate-kml" class="uri">https://cartetika.ru/tpost/jl4hk9a1r1-o-formate-kml</a></p></li>
+<li id="fn11"><p><strong>Разница между векторными и растровыми тайлами в веб-картах</strong> <a href="https://cartetika.ru/tpost/2tecy4r8f1-raznitsa-mezhdu-vektornimi-i-rastrovimi" class="uri">https://cartetika.ru/tpost/2tecy4r8f1-raznitsa-mezhdu-vektornimi-i-rastrovimi</a></p></li>
 </ol>
 </section>
     </div>
