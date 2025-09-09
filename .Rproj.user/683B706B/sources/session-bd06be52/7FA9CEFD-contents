@@ -10,7 +10,13 @@ website:
     left:
       - href: index.qmd
         text: Лекции
-      
+      - href: exam.qmd
+        text: Экзамен
+    right: 
+      - href: https://t.me/geomess
+        icon: telegram
+      - icon: github
+        href: https://github.com/baltti/bachelor-gis-course   
       
 
 format:
