@@ -3,7 +3,7 @@
     "path": "~/Desktop/bachelor-gis-course/03-cartography-basics.qmd",
     "project_path": "03-cartography-basics.qmd",
     "type": "quarto_markdown",
-    "hash": "1664341080",
+    "hash": "2988422599",
     "contents": "",
     "dirty": false,
     "created": 1757923342090.0,
@@ -19,14 +19,14 @@
         "rmdVisualCollapsedChunks": "",
         "cursorPosition": "85,0",
         "scrollLine": "184",
-        "rmdVisualModeLocation": "4215:6110.5"
+        "rmdVisualModeLocation": "6358:8836.5"
     },
     "folds": "",
-    "lastKnownWriteTime": 1758025938,
+    "lastKnownWriteTime": 1758029200,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1758025938738,
+    "last_content_update": 1758029200658,
     "read_only": false,
     "read_only_alternatives": []
 }
