@@ -155,9 +155,10 @@
 
 <p>Самое главное, чем занимается картография:</p>
 <ul>
-<li><p>математическое обоснование картографирования;</p></li>
-<li><p>разработка знаковой системы.</p></li>
+<li><p>математическое обоснование картографирования, то есть как спроектировать карту максимально точно;</p></li>
+<li><p>разработка знаковой системы, то есть как будут отображены те или иные объекты.</p></li>
 </ul>
+<p>Этими задачами занимаются немного разные подотрасли картографии, а вторая из них вообще со временем переросла в картографический дизайн.</p>
 </section></section>
 <section id="что-такое-карта" class="title-slide slide level1 center">
 <h1>Что такое карта?</h1>
@@ -165,7 +166,20 @@
 <blockquote>
 <p>A symbolised representation of a geographical reality, representing selected features and characteristics, resulting from the creative effort of its author’s execution of choices, that is designed for use when spatial relationships are of primary relevance.</p>
 </blockquote>
-<p>По ГОСТ карта - это Построенное в картографической проекции, уменьшенное, обобщенное изображение поверхности Земли, поверхности другого небесного тела или внеземного пространства, показывающее расположенные на них объекты в определенной системе условных знаков.</p>
+<p>По ГОСТ карта - это построенное в картографической проекции, уменьшенное, обобщенное изображение поверхности Земли, поверхности другого небесного тела или внеземного пространства, показывающее расположенные на них объекты в определенной системе условных знаков.</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>На заметку</strong></p>
+</div>
+<div class="callout-content">
+<p>Карта могут быть географическими, общегеографическими, топографическими, отраслевыми, специального назначения, тематическими, комплексными, аналитическими, синтетическими, обзорными.</p>
+</div>
+</div>
+</div>
 </section>
 
 <section id="элементы-карты" class="title-slide slide level1 center">
@@ -173,6 +187,7 @@
 
 <img data-src="images/clipboard-1600200389.png" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://arcreview.esri-cis.ru/2009/03/11/mapping-basics/</p></section>
 
+<section>
 <section id="чем-карта-отличается-от-изображения-поверхности-земли" class="title-slide slide level1 center">
 <h1>Чем карта отличается от изображения поверхности Земли?</h1>
 <div class="fragment">
@@ -188,7 +203,17 @@
 <p>Она использует системный подход</p>
 </div>
 </section>
+<section class="slide level2">
 
+<blockquote>
+<p>Обманывать при помощи географических карт не только легко, но еще и очень важно. Для того чтобы передать наполненные смыслом взаимосвязи в сложном трехмерном мире на листе бумаги или экране, карта должна искажать окружающую реальность. Все географические карты лгут<a href="#/footnotes" class="footnote-ref" id="fnref4" role="doc-noteref" data-footnote-href="#/fn4" onclick=""><sup>4</sup></a></p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clipboard-3037284474.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+<aside></aside></section></section>
 <section id="математическая-основа-карты" class="title-slide slide level1 center">
 <h1>Математическая основа карты</h1>
 <p>В математическую основу карты входят:</p>
@@ -365,20 +390,212 @@
 </div>
 </div></div>
 </section></section>
+<section>
+<section id="немного-об-искажениях-проекций" class="title-slide slide level1 center">
+<h1>Немного об искажениях проекций</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://archive.org/details/cu31924003898271/page/n56/mode/1up?view=theater"><img data-src="images/clipboard-3703581029.png" class="quarto-figure quarto-figure-center" width="749"></a></p>
+</figure>
+</div>
+<figcaption>Из книги: Elements of map projections with application on map and chart conctruction</figcaption>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/clipboard-2556514745.png" class="quarto-figure quarto-figure-center r-stretch" width="881"></section>
+<section class="slide level2">
+
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clipboard-2159640285.png" class="quarto-figure quarto-figure-center" width="442"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clipboard-3679214702.png" class="quarto-figure quarto-figure-center" width="653"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/clipboard-3285082643.png" class="quarto-figure quarto-figure-center r-stretch"><p>Не так как вы привыкли видеть на карте 🤯</p>
+</section>
+<section class="slide level2">
+
+<p>Для того, чтобы оценивать искажения и их характер существуют <strong>эллипсы Тиссо или эллипсы искажений</strong> - бесконечно малый эллипс в любой точке карты, являющийся отображением бесконечно малой окружности в соответствующей точке на поверхности земного эллипсоида или шара<a href="#/footnotes" class="footnote-ref" id="fnref5" role="doc-noteref" data-footnote-href="#/fn5" onclick=""><sup>5</sup></a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clipboard-2264906371.png" class="quarto-figure quarto-figure-center" width="613"></p>
+</figure>
+</div>
+<aside></aside></section>
+<section class="slide level2">
+
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clipboard-857065884.png" width="863"></p>
+<figcaption>Эллипсы Тиссо в проекции Меркатора</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clipboard-231530803.png" width="1260"></p>
+<figcaption>Эллипсы Тиссо в проекции Галля-Питерса</figcaption>
+</figure>
+</div>
+</div></div>
+</section></section>
+<section>
 <section id="как-выбрать-картографическую-проекцию" class="title-slide slide level1 center">
 <h1>Как выбрать картографическую проекцию?</h1>
 <p>Однозначного ответа, увы, здесь нет.</p>
 <p>В первую очередь, необходимо понять, какой параметр объектов наиболее важно сохранить: <strong>размеры, длины или углы</strong>? Кроме того, следует учитывать расположение картографируемой области, так как для разных типов проекций искажения будут наименее выраженными в определенных областях.</p>
+<p>Если ориентироваться на минимазацию искажений, то можно использовать методику, предложенную в <a href="https://kartfak.ru/wp-content/uploads/2023/03/%D0%90%D1%82%D0%BB%D0%B0%D1%81_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%86%D0%B8%D0%B9_%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2_%D0%97%D0%B0%D0%B3%D1%80%D0%B5%D0%B1%D0%B8%D0%BD.pdf">Атласе картографический проекций для крупных регионов России</a><a href="#/footnotes" class="footnote-ref" id="fnref6" role="doc-noteref" data-footnote-href="#/fn6" onclick=""><sup>6</sup></a>.</p>
+<aside></aside></section>
+<section class="slide level2">
 
-
+<p>Если картографируемый участок находится в <strong>экваториальной зоне</strong>:</p>
+<ul>
+<li><p><strong>вытянут вдоль параллелей</strong>, то рекомендуется использовать <em>нормальную цилиндрическую или нормальную коническую проекции</em></p></li>
+<li><p><strong>компактной формы</strong>, то рекомендуется использовать <em>нормальную коническую или азимутальную проекцию</em> с точкой касания к поверхности Земли у центра картографируемого участка (поперечную или косую)</p></li>
+<li><p><strong>вытянут в произвольном направлении</strong> (под углом к параллелям и меридианам), то рекомендуется использование <em>цилиндрической проекции</em> с таким расположением оси вращения, чтобы линия касания проходила максимально близко к центру участка.</p></li>
+</ul>
 </section>
+<section class="slide level2">
 
+
+<img data-src="images/clipboard-2630308725.png" class="quarto-figure quarto-figure-center r-stretch" width="1443"></section>
+<section class="slide level2">
+
+<p>Если участок исследования расположен в <strong>средних широтах</strong> (применимо как к северному, так и южному полушарию):</p>
+<ul>
+<li><p><strong>вытянут вдоль параллелей</strong>, то рекомендуется использование <em>прямой конической проекции</em> для соответствующего полушария (северного или южного)</p></li>
+<li><p><strong>компактной формы</strong>, то рекомендуется использование <em>нормальной конической проекции или азимутальной проекции</em> с точкой касания в центре участка</p></li>
+<li><p><strong>вытянут в произвольном направлении</strong> (под углом к параллелям и меридианам), то рекомендуется использование <em>поперечной или косой цилиндрической проекции</em> (расположение оси вращения здесь выбирается так, чтобы минимизировать искажения на участке)</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/clipboard-4076587857.png" class="quarto-figure quarto-figure-center r-stretch" width="1414"></section>
+<section class="slide level2">
+
+<p>Если участок расположен в <strong>приполярной области</strong> (применимо к обоим полушариям):</p>
+<ul>
+<li><p><strong>вытянут вдоль параллелей или вытянут в произвольном направлении</strong>, то рекомендуется использовать <em>полярную азимутальную проекцию</em></p></li>
+<li><p>имеет <strong>компактную форму</strong>, то рекомендуется использование <em>полярной или косой азимутальной проекции</em> (в зависимости от конкретного расположения участка для минимизации искажений рекомендуется располагать точку касания по центру отображаемого участка)</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/clipboard-3096408436.png" class="quarto-figure quarto-figure-center r-stretch" width="1027"></section></section>
+<section>
+<section id="немного-о-масштабах" class="title-slide slide level1 center">
+<h1>Немного о масштабах</h1>
+<p>Масштаб - это отношение реальной длины линии на местности к ее длине на карте, то есть во сколько раз мы все уменьшаем на карте.</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>На заметку</strong></p>
+</div>
+<div class="callout-content">
+<p>Масштаб на карте на самом деле не является стабильной величиной и может изменяться от точки к точке, что связано с переходом от искривленной поверхности Земли к ее плоскому изображению.</p>
+<p>То, что мы привыкли видеть в качестве масштаба на карте - это <strong>главный масштаб</strong>, то есть масштаб карты на точках или линиях нулевых искажений. Масштаб в любой другой точке называется <strong>частным масштабом</strong>.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p>На картах вы, как правило, можете увидеть какой-то из этих масштабов:</p>
+<ul>
+<li><p><strong>численный</strong> - масштаб указан безразмерной дробью, в числителе которой всегда единица, а в знаменателе - число, показывающее степень уменьшения, например, 1:1000 или 1:500;</p></li>
+<li><p><strong>графический</strong> в виде графика для измерение длин линий, чаще всего вы видите на картах <em>линейный</em> графический масштаб;</p></li>
+</ul>
+
+<img data-src="images/clipboard-2421915549.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
+<li><strong>именованный</strong>, указывающий соотношение длин линий на карте и на местности, например, в 1 см 1 км или в 1 см 50 км.</li>
+</ul>
+</section></section>
+<section>
+<section id="генерализация" class="title-slide slide level1 center">
+<h1>Генерализация</h1>
+<p>Генерализация должна осуществляться в соответствии с назначением, масштабом, содержанием карты, особенностями картографируемой территории и самого объекта<a href="#/footnotes" class="footnote-ref" id="fnref7" role="doc-noteref" data-footnote-href="#/fn7" onclick=""><sup>7</sup></a>.</p>
+<p>Два основных вида генерализации:</p>
+<ul>
+<li><p>генерализация содержания, которая предполагает выбор объектов, подлежащих отображению на карте и того, какими символами они будут представлены;</p></li>
+<li><p>генерализация геометрии предполагает изменение формы и размера объектов.</p></li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>На заметку</strong></p>
+</div>
+<div class="callout-content">
+<p>Вообще эта классификация типов генерализации довольно условна и у разных картографов разное мнение на этот счет.</p>
+</div>
+</div>
+</div>
+<aside></aside></section>
+<section id="генерализация-содержания" class="slide level2">
+<h2>Генерализация содержания</h2>
+<p>По большей части она относится к способам отображения количественной информации: способ классификации и выбор цветовой палитры.</p>
+
+<img data-src="images/clipboard-2212316470.png" width="663" class="r-stretch quarto-figure-center"><p class="caption">Источник — Самсонов Тимофей. «Генерализация пространственных данных и ее картографические приложения» https://dissovet.msu.ru/dissertation/3365</p></section>
+<section class="slide level2">
+
+<p>Но к ней также относится отбор отображаемых на карте слоев и объектов.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clipboard-542994563.png" class="quarto-figure quarto-figure-center" width="1047"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clipboard-3230762663.png" class="quarto-figure quarto-figure-center" width="1122"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="генерализация-геометрии" class="slide level2">
+<h2>Генерализация геометрии</h2>
+
+
+
+<img data-src="images/clipboard-939571135.png" width="1600" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://cartetika.ru/tpost/oim9ppbef1-generalizatsiya-v-kartografii-teoriya-kr</p></section></section>
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Сноски</h2>
 
 <ol>
 <li id="fn1"><p>ГОСТ 21667-76 Картография. Термины и определения (с Изменением 1, 2) <a href="https://docs.cntd.ru/document/1200006865?section=status">https://docs.cntd.ru/document/1200006865</a></p></li>
 <li id="fn2"><p>A Strategic Plan for the International Cartographic Association 2003-2011 - <a href="https://icaci.org/files/documents/reference_docs/ICA_Strategic_Plan_2003-2011.pdf" class="uri">https://icaci.org/files/documents/reference_docs/ICA_Strategic_Plan_2003-2011.pdf</a></p></li>
 <li id="fn3"><p>Храмов В.М. Картография (лекции) - <a href="https://geo.bsu.by/images/pres/cart/carto/carto01.pdf" class="uri">https://geo.bsu.by/images/pres/cart/carto/carto01.pdf</a></p></li>
+<li id="fn4"><p>Марк Монмонье ; перевод с английского Михаила Попова; научный редактор А. О. Захаров. - Москва : КоЛибри: Азбука-Аттикус, 2021.</p></li>
+<li id="fn5"><p><a href="http://www.gisa.ru/13458.html" class="uri">http://www.gisa.ru/13458.html</a></p></li>
+<li id="fn6"><p>Иванов А.Г., Загребин Г.И. Атлас картографических проекций на крупные регионы Российской федерации: учебно-наглядное издание. – М.: МИИГАиК, 2012. – 19 с.: ил.</p></li>
+<li id="fn7"><p>Берлянт. «Картография», 2014</p></li>
 </ol>
 </section>
     </div>
