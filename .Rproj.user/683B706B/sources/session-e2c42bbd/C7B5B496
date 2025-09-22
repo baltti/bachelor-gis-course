@@ -1,14 +1,14 @@
 {
-    "id": "00C82F8F",
-    "path": "~/Desktop/bachelor-gis-course/04-coordinate-reference-systems.qmd",
-    "project_path": "04-coordinate-reference-systems.qmd",
+    "id": "C7B5B496",
+    "path": "~/Desktop/bachelor-gis-course/03-cartography-basics.qmd",
+    "project_path": "03-cartography-basics.qmd",
     "type": "quarto_markdown",
-    "hash": "1615229450",
+    "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1757923312172.0,
+    "created": 1757923342090.0,
     "source_on_save": false,
-    "relative_order": 5,
+    "relative_order": 4,
     "properties": {
         "rmdVisualMode": "true",
         "rmdVisualWrapConfigured": "true",
@@ -17,16 +17,16 @@
         "Source": "Source",
         "docOutlineVisible": "0",
         "rmdVisualCollapsedChunks": "",
-        "cursorPosition": "0,0",
+        "cursorPosition": "57,0",
         "scrollLine": "0",
-        "rmdVisualModeLocation": "2:0"
+        "rmdVisualModeLocation": "360:0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1757923329,
+    "lastKnownWriteTime": 1758529708,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1757923329287,
+    "last_content_update": 1758529708592,
     "read_only": false,
     "read_only_alternatives": []
 }

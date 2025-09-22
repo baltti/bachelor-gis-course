@@ -141,8 +141,309 @@
 </section>
 <section class="slide level2">
 
+<p>Все системы координат в ГИС можно поделить на две группы:</p>
+<ul>
+<li><p><strong>географические</strong> - общеземные системы координат, которые используют широту и долготу в качестве координат с градусами как единицами измерения, измерения здесь выполняются на сфере/эллипсоиде;</p></li>
+<li><p><strong>прямоугольные</strong> - стандартные плоские прямоугольные декартовы координаты, как правило, с метрическими единицами измерения, измерения ведутся на плоскости.</p></li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>На заметку</strong></p>
+</div>
+<div class="callout-content">
+<p>Прямоугольные системы координат в современной литературе могут еще называться спроецированными (калька с английского слова “projected”)</p>
+</div>
+</div>
+</div>
+</section>
+<section id="географическая-система-координат" class="title-slide slide level1 center">
+<h1>Географическая система координат</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clipboard-3086384725.png"></p>
+<figcaption>Источник: http://rrrcn.ru/arcview-gis-dlya-ekologov3/34</figcaption>
+</figure>
+</div>
+<p><strong>Широтой</strong> точки называется угол, образованный отвесной линией в данной точке и плоскостью экватора. Этот угол отсчитывается от плоскости экватора на север или на юг, изменяясь от 0 до 90. Широта бывает северная (+) и южная (-).</p>
+<p><strong>Долготой</strong> точки называется двугранный угол, заключенный между плоскостью начального (Гринвичского) меридиана и плоскостью меридиана, проходящего через данную точку. От начального нулевого меридиана долготу отсчитывают на восток и запад, до 180. Соответственно, долгота называется восточной (+) и западной (-).<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a></p>
+<aside></aside></section>
+
+<section id="прямоугольная-система-координат" class="title-slide slide level1 center">
+<h1>Прямоугольная система координат</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/Cartesian-coordinate-system.svg" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+<p><strong>Прямоуго́льная (дека́ртова) систе́ма координа́т</strong>&nbsp;— прямолинейная система координат с взаимно перпендикулярными координатными осями на плоскости или в пространстве. Часто используемая система координат. Просто обобщается для пространств любой размерности<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a>.</p>
+<aside></aside></section>
+
+<section id="что-такое-система-координат-в-гис" class="title-slide slide level1 center">
+<h1>Что такое система координат в ГИС</h1>
+<p>Любая система координат в ГИС состоит из нескольких компонентов:</p>
+<ul>
+<li><p>картографическая проекция, в которую входят:</p>
+<ul>
+<li><p>датум или эллипсоид</p></li>
+<li><p>поверхность, на которую проецируется изображение</p></li>
+</ul></li>
+<li><p>оси, их направление;</p></li>
+<li><p>начало системы координат;</p></li>
+<li><p>единицы измерения.</p></li>
+</ul>
+<blockquote>
+<p>Система координат базируется на картографической проекции, которая определяет используемый эллипсоид (в иностранной литературе часто называемый датумом) и способ проецирования поверхности Земли на плоскость (используемую поверхность относимости и расположение центра проецирования). К полученному изображению Земли на плоскости добавляется начало системы координат и ее оси.</p>
+</blockquote>
+</section>
+
+<section>
+<section id="реестр-систем-координат" class="title-slide slide level1 center">
+<h1>Реестр систем координат</h1>
+<p>В настоящее время используется единая классификация систем координат в ГИС – <strong><em>реестр EPSG</em></strong>, изначально созданный <em>European petroleum survey group</em> и получивший от нее свою аббревиатуру.</p>
+<blockquote>
+<p><em>Эта организация в настоящее время называется The International Association of Oil &amp; Gas Producers (IOGP). IOGP ведёт базу данных систем координат, которая в настоящее время является стандартом de facto в сфере ГИС. Поэтому часто вместо полного описания СК достаточно указать её EPSG-код, который являются её ключом в базе данных</em><a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a><em>.</em></p>
+</blockquote>
+<p>Кроме него также могут использоваться данные других реестров систем координат, например, одноименный реестр компании ESRI.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Дополнительно</strong></p>
+</div>
+<div class="callout-content">
+<p>Официальный сайт реестра - <a href="https://epsg.org/home.html" class="uri">https://epsg.org/home.html</a></p>
+<p>(Неофициальный) сайт реестра - epsg.io</p>
+</div>
+</div>
+</div>
+<aside></aside></section>
+<section class="slide level2">
+
+<ul>
+<li><p><strong><em>EPSG:4326</em></strong></p>
+<p>WGS 84 - WGS84 - World Geodetic System 1984, used in GPS</p></li>
+<li><p><strong><em>EPSG:3857</em></strong></p>
+<p>WGS 84 / Pseudo-Mercator - Spherical Mercator, Google Maps, OpenStreetMap, Bing, ArcGIS, ESRI</p></li>
+<li><p><strong><em>ESRI:102025</em></strong></p>
+<p>Asia North Albers Equal Area Conic</p></li>
+</ul>
+</section></section>
+<section id="форматы-описания-систем-координат-в-гис" class="title-slide slide level1 center">
+<h1>Форматы описания систем координат в ГИС</h1>
+<p>Есть два основных формата описания параметров систем координат:</p>
+<ul>
+<li>WKT (well known text) - текстовый формат описания параметров систем координат и параметров перехода между ними;</li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>На заметку</strong></p>
+</div>
+<div class="callout-content">
+<p>Компания ESRI использует несколько иную реализацию формата WKT для описания СК, она обычно называется <strong>ESRI WKT</strong> и используется, в частности, в ArcGIS.</p>
+</div>
+</div>
+</div>
+<ul>
+<li>proj4 - строковое описание системы координат, базирующее на проекте <a href="https://github.com/OSGeo/PROJ">proj</a>.</li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Дополнительно</strong></p>
+</div>
+<div class="callout-content">
+<p>proj как библиотека широко используется в работе с системами координат в различных языках программирования.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<section id="формат-описания-wkt" class="title-slide slide level1 center">
+<h1>Формат описания WKT</h1>
+<p>Международный формат описания WKT закреплен <a href="https://www.ogc.org/standards/wkt-crs/">стандартом Open Geospatial Consortium</a>.</p>
+<p>Описание системы координат состоит из <strong>ключевых слов и атрибутов</strong> этих ключевых слов. Ключевые слова указываются перед квадратными скобками, а атрибуты — внутри скобок. Кроме того, атрибуты могут содержать вложенные ключевые слова.</p>
+<p>Пример фрагмента описания системы координат: <code>KEYWORD1[attribute1,KEYWORD2[attribute2,attribute3]]</code></p>
+</section>
+<section class="slide level2">
 
 
+<img data-src="images/clipboard-3959220997.png" class="r-stretch"></section></section>
+<section>
+<section id="формат-описания-proj" class="title-slide slide level1 center">
+<h1>Формат описания PROJ</h1>
+<table class="caption-top">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 43%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Параметр</th>
+<th>Описание</th>
+<th>Описание (англ.)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>+a</td>
+<td></td>
+<td>Semimajor radius of the ellipsoid axis</td>
+</tr>
+<tr class="even">
+<td>+axis</td>
+<td></td>
+<td>Axis orientation</td>
+</tr>
+<tr class="odd">
+<td>+b</td>
+<td></td>
+<td>Semiminor radius of the ellipsoid axis</td>
+</tr>
+<tr class="even">
+<td>+ellps</td>
+<td></td>
+<td>Ellipsoid name (see <code>proj -le</code>)</td>
+</tr>
+<tr class="odd">
+<td>+k</td>
+<td></td>
+<td>Scaling factor (deprecated)</td>
+</tr>
+<tr class="even">
+<td>+k_0</td>
+<td></td>
+<td>Scaling factor</td>
+</tr>
+<tr class="odd">
+<td>+lat_0</td>
+<td></td>
+<td>Latitude of origin</td>
+</tr>
+<tr class="even">
+<td>+lon_0</td>
+<td></td>
+<td>Central meridian</td>
+</tr>
+<tr class="odd">
+<td>+lon_wrap</td>
+<td></td>
+<td>Center longitude to use for wrapping (see below)</td>
+</tr>
+<tr class="even">
+<td>+over</td>
+<td></td>
+<td>Allow longitude output outside -180 to 180 range, disables wrapping (see below)</td>
+</tr>
+<tr class="odd">
+<td>+pm</td>
+<td></td>
+<td>Alternate prime meridian (typically a city name, see below)</td>
+</tr>
+<tr class="even">
+<td>+proj</td>
+<td></td>
+<td>Projection name (see <code>proj -l</code>)</td>
+</tr>
+<tr class="odd">
+<td>+units</td>
+<td></td>
+<td>meters, US survey feet, etc.</td>
+</tr>
+<tr class="even">
+<td>+vunits</td>
+<td></td>
+<td>vertical units.</td>
+</tr>
+<tr class="odd">
+<td>+x_0</td>
+<td></td>
+<td>False easting</td>
+</tr>
+<tr class="even">
+<td>+y_0</td>
+<td></td>
+<td>False northing</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/clipboard-3912507845.png" class="r-stretch"></section></section>
+<section id="сервисы-для-поиска-и-подбора-систем-координат" class="title-slide slide level1 center">
+<h1>Сервисы для поиска и подбора систем координат</h1>
+<ul>
+<li><p>Projection wizard <a href="https://projectionwizard.org/" class="uri">https://projectionwizard.org/</a></p></li>
+<li><p>World map generator <a href="https://www.worldmapgenerator.com/en/wizard/step/projection/" class="uri">https://www.worldmapgenerator.com/en/wizard/step/projection/</a></p></li>
+<li><p>Map projection explorer <a href="https://www.geo-projections.com/" class="uri">https://www.geo-projections.com/</a></p></li>
+<li><p>Compare map projections <a href="https://map-projections.net/singleview.php" class="uri">https://map-projections.net/singleview.php</a></p></li>
+<li><p>Map projections <a href="https://bella-mir.github.io/proj-guesser/#/" class="uri">https://bella-mir.github.io/proj-guesser/#/</a></p></li>
+<li><p><a href="https://spatialreference.org/" class="uri">https://spatialreference.org/</a></p></li>
+</ul>
+</section>
+
+<section>
+<section id="системы-координат-в-qgis" class="title-slide slide level1 center">
+<h1>Системы координат в QGIS</h1>
+<p>В QGIS каждый добавленный слой и набор данных имеет свою собственную систему координат, а также есть система координат проекта, в которой отрисовываются данные на экране и выполняются некоторые расчеты. Эти системы координат могут (а в некоторых случаях для расчетов - должны) совпадать, а могут быть различны и могут изменяться независимо друг от друга.</p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Важно</strong></p>
+</div>
+<div class="callout-content">
+<p>Взаимная независимость систем координат позволяет работать одновременно с данными в разных системах, при этом отображая их в той системе координат, которая более удобна пользователю.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p>Работа с системами координат в QGIS имеет несколько вариантов:</p>
+<ul>
+<li><p><strong>перепроецирование слоев</strong> (для растровых слоев иногда называемое деформацией) - пересчет слоя из одной системы координат в другую; - назначение системы координат</p></li>
+<li><p><strong>присвоение/назначение системы координат</strong> слоям, в которых ее нет или задана некорректно;</p></li>
+<li><p><strong>создание пользовательских систем координат</strong> - внесение параметров нестандартных систем координат в каталог программы;</p></li>
+<li><p><strong>перепроецирование на лету</strong> - изменение системы координат проекта, то есть системы координат, в первую очередь используемой для отображения данных на экране, которое не затрагивает системы координат отдельных слоев.</p></li>
+</ul>
+</section></section>
+<section id="литература" class="title-slide slide level1 center">
+<h1>Литература</h1>
+<ol type="1">
+<li><p>Запорожченко А.В. Картографические проекции и методика их выбора для создания карт различных типов <a href="https://gistoolkit.ru/download/doc/projections.pdf" class="uri">https://gistoolkit.ru/download/doc/projections.pdf</a></p></li>
+<li><p>Мозжерин В.В. Практикум по картографии. Математическая основа карт (учебно-методическое пособие). Казань: Изд-во КГУ, 2005. – 99 с. <a href="https://kpfu.ru/docs/F1435536248/mozzherinmetodichkaofcartography_61.pdf" class="uri">https://kpfu.ru/docs/F1435536248/mozzherinmetodichkaofcartography_61.pdf</a></p></li>
+<li><p>Иванов А.Г., Загребин Г.И. Атлас картографических проекций на крупные регионы Российской федерации: учебно-наглядное издание. – М.: МИИГАиК, 2012. – 19 с.: ил. <a href="https://kartfak.ru/2023/03/14/картографические-проекции/" class="uri">https://kartfak.ru/2023/03/14/картографические-проекции/</a></p></li>
+</ol>
+
+
+</section>
+
+<section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Сноски</h2>
+
+<ol>
+<li id="fn1"><p><a href="https://portal.tpu.ru/SHARED/p/POCELUEV/ucheba/Geodesy/Lab3.pdf" class="uri">https://portal.tpu.ru/SHARED/p/POCELUEV/ucheba/Geodesy/Lab3.pdf</a></p></li>
+<li id="fn2"><p>Прямоугольная система координат <a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D0%BA%D0%BE%D0%BE%D1%80%D0%B4%D0%B8%D0%BD%D0%B0%D1%82" class="uri">https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D0%BA%D0%BE%D0%BE%D1%80%D0%B4%D0%B8%D0%BD%D0%B0%D1%82</a></p></li>
+<li id="fn3"><p>Трансформация описания систем координат из формата MapInfo в WKT и PROJ.4 <a href="https://gis-lab.info/qa/mapinfo_to_wkt_proj4.html" class="uri">https://gis-lab.info/qa/mapinfo_to_wkt_proj4.html</a></p></li>
+</ol>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
