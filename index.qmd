@@ -41,3 +41,11 @@ author:
 ```
 
 [Открыть в новой вкладке](https://baltti.github.io/bachelor-gis-course/03-cartography-basics.html){target="_blank"}
+
+# Системы координат в ГИС
+
+```{=html}
+<iframe src="https://baltti.github.io/bachelor-gis-course/04-coordinate-reference-systems.html" width="800" height="400"></iframe>
+```
+
+[Открыть в новой вкладке](https://baltti.github.io/bachelor-gis-course/04-coordinate-reference-systems.html){target="_blank"}
