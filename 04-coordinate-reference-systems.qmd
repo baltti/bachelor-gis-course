@@ -129,6 +129,10 @@ proj как библиотека широко используется в раб
 
 # Формат описания PROJ {.scrollable}
 
+![](images/clipboard-1086786894.png){fig-align="center"}
+
+# Формат описания PROJ {visibility="hidden"}
+
 | Параметр | Описание | Описание (англ.) |
 |-------------------|---------------------------|---------------------------|
 | +a | Большая полуось эллипсоида | Semimajor radius of the ellipsoid axis |
@@ -223,12 +227,10 @@ proj как библиотека широко используется в раб
 
 ::::: columns
 ::: {.column width="50%"}
-
 ![](images/clipboard-2237266955.png)
 :::
 
 ::: {.column width="50%"}
-
 ![](images/clipboard-759752856.png)
 :::
 :::::

@@ -3,7 +3,7 @@
     "path": "~/Desktop/bachelor-gis-course/04-coordinate-reference-systems.qmd",
     "project_path": "04-coordinate-reference-systems.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "1699300611",
     "contents": "",
     "dirty": false,
     "created": 1757923312172.0,
@@ -17,16 +17,16 @@
         "Source": "Source",
         "docOutlineVisible": "0",
         "rmdVisualCollapsedChunks": "",
-        "cursorPosition": "235,0",
-        "scrollLine": "116",
-        "rmdVisualModeLocation": "8157:9111.5"
+        "cursorPosition": "129,0",
+        "scrollLine": "122",
+        "rmdVisualModeLocation": "4165:4122"
     },
     "folds": "",
-    "lastKnownWriteTime": 1758619280,
+    "lastKnownWriteTime": 1758620742,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1758619280049,
+    "last_content_update": 1758620742709,
     "read_only": false,
     "read_only_alternatives": []
 }
