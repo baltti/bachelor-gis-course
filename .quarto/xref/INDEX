@@ -28,5 +28,14 @@
   },
   "basics.qmd": {
     "basics.html": "9ce10ee7"
+  },
+  "project.qmd": {
+    "project.html": "10c6beaf"
+  },
+  "osm.qmd": {
+    "osm.html": "d8bc46c9"
+  },
+  "style.qmd": {
+    "style.html": "5ec6128e"
   }
 }
