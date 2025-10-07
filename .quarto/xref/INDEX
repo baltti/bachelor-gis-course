@@ -40,5 +40,8 @@
   },
   "visualisation.qmd": {
     "visualisation.html": "cc1026f4"
+  },
+  "crs.qmd": {
+    "crs.html": "e647da6f"
   }
 }
