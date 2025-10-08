@@ -3,7 +3,7 @@
     "path": "~/Desktop/bachelor-gis-course/crs.qmd",
     "project_path": "crs.qmd",
     "type": "quarto_markdown",
-    "hash": "1250756189",
+    "hash": "1655493649",
     "contents": "",
     "dirty": false,
     "created": 1759750003014.0,
@@ -19,14 +19,14 @@
         "rmdVisualCollapsedChunks": "",
         "cursorPosition": "96,0",
         "scrollLine": "0",
-        "rmdVisualModeLocation": "2:0"
+        "rmdVisualModeLocation": "7749:13672.5"
     },
     "folds": "",
-    "lastKnownWriteTime": 1759839405,
+    "lastKnownWriteTime": 1759908158,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1759839405872,
+    "last_content_update": 1759908158898,
     "read_only": false,
     "read_only_alternatives": []
 }
