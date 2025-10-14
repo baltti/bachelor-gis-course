@@ -258,7 +258,8 @@ window.Quarto = {
     <h2 id="toc-title">Содержание</h2>
    
   <ul>
-  <li><a href="#отрисовка-кварталов" id="toc-отрисовка-кварталов" class="nav-link active" data-scroll-target="#отрисовка-кварталов">Отрисовка кварталов</a></li>
+  <li><a href="#расчет-площади-зданий" id="toc-расчет-площади-зданий" class="nav-link active" data-scroll-target="#расчет-площади-зданий">Расчет площади зданий</a></li>
+  <li><a href="#отрисовка-кварталов" id="toc-отрисовка-кварталов" class="nav-link" data-scroll-target="#отрисовка-кварталов">Отрисовка кварталов</a></li>
   <li><a href="#расчет-коэффицента-застройки" id="toc-расчет-коэффицента-застройки" class="nav-link" data-scroll-target="#расчет-коэффицента-застройки">Расчет коэффицента застройки</a>
   <ul class="collapse">
   <li><a href="#использование-пространственного-объединения" id="toc-использование-пространственного-объединения" class="nav-link" data-scroll-target="#использование-пространственного-объединения">Использование пространственного объединения</a></li>
@@ -289,6 +290,115 @@ window.Quarto = {
 </header>
 
 
+<section id="расчет-площади-зданий" class="level1">
+<h1>Расчет площади зданий</h1>
+<p>Для расчета площади зданий воспользуемся калькулятором полей в таблице атрибутов.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Напоминание
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Таблица атрибутов может быть открыта из контекстного меню слоя.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2477555248.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="526"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Важно
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Расчет площади мы будем осуществлять в том слое, который вы получили по итогам перепроецирования: слой в системе координат UTM.</p>
+</div>
+</div>
+<p>В открывшейся таблице атрибутов вы увидите собственную панель инструментов, на которой вам нужен калькулятор полей.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1045039255.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="2158"></p>
+</figure>
+</div>
+<p>В открывшемся окне калькулятора полей вам нужно создать новое поле с типом данных “десятичное число”, в которое будет записан ваш результат.</p>
+<p>Для расчета площади необходима будет одна из функций из группы <strong>Геометрия</strong>: <code>area()</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-485574753.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1489"></p>
+</figure>
+</div>
+<p>Само выражение:</p>
+<pre><code>area ($geometry)</code></pre>
+<p>Что значит аргумент <code>$geometry</code> в скобках?</p>
+<p>Это говорит о том, что для расчета будет использована не какая-то конкретная геометрия одного объекта, а все геометрии слоя.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Важно
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Обратите внимание, что у нас есть две функции для расчета площади:</p>
+<ul>
+<li><p><code>$area</code> - расчет площади осуществляется в <em>системе координат проекта на эллипсоиде</em>;</p></li>
+<li><p><code>area()</code> - расчет площади осуществляется в <em>системе координат слоя на плоскости</em>.</p></li>
+</ul>
+<p>Мы используем здесь второй вариант, так как нам необходим расчет именно в системе координат слоя. Для этого мы его и перепроецировали.</p>
+</div>
+</div>
+<p>В результате вычисления вы получите новое поле, в которое будет записана площадь.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2007705995.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="961"></p>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+На заметку
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>В нашем случае площадь будет рассчитана в квадратных метрах, так как мы использовали систему координат слоя, в которой единицами измерения являются метры.</p>
+<p>Это площадь застройки здания, то есть площадь по контуру первого этажа.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Дополнительно
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Вы можете аналогично рассчитать периметр здания, воспользовавшись функцией <code>perimeter</code>.</p>
+<p>Общая площадь здания может быть рассчитана как произведение уже рассчитаной вами площади и количества этажей.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2704296193.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="728"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="отрисовка-кварталов" class="level1">
 <h1>Отрисовка кварталов</h1>
 <p>Для того, чтобы определить плотность застройки нам необходимо сверить ее с какими-то территориальными единицами. Это могут быть единицы административного деления, земельные участки или кварталы.</p>
