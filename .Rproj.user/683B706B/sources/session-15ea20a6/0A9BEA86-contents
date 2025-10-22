@@ -13,6 +13,8 @@ website:
       - sidebar:practice
       - href: exam.qmd
         text: Экзамен
+      - href: homework.qmd
+        text: Практическая работа
     right: 
       - href: https://t.me/geomess
         icon: telegram
