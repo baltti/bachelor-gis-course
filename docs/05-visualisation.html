@@ -140,6 +140,29 @@
 
 </section>
 <section>
+<section id="почему-это-важно" class="title-slide slide level1 center">
+<h1>Почему это важно?</h1>
+<p>В течение всей истории человечества изображения и карты использовались для манипуляции мнениями.</p>
+<iframe width="800" height="400" src="https://www.youtube.com/embed/G0_MBrJnRq0?si=tr3FCQvfY6fsZYKK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>На заметку</strong></p>
+</div>
+<div class="callout-content">
+<p>В случае с картами манипулировать даже проще, чем с обычными графиками, потому что в среднем человек больше будет доверять именно карте и считать ее более надежной и объективной.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/Try_to_impeach_this.gif" class="quarto-figure quarto-figure-center r-stretch"></section></section>
+<section>
 <section id="общие-принципы-визуализации" class="title-slide slide level1 center">
 <h1>Общие принципы визуализации</h1>
 <blockquote>
@@ -212,8 +235,8 @@
 
 
 <section>
-<section id="аспекты-восприятия" class="title-slide slide level1 center">
-<h1>Аспекты восприятия</h1>
+<section id="аспекты-восприятия1" class="title-slide slide level1 center">
+<h1>Аспекты восприятия<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a></h1>
 <p>Существует четыре основных аспекта восприятия визуальных характеристик. Именно эти аспекты и особенности интерпретации будут влият на то, как их понимают на карте:</p>
 <ul>
 <li><p>селективность - возможность однозначно выделить группу объектов на основе изменения визуальной переменной;</p></li>
@@ -234,7 +257,7 @@
 </div>
 </div>
 </div>
-</section>
+<aside></aside></section>
 <section id="селективность" class="slide level2">
 <h2>Селективность</h2>
 <div class="quarto-figure quarto-figure-center">
@@ -324,7 +347,7 @@
 <p>Поэтому изменение от светлого к темному и наоборот будут наиболее просты и однозначны в восприятии, даже если концы палитры будут слабо насыщенными, а центральная часть - наиболее чистой по цвету.</p>
 <p>То есть, если яркость меняется последовательно, цвет отчасти отходит на второй план.</p>
 <p>С учетом этого факта в 2015 году Натаниелем Смитом и Стефаном ван дер Вольтом (Nathaniel J. Smith, Stefan van der Walt) были разработаны цветовые палитры <em>magma, inferno, plasma, viridis</em> в составе библиотеки <a href="https://bids.github.io/colormap/">matplotlib colormaps</a>.</p>
-<p>Позднее этот набор был дополнен еще одной палитрой <em>cividis</em><a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a>.</p>
+<p>Позднее этот набор был дополнен еще одной палитрой <em>cividis</em><a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a>.</p>
 <aside></aside></section>
 <section class="slide level2">
 
@@ -332,8 +355,21 @@
 <img data-src="images/Pasted image 20241212113034.png" class="quarto-figure quarto-figure-center r-stretch" width="800"></section>
 <section id="расходящиеся-палитры" class="slide level2">
 <h2>Расходящиеся палитры</h2>
-<p>Основной принцип их построения состоит в том, что центр имеет максимальную яркость, а вправо и влево однородно оно уменьшается, переходя в цвета с противоположных концов спектра: к синему и красному или оранжевому и фиолетовому. То есть они объединяют два градиента разных цветов по яркости.</p>
+<p>Основной принцип их построения состоит в том, что центр имеет максимальную яркость, а вправо и влево однородно оно уменьшается, переходя в цвета с противоположных концов спектра: к синему и красному или оранжевому и фиолетовому.</p>
+<p>То есть они объединяют два градиента разных цветов по яркости.</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>На заметку</strong></p>
+</div>
+<div class="callout-content">
 <p>Чаще всего вы видите такие палитры при отображении температуры: белый центр, от которого расходятся в противоположные стороны красный и синий градиенты. Также такие цветовые схемы могут быть использованы для отображения доходов и убытков, изменений во времени, отклонений от нормы или среднего значения.</p>
+</div>
+</div>
+</div>
 </section>
 <section class="slide level2">
 
@@ -355,7 +391,7 @@
 <section id="радужная-палитра" class="slide level2">
 <h2>Радужная палитра</h2>
 <p>В настоящее время рекомендуется избегать так называемой радужной палитры, потому что сама по себе она искажает изображение объектов.</p>
-<p>Это связано с тем, что в ней содержатся различные по яркости и цвету фрагменты, которые не позволяют однозначно последовательно выстроить цвета<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a>.</p>
+<p>Это связано с тем, что в ней содержатся различные по яркости и цвету фрагменты, которые не позволяют однозначно последовательно выстроить цвета<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/Pasted image 20241212142631.png" class="quarto-figure quarto-figure-center"></p>
@@ -391,13 +427,13 @@
 <p>Классификация для числовых значений подразумевает разбивку на интервалы.</p>
 <p>Самые широко применяемые методы классификации в геоинформационных системах:</p>
 <ul>
-<li>Равное количество (квантиль): в каждом классе будет одинаковое количество элементов;</li>
-<li>Равный интервал: каждый класс будет иметь одинаковый размер.</li>
-<li>Стандартное отклонение: классы строятся в зависимости от стандартного отклонения значений.</li>
-<li>Фиксированный интервал: каждый класс будет иметь фиксированный диапазон значений (например, при значениях от 1 до 16 и размере интервала 4 классами будут 1-4, 5-8, 9-12 и 13-16).</li>
-<li>Логарифмическая шкала: подходит для данных с широким диапазоном значений.</li>
-<li>естественные интервалы (Natural Breaks (Jenks)): дисперсия внутри каждого класса минимизируется, а дисперсия между классами максимизируется.</li>
-<li>форматированные отступы: вычисляет последовательность из примерно n+1 равномерно распределенных “красивых” значений, которые покрывают диапазон значений x. Значения выбираются таким образом, чтобы они были в 1, 2 или 5 раз больше 10.</li>
+<li><em>Равное количество (квантиль)</em>: в каждом классе будет одинаковое количество элементов;</li>
+<li><em>Равный интервал</em>: каждый класс будет иметь одинаковый размер.</li>
+<li><em>Стандартное отклонение</em>: классы строятся в зависимости от стандартного отклонения значений.</li>
+<li><em>Фиксированный интервал</em>: каждый класс будет иметь фиксированный диапазон значений (например, при значениях от 1 до 16 и размере интервала 4 классами будут 1-4, 5-8, 9-12 и 13-16).</li>
+<li><em>Логарифмическая шкала</em>: подходит для данных с широким диапазоном значений.</li>
+<li><em>естественные интервалы</em> (Natural Breaks (Jenks)): дисперсия внутри каждого класса минимизируется, а дисперсия между классами максимизируется.</li>
+<li><em>форматированные отступы</em>: вычисляет последовательность из примерно n+1 равномерно распределенных “красивых” значений, которые покрывают диапазон значений x. Значения выбираются таким образом, чтобы они были в 1, 2 или 5 раз больше 10.</li>
 </ul>
 </section>
 <section class="slide level2">
@@ -462,8 +498,20 @@
 <p>Как понять какое количество интервалов вам нужно?</p>
 <p>Вы можете опираться на общеизвестные теории восприятия информации, которые говорят нам о том, что кратковременная память не способна удерживать более 7 интервалов (максимум 10). Поэтому, как правило, рекомендуют использовать от 3 до 7 интервалов.</p>
 <p>Чем больше у вас будет интервалов/категорий, тем сложнее будет вашему потенциальному зрителю.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Дополнительно</strong></p>
+</div>
+<div class="callout-content">
 <p>Если вы хотите опираться на количественную методику расчета числа интервалов, можно воспользоваться распространенной формулой Стерджесса, где <span class="math inline">\(n\)</span> - количество интервалов, <span class="math inline">\(N\)</span> - число объектов:</p>
 <p><span class="math inline">\(n = 1+|log_2 N|\)</span> или <span class="math inline">\(n = 1+|3.322 \lg N|\)</span></p>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="способы-визуализации-пространственных-данных" class="title-slide slide level1 center">
@@ -491,17 +539,24 @@
 </section>
 <section id="карты-символов" class="slide level2">
 <h2>Карты символов</h2>
-<p>Карты символов делятся на две основные группы: пропорциональные или градуированные символы и карты плотности точек.</p>
+<p>Карты символов делятся на две основные группы:</p>
+<ul>
+<li><p>пропорциональные или градуированные символы</p></li>
+<li><p>карты плотности точек.</p></li>
+</ul>
 <p>Карты пропорциональных символов в литературе по картографии могут еще называться картами точечных символов</p>
+</section>
+<section class="slide level2">
+
 <h3 id="карта-пропорциональных-символов">Карта пропорциональных символов</h3>
 <p>Карта пропорциональных символов или карта точечных символов (второй термин более характерен для отечественной литературы) - это тип тематической карты, на которой символы различной величины показывают значение количественного показателя. Размер символа здесь напрямую зависит от величины показателя.</p>
 <p>В качестве символов может быть использована любая простая геометрическая фигура (круг, квадрат, треугольник и т.д.) или пиктограмма.</p>
 
-<img data-src="images/clipboard-1598777521.png" class="r-stretch"></section>
+<img data-src="images/clipboard-1598777521.png" class="quarto-figure quarto-figure-center r-stretch" width="1660"></section>
 <section class="slide level2">
 
 
-<img data-src="images/clipboard-1846367819.png" class="r-stretch"><div class="callout callout-caution callout-titled callout-style-default">
+<img data-src="images/clipboard-1846367819.png" class="quarto-figure quarto-figure-center r-stretch"><div class="callout callout-caution callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
@@ -523,7 +578,19 @@
 <section class="slide level2">
 
 <p>Основной визуальной характеристикой при создании карты пропорциональных символов является размер, который может быть однозначно интерпретируемым только для количественных переменных.</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>На заметку</strong></p>
+</div>
+<div class="callout-content">
 <p>Пропорциональные символы могут быть использованы для отображения абсолютных значений показателей, в которых отсутствуют отрицательные значения. Как правило, это относится к пространственно экстенсивным или глобальным переменным, то есть тем, которые могут быть соотнесены только с пространственной единицей целиком как суммой ее составных частей.</p>
+</div>
+</div>
+</div>
 </section>
 <section class="slide level2">
 
@@ -539,19 +606,12 @@
 <img data-src="images/Pasted image 20241216151112.png" class="r-stretch quarto-figure-center"><p class="caption">An 1858 proportional symbol map by Charles Joseph Minard, with a circle for each department sized according to the amount of meat shipped to Paris for consumption, including pie charts distinguishing the types of meat.</p></section>
 <section class="slide level2">
 
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/6331225797_c659a9230f_b.jpg"></p>
-<figcaption>Источник: https://www.flickr.com/photos/b_willers/6331225797/in/photostream/</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/Pasted image 20250812183908.png"></p>
-<figcaption>Источник: https://ig.ft.com/coronavirus-global-data/</figcaption>
-</figure>
-</div>
-</section>
+
+<img data-src="images/6331225797_c659a9230f_b.jpg" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://www.flickr.com/photos/b_willers/6331225797/in/photostream/</p></section>
+<section class="slide level2">
+
+
+<img data-src="images/Pasted image 20250812183908.png" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://ig.ft.com/coronavirus-global-data/</p></section>
 <section class="slide level2">
 
 
@@ -575,22 +635,20 @@
 <img data-src="images/clipboard-1118569879.png" class="r-stretch"></section>
 <section class="slide level2">
 
-<p><img data-src="images/clipboard-2960644416.png"></p>
-<h3 id="карта-плотности-точек">Карта плотности точек</h3>
-<p>Подход отображения величины показателя с помощью скопления точек равномерно и случайным образом в пределах административного района.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/Pasted image 20241030110341.png"></p>
-<figcaption>Арманд Жозеф Фрер де Монтизон (Armand Joseph Frère de Montizon) - Carte Philosophique figurant la Population de la France</figcaption>
-</figure>
-</div>
-</section>
+
+<img data-src="images/clipboard-2960644416.png" class="r-stretch"></section>
 <section class="slide level2">
 
-<p>Самым знаменитым примером карты плотности точек является карта Джона Сноу, которая положила начало пространственному анализу, тематическому картографированию, ГИС, кластеризации и современной эпидемиологии, но на самом деле история не совсем такая, как ее обычно рассказывают<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a>.</p>
+<h3 id="карта-плотности-точек">Карта плотности точек</h3>
+<p>Подход отображения величины показателя с помощью скопления точек равномерно и случайным образом в пределах административного района.</p>
+
+<img data-src="images/Pasted image 20241030110341.png" class="r-stretch quarto-figure-center"><p class="caption">Арманд Жозеф Фрер де Монтизон (Armand Joseph Frère de Montizon) - Carte Philosophique figurant la Population de la France</p></section>
+<section class="slide level2">
+
+<p>Самым знаменитым примером карты плотности точек является карта Джона Сноу, которая положила начало пространственному анализу, тематическому картографированию, ГИС, кластеризации и современной эпидемиологии, но на самом деле история не совсем такая, как ее обычно рассказывают<a href="#/footnotes" class="footnote-ref" id="fnref4" role="doc-noteref" data-footnote-href="#/fn4" onclick=""><sup>4</sup></a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Pasted image 20241019161907.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="images/Pasted image 20241019161907.png" class="quarto-figure quarto-figure-center" width="738"></p>
 </figure>
 </div>
 <aside></aside></section>
@@ -615,17 +673,445 @@
 
 
 <img data-src="images/clipboard-4289759678.png" class="quarto-figure quarto-figure-center r-stretch" width="1730"></section>
+<section class="slide level2">
+
+
+<img data-src="images/clipboard-659947962.png" class="r-stretch quarto-figure-center"><p class="caption">Карта чемпионов футбольной лиги с 1936 по 2019 год (Map of NCAA football champions, 1936–2019, with an isotype proportional symbol). Источник: https://commons.wikimedia.org/wiki/File:College_Football_Champions_Map.png</p></section>
 <section id="картограммы" class="slide level2">
 <h2>Картограммы</h2>
+<p>Картограмма в терминологии картографии предполагает некое подобное карте изображение, поэтому, как правило, в них происходит либо искажение топологии (взаимного расположения объектов), либо искажение формы.</p>
+
+<img data-src="images/Pasted image 20241030143510.png" class="quarto-figure quarto-figure-center r-stretch" width="1365"></section>
+<section class="slide level2">
+
+<h3 id="фоновая-картограмма">Фоновая картограмма</h3>
+<p>В англоязычной литературе такие карты называются <em>choropleth</em> (от древнегреческого&nbsp;χῶρος&nbsp;(<em>khôros</em>) - ‘область, регион’ and&nbsp;πλῆθος&nbsp;(<em>plêthos</em>) -&nbsp;‘множество’). При этом термин “<em>cartogram</em>” существует самостоятельно и используется для того, что в традиции отечественной картографии принято называть анаморфной картой. Разница в терминологии часто приводит к неправильному переводу или неправильному названию этого типа карт в некоторых источниках.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Дополнительно</strong></p>
+</div>
+<div class="callout-content">
+<p>Скорее всего эта разница может быть объяснена самим происхождением понятия “картограмма” (нем. <em>kartogramm</em>), который был предложен немецкими картографами Хааком и Вайхелем и впоследствии получил широкое применение в качестве обозначения всех тематических карт. Судя по всему, отсюда он и перешел в отечественную картографию. Но со временем американский картограф Райс и другие конкретизировали термин и он получил свое современное значение в международной терминологии.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p>Один из самых распространенных типов отображения географических &nbsp;данных - все объекты раскрашиваются или заштриховываются в&nbsp;зависимости от значения какого-либо показателя.</p>
+<p>Основной визуальной характеристикой здесь является яркость или цвет, текстура или штриховка используется значительно реже.</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>На заметку</strong></p>
+</div>
+<div class="callout-content">
+<p>В традиции отечественной картографии выделяют методы качественного и количественного фона в зависимости от картографируемой переменной. Так, при создании фоновой картограммы по номинальной переменной (тип почвы, горные породы) применяется соответственно метод качественного фона, а при количественной (плотность населения, доход, ВВП) - метод количественного фона.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
 
 
-</section></section>
+<img data-src="images/Pasted image 20241218120042.png" class="r-stretch quarto-figure-center"><p class="caption">Карта уровня образования жителей Франции, Чарльз Дюпин, 1826 год</p></section>
+<section class="slide level2">
+
+<p>“<em>cartes teintées</em>” (тонированные карты) для отображения различных видов статистических данных: образование, уровень преступности, заболеваемость, условия проживания и прочие. Например, карта заболеваемости холерой в Париже 1832 года Шарля Пике.</p>
+
+<img data-src="images/Pasted image 20241218120304.png" class="r-stretch quarto-figure-center"><p class="caption">1832 год, карта эпидемии холеры в Париже, Шарль Пике (Charles Picquet)</p></section>
+<section class="slide level2">
+
+<p>Одной из первых карт качественного фона считается карта языковых регионов Готтфрида Гензела (<a href="https://en.wikipedia.org/wiki/Gottfried_Hensel">Gottfried Hensel</a>), опубликованная им в 1741 году в работе по языкознанию <strong>Synopsis Universae Philologiae</strong>.</p>
+
+<img data-src="images/Pasted image 20241218130229.png" width="1121" class="r-stretch quarto-figure-center"><p class="caption">Четыре mappae geographico-polyglottae с первыми словами из молитвы «Отче наш” на разных языках и системах письма. Источник: https://commons.wikimedia.org/wiki/File:Hensel_1741_4maps.jpg#/media/%D0%A4%D0%B0%D0%B9%D0%BB:Hensel_1741_4maps.jpg</p></section>
+<section class="slide level2">
+
+
+<img data-src="images/Pasted image 20241218130804.png" class="r-stretch quarto-figure-center"><p class="caption">Chorochromatic map of ethnic groups in Europe, from the 2nd edition of Physikalisher Atlas</p></section>
+<section class="slide level2">
+
+
+<img data-src="images/clipboard-4038511505.png" width="943" class="r-stretch quarto-figure-center"><p class="caption">Отношение площади купленной крестьянами земли к имеющимся у них надельной в %. Карта уездов Таврической губернии / Центральный статистический комитет. 1939. 2 л.</p></section>
+<section class="slide level2">
+
+
+<img data-src="images/clipboard-3958555903.png" width="1126" class="r-stretch quarto-figure-center"><p class="caption">Почвенная карта СССР / под ред. Л. И. Прасолова. М.: 1-я образцовая тип. им. Огиза РСФСР, [1938?]. 1 к. цв.; 34х27 см.</p></section>
+<section class="slide level2">
+
+<p>При создании фоновых картограмм следует учитывать, что они представляют минимальную визуальную равнозначность объектов, то есть наше восприятие будет искажено формой и размером самих по себе площадных объектов.</p>
+<p>Например, административно-территориальные единицы разного размера и формы, но с одинаковым количеством населения будут иметь совершенно различные паттерны распределения этого населения по территории.</p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Важно</strong></p>
+</div>
+<div class="callout-content">
+<p>В связи с этим рекомендуется нормализовывать данные.</p>
+<p>Основными приемами нормализации являются:</p>
+<ul>
+<li><p>вычисление плотности путем деления переменной на площадь территориальных единиц;</p></li>
+<li><p>вычисление доли от целого;</p></li>
+<li><p>вычисление средней величины на душу населения;</p></li>
+<li><p>скорость изменения по отношению к предыдущему периоду времени.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="дазиметрические-карты">Дазиметрические карты</h3>
+<p>Дазиметрическая карта - это такой тип тематической карты, в котором используется площадная символика (заливка или штриховка) для отображения пространственно распределенной величины на основе фоновой картограммы с ее корректировкой по вспомогательным данным о пространственном распределении.</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>На заметку</strong></p>
+</div>
+<div class="callout-content">
+<p>Название произошло от греческих <em>δασύς (dasýs)</em>&nbsp;&nbsp;«плотный» и&nbsp;<em>μέτρο (métro)</em>&nbsp;&nbsp;«мера». Такое название появилось благодаря тому, что такие карты, как правило создавались для отображения плотности населения.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/Pasted image 20241030204113.png" class="r-stretch quarto-figure-center"><p class="caption">Одна из первых дазиметрических карт: карта плотности населения</p></section>
+<section class="slide level2">
+
+
+<img data-src="images/clipboard-2094741205.png" width="1218" class="r-stretch quarto-figure-center"><p class="caption">Картограмма национального состава населения по Оренбургской области. Сост. по данным соц.-эконом. справочника «Средняя Волга» изд. 1934 г. / сост. Волж. картогр. ф-кой В.К.Т. Г.У.Г.С.К. Н.К.В.Д. 1935 г. [Саратов: Волж. картогр. ф-ка], 1935. 1 к. цв.; 30х48 см</p></section>
+<section class="slide level2">
+
+<h3 id="двухкомпонентные-фоновые-картограммы">Двухкомпонентные фоновые картограммы</h3>
+<p><em>Двухкомпонентные фоновые картограммы (bivariate choropleth)</em> сочетают в себе сразу две цветовые шкалы для отображения комбинации двух количественных переменных.</p>
+<p>С одной стороны, такой подход позволяет показать и проанализировать связь между двумя явлениями.</p>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Внимание</strong></p>
+</div>
+<div class="callout-content">
+<p>Главная сложность в том, что получается слишком неоднозначная цветовая шкала, восприятие которой затруднено.</p>
+<p>Поэтому широкого распространения такие картограммы не получили.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/Pasted image 20241220141619.png" class="quarto-figure quarto-figure-center" width="718"></p>
+</figure>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/Pasted image 20241220142318.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/Pasted image 20241223122707.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/Pasted image 20250812183641.png" width="1333" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://timogrossenbacher.ch/2019/04/bivariate-maps-with-ggplot2-and-sf/</p></section>
+<section class="slide level2">
+
+
+<img data-src="images/clipboard-21782008.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="images/Pasted image 20241223121054.png" class="r-stretch quarto-figure-center"><p class="caption">Kashnitsky I. &amp; Schöley J. (2018). Regional population structures at a glance. The Lancet, 392(10143), 209–210. https://doi.org/10.1016/S0140-6736(18)31194-2</p></section>
+<section class="slide level2">
+
+<h4 id="лица-чернова">Лица Чернова</h4>
+<p>Впервые этот метод был предложен американским статистиком Германом Черновым в 1973 году (<strong>Herman Chernoff, <a href="http://links.jstor.org/sici?sici=0162-1459%28197306%2968%3A342%3C361%3ATUOFTR%3E2.0.CO%3B2-2">The Use of Faces to Represent Points in K-Dimensional Space Graphically</a>, Journal of the American Statistical Association, vol.&nbsp;68, no. 342, pp.&nbsp;361–368, 1973</strong>).</p>
+<p>Как правило, такой способ комбинации отображения различных переменных значительно проще считывается визуально, чем цветовые сочетания или сочетания цвет-форма/размер символа, так как по своей природе человеку проще искать и воспринимать паттерны в лицах других людей.</p>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/clipboard-4271786495.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="анаморфная-карта-смежная-картограмма">Анаморфная карта (смежная картограмма)</h3>
+<p>Анаморфная (также встречается под названием анаморфированная карта или анаморфоза) карта - это пре­об­ра­зо­ван­ная не­про­стран­ст­вен­но­по­доб­ная кар­та, из­ме­няю­щая фор­мы по­ка­зан­ных объ­ек­тов и на­прав­ле­ния, но точ­но от­ра­жаю­щая их то­по­ло­ги­че­ские от­но­ше­ния.</p>
+<p>В иностранной литературе такие карты, как правило, называются просто картограммами - <em>cartogram</em> или <em>area cartogram.</em></p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>На заметку</strong></p>
+</div>
+<div class="callout-content">
+<p>Иногда анаморфные карты также называют картоидами, так как истинные очертания объектов заменены на геометрическую абстракцию.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/Pasted image 20250812184021.png" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://www.viewsoftheworld.net/?p=5833#more-5833</p></section>
+<section class="slide level2">
+
+<h3 id="несмежная-картограмма">Несмежная картограмма</h3>
+<p>Вариацией анаморфных карт является <em>несмежная картограмма</em> (иногда в отечественной литературе встречается термин “<em>топологически разорванная картограмма</em>”, иностранный термин - <em>“non-contiguous cartogram”</em>), в которой также размер объектов изменяется пропорционально визуализируемой величине, но с некоторыми особенностями:</p>
+<ul>
+<li><p>нарушается смежность объектов друг с другом;</p></li>
+<li><p>изменение размера объектов происходит пропорционально с сохранением их формы</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/Pasted image 20241107094627.png" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://howmuch.net/articles/atlas-of-economic-growth</p></section>
+<section class="slide level2">
+
+<h3 id="графические-картограммы">Графические картограммы</h3>
+<p>Как правило, в таком типе карт каждый исходный объект заменяется объектом универсальной формы, размер которого будет зависеть от величины показателя.</p>
+<p>Самыми распространенными являются картограмма ДеМерса и Дорлинга: первая использует квадраты, а вторая - круги.</p>
+
+<img data-src="images/Pasted image 20241107095233.png" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://www.nytimes.com/elections/2012/ratings/electoral-map.html</p></section>
+<section class="slide level2">
+
+
+<img data-src="images/Снимок экрана 2024-11-07 в 09.58.12.png" width="1374" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://archive.nytimes.com/www.nytimes.com/interactive/2008/08/04/sports/olympics/20080804_MEDALCOUNT_MAP.html?_r=0</p></section>
+<section class="slide level2">
+
+<h3 id="сеточная-картограмма">Сеточная картограмма</h3>
+<p><em>Сеточная картограмма</em> (также иногда встречается под названием <em>“мозаичная картограмма”</em>, иностранный же термин - <em>“mosaic cartogram” или “grid cartogram”</em>, также встречается термин <em>“hex grid cartogram”</em> для тех из них, которые используют шестиугольники) составляется из повторяющихся фигур одинакового размера (как правило, квадратов/прямоугольников или шестиугольников, так как ими можно без зазоров заполнить любую по размеру площадь на плоскости) для построения мозаичного представления переменной.</p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Важно</strong></p>
+</div>
+<div class="callout-content">
+<p>Эти картограммы могут показаться похожими на карты, построенные на основе регулярной сетки. Но при использовании регулярной сетки для агрегирования каждой ячейке соответствует определенное значение величины, полученное при агрегировании, а в сеточной картограмме каждая ячейка соответствует определенному и только одному значению отображаемой переменной.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/Pasted image 20241107094757.png" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://ourworldindata.org/population-growth</p></section>
+<section class="slide level2">
+
+
+<img data-src="images/Pasted image 20241107094814.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="images/Pasted image 20241107094923.png" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://www.washingtonpost.com/graphics/politics/2016-election/50-state-poll/</p></section>
+<section class="slide level2">
+
+
+<img data-src="images/Pasted image 20241107100218.png" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://www.viewsoftheworld.net/?p=4487</p></section>
+<section class="slide level2">
+
+<h3 id="карта-значений-с-альфа-каналом">Карта значений с альфа-каналом</h3>
+<p>Фактически такие карты представляют собой двухкомпонентные картограммы, в которых вторая переменная задает не цвет или яркость, а насыщенность цвета.</p>
+<p>Поэтому отдельные объекты, имеющие большее значение будут более яркими и насыщенными, а объекты с наименьшим влиянием на результат или отображаемую величину будут затемнены. Это затемнение и уменьшение насыщенности достигается за счет вариации в прозрачности (тот самый “альфа-канал”), что позволяет добиться эффекта наложения фильтра на карту.</p>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/Pasted image 20241219125822.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="images/Pasted image 20241219130533.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="плиточные-карты">Плиточные карты</h3>
+<p>На таких картах объекты преобразуются в объекты универсальной формы и размера (как правило, квадратные или шестиугольные), которые потом&nbsp;могут быть раскрашены по значениям показателей либо внутри них могут быть построены графики или приведены значения цифрами.</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>На заметку</strong></p>
+</div>
+<div class="callout-content">
+<p>Плиточные карты (в иностранной литературе называемые “<em>tile grid maps”</em>) рекомендуется применять тогда, когда нужно сделать так, чтобы зритель не отвлекался на форму и размер объектов, так &nbsp;как в этом случае все объекты будут выглядеть одинаково.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Важно</strong></p>
+</div>
+<div class="callout-content">
+<p>Главное отличие плиточной карты от графической картограммы в том, что здесь все объекты не только универсальной формы, но и одинакового размера, тогда как в графической картограмме размер варьируется в зависимости от величины отображаемого показателя.</p>
+<p>Сеточная картограмма отличается от плиточной карты тем, что в ней каждый объект составляется из небольших ячеек универсальной формы и размера, в то время, как в плиточной карте каждый исходный объект заменяется одним универсальным объектом.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/Снимок экрана 2025-08-12 в 18.42.45.png" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://ria.ru/20250811/reyting-2034531704.html</p></section>
+<section class="slide level2">
+
+
+<img data-src="images/Pasted image 20250812184416.png" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://t.me/data_publication/705</p></section>
+<section id="карты-линейных-знаков" class="slide level2">
+<h2>Карты линейных знаков</h2>
+<h3 id="карты-потоков">Карты потоков</h3>
+<p>Карты потоков (<em>flow maps</em>) - это тематические карты, использующие линейные символы для отображения движения между локациями: движение людей, трафик, поставки продукции, миграции животных и прочее.</p>
+<p>Как правило, карты потоков используют линейные символы с различной толщиной, чтобы показать объемы перемещений или передвижений между локациями, что делает их близкими к картам пропорциональных символов.</p>
+
+<img data-src="images/clipboard-2618394488.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="images/Pasted image 20241220143836.png" class="r-stretch quarto-figure-center"><p class="caption">Карта экспорта мяса железнодорожным транспортом из регионов Франции в Париж</p></section>
+<section class="slide level2">
+
+<p>Карты потоков показывают несколько аспектов перемещения:</p>
+<ul>
+<li><p><strong>начало и конец передвижения</strong>;</p></li>
+<li><p><strong>маршрут</strong>;</p></li>
+<li><p><strong>что перемещается</strong>;</p></li>
+<li><p><strong>количество перемещаемого</strong>;</p></li>
+<li><p><strong>направление перемещения</strong>;</p></li>
+<li><p><strong>скорость перемещения</strong>.</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/clipboard-1221424744.png" class="quarto-figure quarto-figure-center r-stretch" width="1172"></section>
+<section class="slide level2">
+
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clipboard-3877754548.png" class="quarto-figure quarto-figure-center" width="1105"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clipboard-1264485195.png" class="quarto-figure quarto-figure-center" width="1089"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/Pasted image 20250812185029.png" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://t.me/qgishack/587</p></section>
+<section class="slide level2">
+
+
+<img data-src="images/clipboard-4065235648.png" class="quarto-figure quarto-figure-center r-stretch" width="637"></section>
+<section class="slide level2">
+
+<h3 id="карты-изолиний">Карты изолиний</h3>
+<p><strong>Карты изолиний</strong> (также могут называться&nbsp;&nbsp;<strong>изоплетами</strong>,&nbsp;<strong>изоквантами</strong>&nbsp;или&nbsp;<strong>изарифмиями</strong>) - карты, на которых отображены линии равных значений (от греческого isos - равный).</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Дополнительно</strong></p>
+</div>
+<div class="callout-content">
+<p>В 1889 году Френсис Гальтон предложил термин изограмма (от греческого ἴσος&nbsp;<em>(isos)</em>&nbsp;‘равный’ и&nbsp;γράμμα&nbsp;<em>(gramma)</em>&nbsp;‘написание, рисунок’) для линий, показывающих равенство физической величины или количества, однако этот термин уже использовался в лингвистике для слов, в которых не повторяется ни одна буква дважды.</p>
+<p>В XX веке в США получил распространение термин изоплета (от греческого πλῆθος,&nbsp;<em>plethos</em>, ‘количество’), в то время как в Европе стал использоваться термин изоритма (от греческого ἀριθμός,&nbsp;<em>arithmos</em>, ‘число’). В нашей стране более широкое распространение получил термин “изолиния”, являющийся словом гибридного греческо-английского происхождения. Также существует еще один греческо-английский термин “изометрическая линия” (от греческого μέτρον,&nbsp;<em>metron</em>, ‘измерение’).</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p>Существует целый ряд специальных названий для изолиний в зависимости от того, какие величины они отображают:</p>
+<ul>
+<li><p>изобаты - линии равной глубины;</p></li>
+<li><p>изобары - линии равного давления;</p></li>
+<li><p>изогипса (горизонталь) - линия равной высоты;</p></li>
+<li><p>изотерма - линия равных температур;</p></li>
+<li><p>изокоста - линия комбинации факторов производства, которые можно купить за одну и ту же сумму;</p></li>
+<li><p>изокванта - линия одинакового объема производства продукции;</p></li>
+<li><p>изохора - линия равного объема;</p></li>
+<li><p>изохрона - линия равного времени.</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/Pasted image 20250812183533.png" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://riatelab.github.io/MDM/</p></section>
+<section class="slide level2">
+
+
+<img data-src="images/clipboard-379974923.png" class="r-stretch quarto-figure-center"><p class="caption">Isochrone map of time it takes to get to Paris. Carte des communications rapides entre Paris et le reste de la France /dressée par E. Martin ; E. Chevaillier, del. Source: University of Chicago Map Collection.</p></section>
+<section class="slide level2">
+
+
+<img data-src="images/clipboard-2484885589.png" class="quarto-figure quarto-figure-center r-stretch" width="736"></section>
+<section id="картодиаграммы" class="slide level2">
+<h2>Картодиаграммы</h2>
+<p>Картодиаграммы могут рассматриваться как один из случаев использования символов на карте, где вместо простых геометрических фигур или значков на карте размещаются графики.</p>
+
+<img data-src="images/clipboard-4203767013.png" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://openedo.mrsu.ru/catalog/Estestvennie/2015/Osnovy_geoinformatsionnogo_kartografirovaniya/main/37.html</p></section>
+<section class="slide level2">
+
+
+
+
+<img data-src="images/clipboard-1664510296.png" width="1131" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://www.primegroup.ru/services_and_decisions/informatsionno-analiticheskie_sistemy/sistemy_vizualizacii/</p></section></section>
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Сноски</h2>
 
 <ol>
-<li id="fn1"><p>Nuñez JR, Anderton CR, Renslow RS (2018) Optimizing colormaps with consideration for color vision deficiency to enable accurate interpretation of scientific data. PLoS ONE 13(7): e0199239. <a href="https://doi.org/10.1371/journal.pone.0199239" class="uri">https://doi.org/10.1371/journal.pone.0199239</a>.)</p></li>
-<li id="fn2"><p>How rainbow colour maps can distort data and be misleading <a href="https://theconversation.com/how-rainbow-colour-maps-can-distort-data-and-be-misleading-167159" class="uri">https://theconversation.com/how-rainbow-colour-maps-can-distort-data-and-be-misleading-167159</a></p></li>
-<li id="fn3"><p><a href="https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/something-in-the-water-the-mythology-of-snows-map-of-cholera/" class="uri">https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/something-in-the-water-the-mythology-of-snows-map-of-cholera/</a></p></li>
+<li id="fn1"><p><a href="https://www.axismaps.com/guide/visual-variables" class="uri">https://www.axismaps.com/guide/visual-variables</a></p></li>
+<li id="fn2"><p>Nuñez JR, Anderton CR, Renslow RS (2018) Optimizing colormaps with consideration for color vision deficiency to enable accurate interpretation of scientific data. PLoS ONE 13(7): e0199239. <a href="https://doi.org/10.1371/journal.pone.0199239" class="uri">https://doi.org/10.1371/journal.pone.0199239</a>.)</p></li>
+<li id="fn3"><p>How rainbow colour maps can distort data and be misleading <a href="https://theconversation.com/how-rainbow-colour-maps-can-distort-data-and-be-misleading-167159" class="uri">https://theconversation.com/how-rainbow-colour-maps-can-distort-data-and-be-misleading-167159</a></p></li>
+<li id="fn4"><p><a href="https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/something-in-the-water-the-mythology-of-snows-map-of-cholera/" class="uri">https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/something-in-the-water-the-mythology-of-snows-map-of-cholera/</a></p></li>
 </ol>
 </section>
     </div>
