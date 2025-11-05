@@ -617,7 +617,7 @@ $n = 1+|log_2 N|$ или $n = 1+|3.322 \lg N|$
 
 Как правило, такой способ комбинации отображения различных переменных значительно проще считывается визуально, чем цветовые сочетания или сочетания цвет-форма/размер символа, так как по своей природе человеку проще искать и воспринимать паттерны в лицах других людей.
 
----
+------------------------------------------------------------------------
 
 ![](images/clipboard-4271786495.png){fig-align="center"}
 
@@ -767,17 +767,14 @@ $n = 1+|log_2 N|$ или $n = 1+|3.322 \lg N|$
 
 ![](images/clipboard-1221424744.png){fig-align="center" width="1172"}
 
----
+------------------------------------------------------------------------
 
 ::::: columns
-
 ::: {.column width="50%"}
-
 ![](images/clipboard-3877754548.png){fig-align="center" width="1105"}
 :::
 
 ::: {.column width="50%"}
-
 ![](images/clipboard-1264485195.png){fig-align="center" width="1089"}
 :::
 :::::
@@ -802,7 +799,7 @@ $n = 1+|log_2 N|$ или $n = 1+|3.322 \lg N|$
 В XX веке в США получил распространение термин изоплета (от греческого πλῆθος, *plethos*, 'количество'), в то время как в Европе стал использоваться термин изоритма (от греческого ἀριθμός, *arithmos*, 'число'). В нашей стране более широкое распространение получил термин "изолиния", являющийся словом гибридного греческо-английского происхождения. Также существует еще один греческо-английский термин "изометрическая линия" (от греческого μέτρον, *metron*, 'измерение').
 :::
 
----
+------------------------------------------------------------------------
 
 Существует целый ряд специальных названий для изолиний в зависимости от того, какие величины они отображают:
 
@@ -826,11 +823,11 @@ $n = 1+|log_2 N|$ или $n = 1+|3.322 \lg N|$
 
 ![Источник: https://riatelab.github.io/MDM/](images/Pasted%20image%2020250812183533.png){fig-align="center"}
 
----
+------------------------------------------------------------------------
 
 ![Isochrone map of time it takes to get to Paris. Carte des communications rapides entre Paris et le reste de la France /dressée par E. Martin ; E. Chevaillier, del. Source: University of Chicago Map Collection.](images/clipboard-379974923.png){fig-align="center"}
 
----
+------------------------------------------------------------------------
 
 ![](images/clipboard-2484885589.png){fig-align="center" width="736"}
 
@@ -842,6 +839,6 @@ $n = 1+|log_2 N|$ или $n = 1+|3.322 \lg N|$
 
 ![Источник: https://openedo.mrsu.ru/catalog/Estestvennie/2015/Osnovy_geoinformatsionnogo_kartografirovaniya/main/37.html](images/clipboard-4203767013.png){fig-align="center"}
 
----
+------------------------------------------------------------------------
 
 ![Источник: https://www.primegroup.ru/services_and_decisions/informatsionno-analiticheskie_sistemy/sistemy_vizualizacii/](images/clipboard-1664510296.png){fig-align="center" width="1131"}

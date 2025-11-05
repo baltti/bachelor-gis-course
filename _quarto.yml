@@ -35,6 +35,8 @@ website:
         - crs.qmd
         - layout.qmd
         - floor area ratio.qmd
+        - buffer.qmd
+        - visualisation.qmd
 
 format:
   html:
