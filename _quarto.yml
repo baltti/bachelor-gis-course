@@ -37,6 +37,7 @@ website:
         - floor area ratio.qmd
         - buffer.qmd
         - visualisation.qmd
+        - georeferencing.qmd
 
 format:
   html:
