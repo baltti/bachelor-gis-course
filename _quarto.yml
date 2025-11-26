@@ -23,6 +23,9 @@ website:
 
   sidebar:
     - id: practice
+      logo: "images/logo.png"
+      pinned: true
+      align: center
       title: "Практикум"
       style: "docked"
       collapse-level: 1
@@ -38,6 +41,7 @@ website:
         - buffer.qmd
         - visualisation.qmd
         - georeferencing.qmd
+        - terrain.qmd
 
 format:
   html:

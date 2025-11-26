@@ -58,5 +58,8 @@
   },
   "georeferencing.qmd": {
     "georeferencing.html": "8f0c4711"
+  },
+  "terrain.qmd": {
+    "terrain.html": "82b498ff"
   }
 }
