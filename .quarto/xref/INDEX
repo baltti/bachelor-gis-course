@@ -61,5 +61,17 @@
   },
   "terrain.qmd": {
     "terrain.html": "82b498ff"
+  },
+  "Без названия.qmd": {
+    "Без названия.html": "fa3549bd"
+  },
+  "test.qmd": {
+    "test.html": "a5043efe"
+  },
+  "06-vector.qmd": {
+    "06-vector.html": "9d2d2c7e"
+  },
+  "07-raster.qmd": {
+    "07-raster.html": "2e04f787"
   }
 }
