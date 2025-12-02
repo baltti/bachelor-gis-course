@@ -567,9 +567,7 @@ reverse($geometry)
 
 [^6]: Документация функции <https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/rasterterrainanalysis.html?highlight=relief%20analysis#slope>
 
-Расчет крутизны склонов или их уклона и экспозиции осуществляется на основе производных первого порядка.
-
-![Определение основных геоморфометрических параметров по Zevenbergen, Thorne (1987). Источник: https://gis-lab.info/qa/geomorphometric-parameters-theory.html](images/800px-Geomorpho_theory_03.png){alt="Определение основных геоморфометрических параметров по Zevenbergen, Thorne (1987). Источник: https://gis-lab.info/qa/geomorphometric-parameters-theory.html" fig-align="center"}
+![Определение основных геоморфометрических параметров по Zevenbergen, Thorne (1987). Источник: https://gis-lab.info/qa/geomorphometric-parameters-theory.html](images/800px-Geomorpho_theory_03.png){fig-align="center"}
 
 ### Расчет крутизны склонов
 
@@ -633,11 +631,7 @@ $$
 
 Этот показатель рассчитывается на основе разности значений между пикселями в сетке 3 на 3. Таким образом, каждый полученный пиксель содержит разницу между центральным пикселем и 8 его окружащими.
 
-![Riley et al (1999) “A Terrain ruggedness Index That Quantifies Topographic heterogeneity”[^10]](images/Снимок%20экрана%202025-03-14%20в%2014.09.56.png){alt="Riley et al (1999) “A Terrain ruggedness Index That Quantifies Topographic heterogeneity”" fig-align="center"}
-
-[^10]: <https://download.osgeo.org/qgis/doc/reference-docs/Terrain_Ruggedness_Index.pdf>
-
-[^11]: <https://download.osgeo.org/qgis/doc/reference-docs/Terrain_Ruggedness_Index.pdf>
+![Riley et al (1999) “A Terrain ruggedness Index That Quantifies Topographic heterogeneity”](images/Снимок%20экрана%202025-03-14%20в%2014.09.56.png){fig-align="center"}
 
 ![](images/213.PNG)
 

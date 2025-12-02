@@ -145,7 +145,20 @@
 <p>Растр - это набор ячеек, организованных в строки и столбцы.</p>
 <p>Строго говоря, растр - это некоторая матрица значений.</p>
 
-<img data-src="images/raster_geom.svg" width="1957" class="r-stretch quarto-figure-center"><p class="caption">Источник: Самсонов Т.Е. Основы геоинформатики: курс лекций : сайт. 2025. — URL: https://tsamsonov.github.io/gis-course/. Дата публикации: 24.04.2025. DOI: 10.5281/zenodo.7902351</p></section>
+<img data-src="images/raster_geom.svg" width="1304" class="r-stretch quarto-figure-center"><p class="caption">Источник: Самсонов Т.Е. Основы геоинформатики: курс лекций : сайт. 2025. — URL: https://tsamsonov.github.io/gis-course/. Дата публикации: 24.04.2025. DOI: 10.5281/zenodo.7902351</p><div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Дополнительно</strong></p>
+</div>
+<div class="callout-content">
+<p>Чаще всего растры двумерны, но существуют и трехмерные растры - кубы данных</p>
+</div>
+</div>
+</div>
+</section>
 <section class="slide level2">
 
 <div class="quarto-figure quarto-figure-center">
@@ -158,19 +171,6 @@
 <p><img data-src="images/dimensions.svg" width="600"></p>
 <figcaption>Источник: Самсонов Т.Е. Основы геоинформатики: курс лекций : сайт. 2025. — URL: https://tsamsonov.github.io/gis-course/. Дата публикации: 24.04.2025. DOI: 10.5281/zenodo.7902351</figcaption>
 </figure>
-</div>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>На заметку</strong></p>
-</div>
-<div class="callout-content">
-<p>Чаще всего растры двумерны, но существуют и трехмерные растры - кубы данных</p>
-</div>
-</div>
 </div>
 </section></section>
 <section id="перепроецирование-растра" class="title-slide slide level1 center">
@@ -223,36 +223,63 @@
 </div>
 </div></div>
 </section>
-<section id="передискретизация" class="slide level2">
-<h2>Передискретизация</h2>
+<section id="передискретизация1" class="slide level2">
+<h2>Передискретизация<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a></h2>
 <h3 id="метод-ближайшего-соседа">Метод ближайшего соседа</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/resampling_nearest_ru.png" width="1343"></p>
+<figcaption>Источник: https://docs.nextgis.ru/docs_ngqgis/source/transformations.html</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
 <p><strong>Ближайший сосед</strong> - самый быстрый алгоритм. Значение берется из ближайшего пикселя с известным значением.</p>
 <ul>
 <li><p>Использует только те значения, которые встречаются в исходном растре.</p></li>
 <li><p>Изображение не сглаживается, возможно появление артефактов в виде ступенек или ареалов.</p></li>
 </ul>
-
-<img data-src="images/resampling_nearest_ru.png" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://docs.nextgis.ru/docs_ngqgis/source/transformations.html</p></section>
-<section id="передискретизация-1" class="slide level2">
+</div></div>
+<aside></aside></section>
+<section id="передискретизация" class="slide level2">
 <h2>Передискретизация</h2>
 <h3 id="линейный-метод">Линейный метод</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/resampling_linear_ru.png"></p>
+<figcaption>Источник: https://docs.nextgis.ru/docs_ngqgis/source/transformations.html</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
 <p><strong>Линейная передискретизация</strong> - использует 4 (2х2) ближайших пикселя исходного растра и рассчитывает значение итоговой ячейки с помощью линейной функции интерполяции.</p>
 <ul>
 <li><p>Итоговые значения могут отличаться от исходного набора.</p></li>
 <li><p>Изображение слегка сглаживается.</p></li>
 </ul>
-
-<img data-src="images/resampling_linear_ru.png" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://docs.nextgis.ru/docs_ngqgis/source/transformations.html</p></section>
-<section id="передискретизация-2" class="slide level2">
+</div></div>
+</section>
+<section id="передискретизация-1" class="slide level2">
 <h2>Передискретизация</h2>
 <h3 id="кубическая-передискретизация">Кубическая передискретизация</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/resampling_cubic_ru.png"></p>
+<figcaption>Источник: https://docs.nextgis.ru/docs_ngqgis/source/transformations.html</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
 <p><strong>Кубическая</strong> и <strong>кубическая с b-сплайном</strong> - использует 16 (4х4) ближайших пикселей исходного растра и рассчитывает значение итоговой ячейки с помощью кубической/сплайновой функции.</p>
 <ul>
 <li><p>Итоговые значения могут отличаться от исходного набора.</p></li>
 <li><p>Изображение сильно сглаживается.</p></li>
 </ul>
-
-<img data-src="images/resampling_cubic_ru.png" class="r-stretch quarto-figure-center"><p class="caption">Источник: https://docs.nextgis.ru/docs_ngqgis/source/transformations.html</p></section>
+</div></div>
+</section>
 <section id="как-выбрать-алгоритм-передискретизации" class="slide level2">
 <h2><strong>Как выбрать алгоритм передискретизации?</strong></h2>
 <p>Метод передискретизации имеет смысл выбирать в зависимости от типа растра:</p>
@@ -260,13 +287,13 @@
 <li><p><em>Индексированный растр</em> - подойдёт только <strong>ближайший сосед</strong>, иначе при трансформации получатся значения, не совпадающие ни с одним из индексов.</p></li>
 <li><p><em>Цветная карта/снимок</em> (в каждом пикселе - значение цвета, например, в RGB) - можно использовать все алгоритмы, но лучше всего подходит <strong>линейный</strong></p></li>
 <li><p><em>Одноканальный растр</em> (например, цифровая модель рельефа) - можно использовать любой алгоритм <em>кроме ближайшего соседа</em>, если нужно сохранить плавность переходов. Ближайший сосед можно выбрать, если критично важно сохранить исходные значения, и появляющаяся ступенчатость не принципиальна.</p></li>
-<li><p><em>Многоканальный растр</em> (пиксели содержат числовые значения определённого спектра, например, инфракрасного) - лучше всего подходит <strong>линейная передескритизация</strong>, но можно использовать и другие способы.</p></li>
+<li><p><em>Многоканальный растр</em> (пиксели содержат числовые значения определённого спектра, например, инфракрасного) - лучше всего подходит <strong>линейная передискретизация</strong>, но можно использовать и другие способы.</p></li>
 </ul>
 </section></section>
 <section>
-<section id="растровая-алгебра1" class="title-slide slide level1 center">
-<h1>Растровая алгебра<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a></h1>
-<p>Существует классификация операций растрового анализа, введенная американским профессором Даной Томлином, которая объединяет их под общим названием “алгебра карт” или “растровая алгебра”<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a>.</p>
+<section id="растровая-алгебра2" class="title-slide slide level1 center">
+<h1>Растровая алгебра<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a></h1>
+<p>Существует классификация операций растрового анализа, введенная американским профессором Даной Томлином, которая объединяет их под общим названием “алгебра карт” или “растровая алгебра”<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a>.</p>
 <p>Предполагая, что обработке подвергается <em>каждая</em> ячейка растра, данная классификация разделяет все операции по охвату относительно текущей ячейки</p>
 <aside></aside></section>
 <section class="slide level2">
@@ -331,11 +358,49 @@
 
 
 <img data-src="images/clipboard-2070830189.png" width="724" class="r-stretch quarto-figure-center"><p class="caption">Теневой рельеф</p></section>
-<section class="slide level2">
+<section id="фокальная-растровая-алгебра-2" class="slide level2">
+<h2>Фокальная растровая алгебра</h2>
+<h3 id="морфометрический-анализ-рельефа">Морфометрический анализ рельефа</h3>
+<p><strong>Уклон поверхности</strong> – это угол наклона в точке пересечения между горизонтальной плоскостью и плоскостью касательной к земной поверхности; фиксирует интенсивность перепада высот (градиент) между двумя заданными точками.</p>
+<p><strong>Экспозиция поверхности</strong> – это угол по часовой стрелке между определенным направлением (как правило, на север) и проекцией уклона на горизонтальную плоскость; фиксирует направление (азимут) максимального уклона (градиента) земной поверхности.</p>
+</section>
+<section id="фокальная-растровая-алгебра-3" class="slide level2">
+<h2>Фокальная растровая алгебра</h2>
+<h3 id="морфометрический-анализ-рельефа-1">Морфометрический анализ рельефа</h3>
 
+<img data-src="images/clipboard-3125959072.png" class="quarto-figure quarto-figure-center r-stretch" width="911"></section>
+<section id="фокальная-растровая-алгебра-4" class="slide level2">
+<h2>Фокальная растровая алгебра</h2>
+<h3 id="морфометрический-анализ-рельефа-2">Морфометрический анализ рельефа</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/800px-Geomorpho_theory_03.png"></p>
+<figcaption>Определение основных геоморфометрических параметров по Zevenbergen, Thorne (1987). Источник: https://gis-lab.info/qa/geomorphometric-parameters-theory.html</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<p>Расчет крутизны склонов (<span class="math inline">\(\alpha\)</span>) или их уклона (<span class="math inline">\(\beta\)</span>) и экспозиции осуществляется на основе производных первого порядка.</p>
+<p><span class="math display">\[
+\alpha=arctan (\sqrt{G^2+H^2}),\: где\: G=\dfrac{z_6-z_4}{2l},\\H=\dfrac{z_2-z_8}{2l}
+\]</span></p>
+<p><span class="math display">\[
+\beta=180^\circ-arctan(\dfrac{\pm\,H}{\pm\,G})+90^\circ(\dfrac{\pm\,G}{|G|})
+\]</span></p>
+</div></div>
+</section>
+<section id="фокальная-растровая-алгебра-5" class="slide level2">
+<h2>Фокальная растровая алгебра</h2>
+<h3 id="морфометрический-анализ-рельефа-3">Морфометрический анализ рельефа</h3>
 
 <img data-src="images/clipboard-3295490945.png" class="r-stretch quarto-figure-center"><p class="caption">Крутизна склонов</p></section>
-<section id="фокальная-растровая-алгебра-2" class="slide level2">
+<section id="фокальная-растровая-алгебра-6" class="slide level2">
+<h2>Фокальная растровая алгебра</h2>
+<h3 id="морфометрический-анализ-рельефа-4">Морфометрический анализ рельефа</h3>
+
+<img data-src="images/clipboard-3231032346.png" class="r-stretch quarto-figure-center"><p class="caption">Экспозиция склонов</p></section>
+<section id="фокальная-растровая-алгебра-7" class="slide level2">
 <h2>Фокальная растровая алгебра</h2>
 <p>Расширенность окрестности означает, что она определяется не фиксированным шаблоном, а условием, которое должно выполниться для того, чтобы анализ в ячейке считался выполненным.</p>
 <div class="columns">
@@ -451,7 +516,7 @@
 </section>
 <section id="взвешенный-растровый-оверлей" class="slide level2">
 <h2>Взвешенный растровый оверлей</h2>
-<p>Пример <strong>взвешенного оверлея</strong> — выбор территорий, обладающих оптимальной совокупностью признаков<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a></p>
+<p>Пример <strong>взвешенного оверлея</strong> — выбор территорий, обладающих оптимальной совокупностью признаков<a href="#/footnotes" class="footnote-ref" id="fnref4" role="doc-noteref" data-footnote-href="#/fn4" onclick=""><sup>4</sup></a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/image-46018781.png" class="quarto-figure quarto-figure-center"></p>
@@ -509,9 +574,10 @@
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Сноски</h2>
 
 <ol>
-<li id="fn1"><p><em>Самсонов Т.Е.</em> <strong>Визуализация и анализ географических данных на языке R.</strong> М.: Географический факультет МГУ, 2024. DOI: <a href="https://doi.org/10.5281/zenodo.901911">10.5281/zenodo.901911</a></p></li>
-<li id="fn2"><p>Tomlin, Dana. 2012. <em>GIS and Cartographic Modeling</em>. 2nd Editio. ESRI Press.</p></li>
-<li id="fn3"><p><em>Самсонов Т.Е.</em> <strong>Основы геоинформатики: курс лекций</strong> : сайт. 2025. — URL: https://tsamsonov.github.io/gis-course/. Дата публикации: 24.04.2025. DOI: 10.5281/zenodo.7902351</p></li>
+<li id="fn1"><p>https://docs.nextgis.ru/docs_ngqgis/source/transformations.html</p></li>
+<li id="fn2"><p><em>Самсонов Т.Е.</em> <strong>Визуализация и анализ географических данных на языке R.</strong> М.: Географический факультет МГУ, 2024. DOI: <a href="https://doi.org/10.5281/zenodo.901911">10.5281/zenodo.901911</a></p></li>
+<li id="fn3"><p>Tomlin, Dana. 2012. <em>GIS and Cartographic Modeling</em>. 2nd Editio. ESRI Press.</p></li>
+<li id="fn4"><p><em>Самсонов Т.Е.</em> <strong>Основы геоинформатики: курс лекций</strong> : сайт. 2025. — URL: https://tsamsonov.github.io/gis-course/. Дата публикации: 24.04.2025. DOI: 10.5281/zenodo.7902351</p></li>
 </ol>
 </section>
     </div>
