@@ -25,7 +25,7 @@ format:
 Чаще всего растры двумерны, но существуют и трехмерные растры - кубы данных
 :::
 
----
+------------------------------------------------------------------------
 
 ![](images/dimensions.svg){fig-align="center"}
 
@@ -73,8 +73,7 @@ format:
 
 ::::: columns
 ::: {.column width="50%"}
-
-![Источник: https://docs.nextgis.ru/docs_ngqgis/source/transformations.html](images/resampling_nearest_ru.png){alt="Источник: https://docs.nextgis.ru/docs_ngqgis/source/transformations.html" fig-align="center" width="1343"}
+![Источник: https://docs.nextgis.ru/docs_ngqgis/source/transformations.html](images/resampling_nearest_ru.png){fig-align="center" width="1343"}
 :::
 
 ::: {.column width="50%"}
@@ -92,7 +91,7 @@ format:
 
 ::::: columns
 ::: {.column width="50%"}
-![Источник: https://docs.nextgis.ru/docs_ngqgis/source/transformations.html](images/resampling_linear_ru.png){alt="Источник: https://docs.nextgis.ru/docs_ngqgis/source/transformations.html" fig-align="center"}
+![Источник: https://docs.nextgis.ru/docs_ngqgis/source/transformations.html](images/resampling_linear_ru.png){fig-align="center"}
 :::
 
 ::: {.column width="50%"}
@@ -110,7 +109,7 @@ format:
 
 ::::: columns
 ::: {.column width="50%"}
-![Источник: https://docs.nextgis.ru/docs_ngqgis/source/transformations.html](images/resampling_cubic_ru.png){alt="Источник: https://docs.nextgis.ru/docs_ngqgis/source/transformations.html" fig-align="center"}
+![Источник: https://docs.nextgis.ru/docs_ngqgis/source/transformations.html](images/resampling_cubic_ru.png){fig-align="center"}
 :::
 
 ::: {.column width="50%"}
@@ -144,7 +143,7 @@ format:
 
 Предполагая, что обработке подвергается *каждая* ячейка растра, данная классификация разделяет все операции по охвату относительно текущей ячейки
 
----
+------------------------------------------------------------------------
 
 1.  *Локальные* — анализируется одна ячейка растра или совпадающие в пространстве ячейки нескольких растров
 
@@ -188,7 +187,7 @@ format:
 
 ![Источник: Самсонов Т.Е. Визуализация и анализ географических данных на языке R. М.: Географический факультет МГУ, 2024. DOI: 10.5281/zenodo.901911](images/raster_neighborhoods.png){fig-align="center" width="851"}
 
----
+------------------------------------------------------------------------
 
 ![Теневой рельеф](images/clipboard-2070830189.png){fig-align="center" width="724"}
 
@@ -212,7 +211,7 @@ format:
 
 ::::: columns
 ::: {.column width="50%"}
-![Определение основных геоморфометрических параметров по Zevenbergen, Thorne (1987). Источник: https://gis-lab.info/qa/geomorphometric-parameters-theory.html](images/800px-Geomorpho_theory_03.png){alt="Определение основных геоморфометрических параметров по Zevenbergen, Thorne (1987). Источник: https://gis-lab.info/qa/geomorphometric-parameters-theory.html" fig-align="center"}
+![Определение основных геоморфометрических параметров по Zevenbergen, Thorne (1987). Источник: https://gis-lab.info/qa/geomorphometric-parameters-theory.html](images/800px-Geomorpho_theory_03.png){fig-align="center"}
 :::
 
 ::: {.column width="50%"}
@@ -232,7 +231,7 @@ $$
 
 ### Морфометрический анализ рельефа
 
-![Крутизна склонов](images/clipboard-3295490945.png){alt="Крутизна склонов" fig-align="center"}
+![Крутизна склонов](images/clipboard-3295490945.png){fig-align="center"}
 
 ## Фокальная растровая алгебра
 
@@ -344,7 +343,7 @@ $$
 
 ## Взвешенный растровый оверлей
 
-![Итоговый выбор](images/unnamed-chunk-20-1.png){alt="Тип землепользования" fig-align="center" width="1200"}
+![Тип землепользования](images/unnamed-chunk-20-1.png){fig-align="center" width="1200"}
 
 ## Извлечение значений растра
 

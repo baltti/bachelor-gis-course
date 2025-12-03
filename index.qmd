@@ -57,3 +57,19 @@ author:
 ```
 
 [Открыть в новой вкладке](https://baltti.github.io/bachelor-gis-course/05-visualisation.html){target="_blank"}
+
+# Основы векторного анализа
+
+```{=html}
+<iframe src="https://baltti.github.io/bachelor-gis-course/06-vector.html" width="800" height="400"></iframe>
+```
+
+[Открыть в новой вкладке](https://baltti.github.io/bachelor-gis-course/06-vector.html){target="_blank"}
+
+# Основы растрового анализа
+
+```{=html}
+<iframe src="https://baltti.github.io/bachelor-gis-course/07-raster.html" width="800" height="400"></iframe>
+```
+
+[Открыть в новой вкладке](https://baltti.github.io/bachelor-gis-course/07-raster.html){target="_blank"}
