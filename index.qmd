@@ -12,6 +12,12 @@ author:
 
 [Балтыжакова Татьяна Игоревна](https://edu.itmo.ru/ru/lecturers_and_professors/329024), кандидат технических наук, доцент Института дизайна и урбанистики.
 
+::: callout-note
+## Цитирование материалов
+
+*Балтыжакова Т.И.* **Геоинформационные системы** : сайт. 2026. — URL: <https://baltti.github.io/bachelor-gis-course/>. DOI: [10.5281/zenodo.19050322](https://doi.org/10.5281/zenodo.19050322)
+:::
+
 ::: callout-tip
 ## Как смотреть лекции
 
