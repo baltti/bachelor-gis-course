@@ -10,6 +10,8 @@ website:
   navbar:
     left:
       - href: index.qmd
+        text: О курсе
+      - href: lectures.qmd
         text: Лекции
       - sidebar:practice
   #    - href: exam.qmd
