@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Балтыжакова Татьяна">
 
-<title>Анализ доступности объектов – Геоинформационные системы</title>
+<title>Лекции – Геоинформационные системы</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -135,12 +136,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Содержание</h2>
    
   <ul>
-  <li><a href="#создание-буферных-зон" id="toc-создание-буферных-зон" class="nav-link active" data-scroll-target="#создание-буферных-зон">Создание буферных зон</a></li>
-  <li><a href="#поиск-объектов-по-расположению" id="toc-поиск-объектов-по-расположению" class="nav-link" data-scroll-target="#поиск-объектов-по-расположению">Поиск объектов по расположению</a>
-  <ul class="collapse">
-  <li><a href="#определение-зданий-попавших-в-границы-буферных-зон" id="toc-определение-зданий-попавших-в-границы-буферных-зон" class="nav-link" data-scroll-target="#определение-зданий-попавших-в-границы-буферных-зон">Определение зданий, попавших в границы буферных зон</a></li>
-  <li><a href="#расчет-количества-доступных-школ" id="toc-расчет-количества-доступных-школ" class="nav-link" data-scroll-target="#расчет-количества-доступных-школ">Расчет количества доступных школ</a></li>
-  </ul></li>
+  <li><a href="#понятие-геоинформационная-система" id="toc-понятие-геоинформационная-система" class="nav-link active" data-scroll-target="#понятие-геоинформационная-система">Понятие “геоинформационная система”</a></li>
   </ul>
 </nav>
     </div>
@@ -149,14 +145,33 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Анализ доступности объектов</h1>
+<h1 class="title">Лекции</h1>
 </div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">АВТОР</div>
+  <div class="quarto-title-meta-heading">Организация</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Балтыжакова Татьяна </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Институт дизайна и урбанистики, Университет ИТМО
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    
+      
+    <div>
+    <div class="quarto-title-meta-heading">Дата публикации</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">31 августа 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -166,200 +181,25 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="создание-буферных-зон" class="level1">
-<h1>Создание буферных зон</h1>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Важно
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Перед тем, как строить буферные зоны объектов, следует их перепроецировать в плоскую прямоугольную систему координат.</p>
-</div>
-</div>
-<p>Буферная зона - это область на карте, каждая точка внутри которой находится в пределах заданного расстояния от исходного объекта.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-1352830376.png" class="img-fluid figure-img" width="1576"></p>
-<figcaption>Источник: Shen, J.; Chen, L.; Wu, Y.; Jing, N. Approach to Accelerating Dissolved Vector Buffer Generation in Distributed In-Memory Cluster Architecture. ISPRS Int. J. Geo-Inf. 2018, 7, 26. https://doi.org/10.3390/ijgi7010026</figcaption>
-</figure>
-</div>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Предупреждение
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Буферные зоны - это один из тех инструментов, которые зависимы от системы координат исходного слоя. То есть размер буфера может быть задан только в единицах измерения слоя.</p>
-</div>
-</div>
-<p>Для создания буферных зон есть одноименный инструмент <em>Буферизация</em> в панели инструментов анализа.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-2295926105.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="856"></p>
-</figure>
-</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Дополнительно
+<span class="screen-reader-only">Дополнительно</span>Как смотреть лекции
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Как видите, у нас есть несколько очень похожих инструментов, мы с вами будем пользоваться самым простым из них.</p>
-<p>Что же делают остальные?</p>
-<ul>
-<li><p>буфер переменной ширины - размер буферной зоны будет зависеть от величины какого-то показателя;</p></li>
-<li><p>множественный буфер - создание сразу нескольких буферных зон с определенным шагом по расстоянию;</p></li>
-<li><p>конические буферы (на самом деле клиновидные) - буфер для линейного объекта с разными значениями размера в начале и конце линии;</p></li>
-<li><p>односторонний буфер - создание буфера только с одной стороны линейного объекта;</p></li>
-<li><p>создать клиновидные буферы - создание буферов в форме сектора круга от точечных объектов.</p></li>
-</ul>
+<p>Презентации можно смотреть либо пользуясь стрелками навигации, либо, листая их стрелками на клавиатуре, после одного щелчка левой кнопки мыши. Если презентация открыта в новой вкладке браузера, вы можете развернуть ее в полноэкранный режим кнопкой <code>F</code>.</p>
 </div>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-3630713758.png" class="img-fluid figure-img" width="574"></p>
-<figcaption>Источник: https://help.axioma-gis.ru/index.html?editing_buffer.html</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-1072641176.png" class="img-fluid figure-img" width="574"></p>
-<figcaption>Источник: https://help.axioma-gis.ru/index.html?editing_buffer.html</figcaption>
-</figure>
-</div>
-<p>В качестве размера буферной зоны мы воспользуемся основным градостроительным нормативом доступности для школ - 500 метров до жилых зданий.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-На заметку
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Если вы использовали другие объекты, то вы можете взять другое расстояние.</p>
-<p>Например, для детских садов зона доступности - 300 метров, для поликлиник - 1000 метров.</p>
-<p>Для объектов коммерческой инфраструктуры нормативов нет, но вы можете взять свое произвольное значение.</p>
-</div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-1525116501.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1520"></p>
-</figure>
-</div>
-<p>Так как в нашем случае буферные зоны строятся для точечных объектов, то основным параметром будет расстояние - размер зоны.</p>
-<p>Также роль будет играть параметр <em>Выполнить слияние результирующих полигонов</em>: при его выборе все полученные полигоны будут объединены в один объект.</p>
-<p>Если вы хотите сразу сохранить свой слой без создания временного файла, то вы можете нажать на кнопку <img src="images/clipboard-4068957659.png" class="img-fluid" width="55"> и выбрать пункт <em>Сохранить в файл</em>, после чего выбрать место для сохранения и указать имя файла.</p>
-<p>В итоге вы увидите новый слой в панели слоев и его отображение на карте.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-2114513451.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1088"></p>
-</figure>
-</div>
-</section>
-<section id="поиск-объектов-по-расположению" class="level1">
-<h1>Поиск объектов по расположению</h1>
-<section id="определение-зданий-попавших-в-границы-буферных-зон" class="level2">
-<h2 class="anchored" data-anchor-id="определение-зданий-попавших-в-границы-буферных-зон">Определение зданий, попавших в границы буферных зон</h2>
-<p>Далее мы можем осуществить поиск домов, которые попадают в заданные области обслуживания.</p>
-<p>Для поиска объектов есть группа инструментов <strong>Вектор — Выборка</strong>.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-На заметку
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Часть инструментов в ней начинается со слова <em>Выбрать (Выделить)</em>, а часть - <em>Извлечь</em>. Разница между ними в том, что в первом случае объекты просто выделяются в исходном слое, а во втором - объекты, соответствующие заданным условия, извлекаются в новый слой.</p>
-</div>
-</div>
-<p>Краткое описания инструментов:</p>
-<ul>
-<li><p><em>выбрать/извлечь по атрибуту</em> - поиск объектов по значению одного из атрибутов;</p></li>
-<li><p><em>выбрать/извлечь по выражению</em> - поиск объектов по значениям нескольких атрибутов одновременно;</p></li>
-<li><p><em>выбрать/извлечь по пространственному отношению</em> - поиск объектов по их расположению относительно объектов другого слоя;</p></li>
-<li><p><em>выделить/извлечь в пределах расстояния</em> - поиск объектов в пределах заданного расстояния от других объектов;</p></li>
-<li><p><em>случайное выделение/случайное извлечение</em> - случайная выборка объектов из слоя (заданного числа объектов или заданного процента объектов);</p></li>
-<li><p><em>случайное выделение в подмножествах/случайное извлечение в подмножествах</em> - сначала слой разбивается по категориям по одному из атрибутов, потом из каждой категории извлекается заданное число или заданный процент объектов.</p></li>
-</ul>
-<p>Нам нужно определить, какие здания попадают в буферные зоны, поэтому нужно воспользоваться <strong>выбрать\извлечь по пространственному отношению</strong>.</p>
-<p>Для выбора объектов нужно сначала указать в каком слое осуществляется поиск (слой со зданиями), геометрический оператор (как объекты расположены относительно объектов другого слоя) и слой для сравнения (буферные зоны). Геометрические операторы в данном случае лучше выбирать <em>Пересекает</em> и <em>Находится внутри</em>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-126608668.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1514"></p>
-</figure>
-</div>
-<p>По результатам извлечения вы получите новый слой, который будет содержать только здания, удовлетворяющие заданным условиям.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-4146872066.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1119"></p>
-</figure>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Дополнительно
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Инструмент <em>Выбрать по расположению</em> работает аналогично, но результатом у вас будет не просто новый слой, а выделенный набор объектов в текущем слое.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Дополнительно
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Такеж вы можете попробовать найти здания в пределах заданного расстояния от школ при помощи инструментов <em>Выделить в пределах расстояния/Извлечение в пределах расстояния</em>.</p>
-<p>Однако следует помнить, что расстояние будет определяться в системе координат проекта, поэтому будет отличаться от того, что получено при помощи буферных зон.</p>
-</div>
-</div>
-</section>
-<section id="расчет-количества-доступных-школ" class="level2">
-<h2 class="anchored" data-anchor-id="расчет-количества-доступных-школ">Расчет количества доступных школ</h2>
-<p>Рассчитаем число доступных школ для каждого из наших зданий с использованием выражения агрегирования.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-3012975634.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1621"></p>
-</figure>
-</div>
-<pre><code> aggregate( 'school_bufer_f66eb7f4_5fbc_470a_acf4_0fd3649f38e1', aggregate:='count',expression:="osm_id", filter:=within(geometry(@parent),@geometry))</code></pre>
-<p>Как видите, выражение очень похоже на то, что мы уже использовали, меняются только некоторые аргументы.</p>
-<p>Во-первых, используется другой тип агрегирования - <code>count</code>, то есть подсчет количества; во-вторых, используется другое выражение фильтрации - в этом случае мы ищем объекты исходного слоя, <em>попавшие внутрь буферных зон</em>.</p>
-<p>По итогам расчета получен новый атрибут, в котором указано количество школ, находящееся в радиусе доступности.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-1515118183.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="2209"></p>
-</figure>
-</div>
+<section id="понятие-геоинформационная-система" class="level1">
+<h1>Понятие “геоинформационная система”</h1>
+<iframe src="https://baltti.github.io/bachelor-gis-course/01-gis-intro.html" width="800" height="400"></iframe>
+<p><a href="https://baltti.github.io/bachelor-gis-course/01-gis-intro.html" target="_blank">Открыть в новой вкладке</a></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
