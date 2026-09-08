@@ -226,7 +226,7 @@ format:
 :::
 :::::::
 
----
+------------------------------------------------------------------------
 
 ![](images/7hr4em0oxxmh1.png){fig-align="center"}
 
@@ -254,7 +254,7 @@ format:
 
 ![Источник: https://www.whoi.edu/ocean-learning-hub/multimedia/spilhaus-projection-of-the-worlds-oceans/](images/clipboard-3564808251.png){fig-align="center"}
 
----
+------------------------------------------------------------------------
 
 ![Источник: https://www.nytimes.com/2026/09/04/world/africa/world-map-projection-africa.html](images/clipboard-2081667498.png){fig-align="center" width="1000"}
 
@@ -352,7 +352,7 @@ format:
 
 - **именованный**, указывающий соотношение длин линий на карте и на местности, например, в 1 см 1 км или в 1 см 50 км.
 
----
+------------------------------------------------------------------------
 
 ![](images/clipboard-123743544.png){fig-align="center"}
 
