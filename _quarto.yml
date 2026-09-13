@@ -33,8 +33,8 @@ website:
       collapse-level: 1
       contents:
         - start.qmd
-    #    - basics.qmd
-    #    - project.qmd
+        - basics.qmd
+        - project.qmd
     #    - osm.qmd
     #    - style.qmd
      #   - crs.qmd
