@@ -26,6 +26,7 @@ website:
 
   sidebar:
     - id: practice
+      logo: "images/logo_urbanistika_ITMO_itog_RUS_plashka_ikonka_white.png"
       pinned: true
       align: center
       title: "Практикум"
