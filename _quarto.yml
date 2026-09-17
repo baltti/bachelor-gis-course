@@ -35,8 +35,8 @@ website:
         - start.qmd
         - basics.qmd
         - project.qmd
-    #    - osm.qmd
-    #    - style.qmd
+        - osm.qmd
+        - style.qmd
      #   - crs.qmd
       #  - layout.qmd
     #    - floor area ratio.qmd
