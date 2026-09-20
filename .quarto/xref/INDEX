@@ -1,6 +1,7 @@
 {
   "index.qmd": {
-    "index.html": "30ff8115"
+    "index.html": "30ff8115",
+    "index.tex": "0540b3c7"
   },
   "about.qmd": {
     "about.html": "8e979904"
@@ -15,52 +16,66 @@
     "03-cartography-basics.html": "fd95e274"
   },
   "homework.qmd": {
-    "homework.html": "e337a298"
+    "homework.html": "e337a298",
+    "homework.tex": "288aa3b5"
   },
   "exam.qmd": {
-    "exam.html": "517df6b3"
+    "exam.html": "517df6b3",
+    "exam.tex": "fff32e92"
   },
   "04-coordinate-reference-systems.qmd": {
     "04-coordinate-reference-systems.html": "d50217f8"
   },
   "start.qmd": {
-    "start.html": "528a8114"
+    "start.html": "528a8114",
+    "start.tex": "d39bbaca"
   },
   "basics.qmd": {
-    "basics.html": "9ce10ee7"
+    "basics.html": "9ce10ee7",
+    "basics.tex": "b72117b7"
   },
   "project.qmd": {
-    "project.html": "10c6beaf"
+    "project.html": "10c6beaf",
+    "project.tex": "5a409bb4"
   },
   "osm.qmd": {
-    "osm.html": "d8bc46c9"
+    "osm.html": "d8bc46c9",
+    "osm.tex": "06b62f05"
   },
   "style.qmd": {
-    "style.html": "5ec6128e"
+    "style.html": "5ec6128e",
+    "style.tex": "9904576e"
   },
   "visualisation.qmd": {
-    "visualisation.html": "cc1026f4"
+    "visualisation.html": "cc1026f4",
+    "visualisation.tex": "ad89cfe9"
   },
   "crs.qmd": {
-    "crs.html": "e647da6f"
+    "crs.html": "e647da6f",
+    "crs.tex": "0e876c55"
   },
   "floor area ratio.qmd": {
-    "floor area ratio.html": "a75e413f"
+    "floor area ratio.html": "a75e413f",
+    "floor-area-ratio.tex": "98155655"
   },
   "layout.qmd": {
-    "layout.html": "a33e6528"
+    "layout.html": "a33e6528",
+    "layout.tex": "c8164ad8"
   },
   "buffer.qmd": {
-    "buffer.html": "38110686"
+    "buffer.html": "38110686",
+    "buffer.tex": "cf01d831"
   },
   "05-visualisation.qmd": {
     "05-visualisation.html": "1cbe5b8d"
   },
   "georeferencing.qmd": {
-    "georeferencing.html": "8f0c4711"
+    "georeferencing.html": "8f0c4711",
+    "georeferencing.tex": "79fd44a8"
   },
   "terrain.qmd": {
-    "terrain.html": "82b498ff"
+    "terrain.html": "82b498ff",
+    "terrain.tex": "060f6470"
   },
   "Без названия.qmd": {
     "Без названия.html": "fa3549bd"
@@ -75,6 +90,7 @@
     "07-raster.html": "2e04f787"
   },
   "lectures.qmd": {
-    "lectures.html": "0dcd4835"
+    "lectures.html": "0dcd4835",
+    "lectures.tex": "ec1cf981"
   }
 }

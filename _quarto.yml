@@ -38,12 +38,12 @@ website:
         - project.qmd
         - osm.qmd
         - style.qmd
-     #   - crs.qmd
-      #  - layout.qmd
-    #    - floor area ratio.qmd
-     #   - buffer.qmd
+        - crs.qmd
+        - floor area ratio.qmd
+     #   - layout.qmd
+    #    - buffer.qmd
      #   - visualisation.qmd
-     #   - georeferencing.qmd
+    #    - georeferencing.qmd
     #    - terrain.qmd
 
 format:
@@ -51,7 +51,7 @@ format:
     theme: flatly
     css: styles.css
     toc: true
-    
+  
 lang: ru-RU    
 language: custom.yml
 
