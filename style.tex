@@ -1,0 +1,680 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  russian,
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic,shorthands=off,provide=*]{babel}
+\else
+\usepackage[bidi=default,shorthands=off,provide=*]{babel}
+\fi
+\ifLuaTeX
+  \usepackage{selnolig} % disable illegal ligatures
+\fi
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Содержание}
+\else
+  \newcommand\contentsname{Содержание}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Список Иллюстраций}
+\else
+  \newcommand\listfigurename{Список Иллюстраций}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Список Таблиц}
+\else
+  \newcommand\listtablename{Список Таблиц}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Рисунок}
+\else
+  \newcommand\figurename{Рисунок}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Таблица}
+\else
+  \newcommand\tablename{Таблица}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Список}
+\newcommand*\listoflistings{\listof{codelisting}{Список Каталогов}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Общие настройки стиля объектов},
+  pdflang={ru-RU},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Общие настройки стиля объектов}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+
+Пункт \textbf{\emph{Стиль}} в окне свойств слоя предоставляет
+необходимые инструменты для отрисовки и стилизации векторных слоев. При
+этом существуют символов и инструменты для работы с векторными данными в
+целом, а также специальные типы символов, предназначенные для различных
+геометрий объектов (точек, линий и полигонов).
+
+Однако для всех видов векторных слоев процесс будет повторяться: в
+верхней части окна содержатся инструменты для классификации и настройки
+стиля, а в нижней - опции отрисовки слоя.
+
+\section{Общие типы
+стилей}\label{ux43eux431ux449ux438ux435-ux442ux438ux43fux44b-ux441ux442ux438ux43bux435ux439}
+
+Вне зависимости от типа геометрий в слое доступно 4 основных способа
+отображения объектов:
+
+\begin{itemize}
+\item
+  \textbf{простой символ} - позволяет отобразить все объекты слоя с
+  использованием одного универсального символа;
+\item
+  \textbf{уникальные значения} - как правило, используется для
+  категориальной или дискретной переменной с небольшим количеством
+  значений, также может использовать выражение в качестве переменной;
+\item
+  \textbf{градуированный знак} - для задания символа в зависимости от
+  числовой переменной, также позволяет использовать выражения;
+\item
+  \textbf{правила} - позволяет задавать символику на основе выражения.
+\end{itemize}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{На заметку}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Следует отметить, что в QGIS нет типа символа для непрерывных величин,
+так как здесь они рассматриваются как частный случай градуированного
+знака.
+
+\end{tcolorbox}
+
+\subsection{Уникальные
+значения}\label{ux443ux43dux438ux43aux430ux43bux44cux43dux44bux435-ux437ux43dux430ux447ux435ux43dux438ux44f}
+
+При использовании типа символа \emph{Уникальные значения} в первую
+очередь следует выбрать переменную, по которой будет осуществляться
+классификация.
+
+Для такого типа символов следует использовать
+\textbf{\emph{категориальную переменную}}, то есть ту, которую нельзя
+ранжировать по возрастанию.
+
+В качестве примера таких переменных можно привести:
+
+\begin{itemize}
+\item
+  тип здания по функциональному назначению - промышленное, жилое и
+  общественное;
+\item
+  тип транспорта - автобус, трамвай, троллейбус;
+\item
+  тип почвы - чернозем, подзолистая, серая лесная и прочие.
+\end{itemize}
+
+Вместо непосредственно конкретной переменной может быть использовано
+выражение, что позволяет устранить необходимость создания отдельного
+атрибута исключительно для символизации слоя и использовать уже
+имеющиеся.
+
+Отдельно может быть настроен \emph{Символ}, который будет использоваться
+как базовый для всех классов (в первую очередь эта настройка будет
+касаться типа заливки и типа контура, а также некоторых других общих
+параметров).
+
+\emph{Цветовой ряд} используется для символизации разных категорий,
+кроме того этот тип символа позволяет использовать набор случайных
+цветов.
+
+Так как тип символа базируется на использовании категориальных
+переменных, для которых предпочтительно использование цвета как основной
+визуальной характеристики, палитра случайных цветов в данном случае
+предпочтительнее, чем готовый градиент.
+
+Автоматически при классификации будет создан пустой класс \emph{Другие
+значения}, который впоследствии может быть заполнен объектами со
+значениями переменной, которых не было в изначальной классификации.
+
+\subsection{Градуированный
+знак}\label{ux433ux440ux430ux434ux443ux438ux440ux43eux432ux430ux43dux43dux44bux439-ux437ux43dux430ux43a}
+
+Градуированный символ может применяться только для числовых показателей,
+так как предполагает ранжирование по возрастанию и классификацию на
+группы.
+
+Градуированные знаки могут использовать не непосредственно значение
+конкретного атрибута, но вычисляемое выражение.
+
+\subsection{Символизация на основе
+правил}\label{ux441ux438ux43cux432ux43eux43bux438ux437ux430ux446ux438ux44f-ux43dux430-ux43eux441ux43dux43eux432ux435-ux43fux440ux430ux432ux438ux43b}
+
+В качестве правил при символизации выступают выражения, которые
+позволяют создавать собственные настройки отрисовки для определенных
+объектов, которые удовлетворяют заданным выражениями условиям.
+
+Так, например, с помощью правила можно установить отрисовку только
+некоторых объектов соответствующих определенным условиям или исключить
+из отрисовки объекты, которые не должны быть отображены, или применить
+специальную символику и отдельные настройки, чтобы выделить на карте
+только некоторые объекты.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Дополнительно}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Выражения могут быть вложенными друг в друга, при этом выражения более
+низкого уровня будут применяться только к тем объектам, которые
+удовлетворяют условиям выражения более высокого уровня.
+
+\end{tcolorbox}
+
+\section{Типы стилей
+полигонов}\label{ux442ux438ux43fux44b-ux441ux442ux438ux43bux435ux439-ux43fux43eux43bux438ux433ux43eux43dux43eux432}
+
+Также как и для линейных объектов для полигонов доступна символизация с
+автоматическим объединением объектов, где кроме перечисленных выше
+исходных символизация добавлена символизация 2.5 D, о которой чуть ниже.
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{images/Снимок экрана 2025-06-02 в 15.57.44.png}}
+\end{center}
+
+Уникальными только для полигональных объектов типами стиля являются:
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{images/Снимок экрана 2025-06-23 в 13.01.45.png}}
+\end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{инвертированные полигоны (inverted polygons)} - позволяет
+  делать заливку не внутрь контура, а вовне. Также как и для
+  символизации с автоматическим объединением объектов остальные типы
+  стилей могут выполнять роль исходной символизации;
+\end{itemize}
+
+\begin{verbatim}
+![](images/Снимок экрана 2025-06-02 в 15.58.15.png){fig-align="center"}
+\end{verbatim}
+
+\begin{itemize}
+\item
+  \textbf{2.5 D} - позволяет создать изометрическую проекцию для
+  полигонов.
+
+  \begin{figure}[H]
+
+  {\centering \pandocbounded{\includegraphics[keepaspectratio]{images/Pasted image 20250602160144.png}}
+
+  }
+
+  \caption{Источник:
+  https://cartetika.ru/tpost/jc36y7ke41-izometriya-v-qgis-osvaivaem-25d}
+
+  \end{figure}%
+\end{itemize}
+
+В изометрической проекции для полигонов доступна дальнейшая настройка
+символов аналогично символам стандартных полигонов.
+
+\section{Маски}\label{ux43cux430ux441ux43aux438}
+
+Маски позволяют настроить наложение символов различных слоев. Это
+необходимо для улучшения читаемости карты и различения символов
+различных слоев.
+
+Маски добавляют настраиваемый прозрачный слой вокруг объектов для того,
+чтобы скрыть часть символов текущего слоя.
+
+В качестве слоя источника маски может быть задан только слой с точечными
+объектами. Для слоя источника маски он должен быть установлен как тип
+слоя символа в настройках стиля, а для того слоя, к которому маска будет
+применяться, он указывается в настройках маски.
+
+\section{Настройка стиля объекта в зависимости от
+атрибута}\label{ux43dux430ux441ux442ux440ux43eux439ux43aux430-ux441ux442ux438ux43bux44f-ux43eux431ux44aux435ux43aux442ux430-ux432-ux437ux430ux432ux438ux441ux438ux43cux43eux441ux442ux438-ux43eux442-ux430ux442ux440ux438ux431ux443ux442ux430}
+
+Рассмотрим настройку стиля объектов для жилых многоквартирных зданий по
+значению этажности.
+
+Атрибут с этажностью - это \emph{building:levels}, но напрямую мы его
+использовать не можем, так как это текстовый атрибут.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{На заметку}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Если вы хотите узнать типы данных своих атрибутов, вы можете просто
+открыть свойства слоя на разделе \emph{Поля}, где будут указаны все
+атрибуты с соответствующими типами данных.
+
+\pandocbounded{\includegraphics[keepaspectratio]{images/clipboard-1722627325.png}}
+
+Также в самой таблице атрибутов есть небольшая подсказка: текстовые
+поля, как правило, выровнены по левому краю, а числовые - по правому.
+
+\end{tcolorbox}
+
+\subsection{Преобразование строки в
+число}\label{ux43fux440ux435ux43eux431ux440ux430ux437ux43eux432ux430ux43dux438ux435-ux441ux442ux440ux43eux43aux438-ux432-ux447ux438ux441ux43bux43e}
+
+Для создания нового атрибута с количеством этажей в числовом формате
+воспользуемся калькулятором полей. Он находится в таблице атрибутов на
+панели инструментов
+\includegraphics[width=0.35417in,height=\textheight,keepaspectratio]{images/clipboard-1228602271.png}.
+
+\begin{center}
+\includegraphics[width=11.42708in,height=\textheight,keepaspectratio]{images/clipboard-2249692529.png}
+\end{center}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{На заметку}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Если вы хотите создать новое поле, то для него нужно обязательно указать
+имя и тип данных, без этого поле создано не будет. \emph{Имя поля должно
+быть уникальным в пределах таблицы}.
+
+Если вы будете записывать результат в уже существующее поле
+(\emph{Обновить существующее поле}), то удостоверьтесь, что тип данных
+этого поля соответствует типу данных, который будет получен в результате
+выражения.
+
+\end{tcolorbox}
+
+Так как нам необходимо преобразовать один тип данных в другой, то
+необходима функция из группы \emph{Преобразования}:
+
+\begin{verbatim}
+to_int("building:levels")
+\end{verbatim}
+
+\pandocbounded{\includegraphics[keepaspectratio]{images/clipboard-1225983304.png}}
+
+В качестве атрибута в эту функцию, необходимо передать строку, но так
+как нам нужно преобразовать все значения конкретного атрибута, то мы
+указываем название этого атрибута.
+
+Для того, чтобы не ошибиться в написании названия атрибута/поля, лучше
+раскрыть группу \emph{Поля и значения} в центре калькулятора полей и
+выбрать нужное вам двойным кликом.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Обратите внимание}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Названия атрибутов/полей в выражениях указываются в двойных кавычках, а
+строки - в одинарных.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Дополнительно}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Если у вас в атрибуте этажности присутствуют значения типа `3.5', то вы
+можете попробовать воспользоваться функцией \texttt{to\_real()}, которая
+преобразовывает строку в десятичное число.
+
+Только не забудьте указать тип данных для нового поля - \emph{десятичное
+число}.
+
+\end{tcolorbox}
+
+По результатам применения функции вы получите новое поле, в котором
+будет содержаться значение этажности в виде числа.
+
+\subsection{Фильтрация
+данных}\label{ux444ux438ux43bux44cux442ux440ux430ux446ux438ux44f-ux434ux430ux43dux43dux44bux445}
+
+В вашей таблице скорее всего присутствуют пропущенные значения
+этажности, что же делать с ними? У нас есть несколько путей:
+
+\begin{itemize}
+\item
+  просто отбросить объекты с пропущенными значениями атрибутов;
+\item
+  найти этажность этих объектов в другом источнике и указать в таблице
+  атрибутов;
+\item
+  проставить среднюю этажность в районе/квартале для тех домов, где она
+  пропущена.
+\end{itemize}
+
+Мы воспользуемся первым способом, но не будем удалять объекты, а просто
+скроем их с помощью фильтра.
+
+\begin{center}
+\includegraphics[width=8.42708in,height=\textheight,keepaspectratio]{images/clipboard-4270695394.png}
+\end{center}
+
+Функция фильтра доступна только для слоев, которые не находятся в режиме
+редактирования, поэтому необходимо сначала отключить режим
+редактирования (аналогично тому, как вы его включали), сохранив
+изменения, а потом воспользоваться фильтром.
+
+\begin{center}
+\includegraphics[width=11.10417in,height=\textheight,keepaspectratio]{images/clipboard-2947640405.png}
+\end{center}
+
+В нашем случае понадобится выражение:
+
+\begin{verbatim}
+"level" NOT null
+\end{verbatim}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Внимание}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Если это выражение не работает, можете попробовать альтернативное:
+\texttt{"level"\ \textgreater{}\ 0.}
+
+\end{tcolorbox}
+
+После применения фильтра количество объектов на карте и в таблице
+атрибутов уменьшиться, перестанут отображаться объекты, не
+соответствующие условию в выражении фильтрации.
+
+Также справа от названия слоя вы увидите значок
+\includegraphics[width=0.375in,height=\textheight,keepaspectratio]{images/clipboard-2168316488.png},
+который предупреждает вас о том, что в этом слое включен фильтр.
+
+\subsection{Настройка стиля по диапазонам
+значений}\label{ux43dux430ux441ux442ux440ux43eux439ux43aux430-ux441ux442ux438ux43bux44f-ux43fux43e-ux434ux438ux430ux43fux430ux437ux43eux43dux430ux43c-ux437ux43dux430ux447ux435ux43dux438ux439}
+
+Как было сказано выше, если мы хотим настроить стиль в зависимости от
+количественной переменной, необходимо воспользоваться типом стиля
+\emph{Символизация по диапазонам значений}.
+
+В качестве значений в данном случае будет выступать наш новый
+вычисленный числовой атрибут.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Дополнительно}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+В значении не обязательно использовать конкретный атрибут, здесь также
+может быть использовано выражение.
+
+Теоретически мы могли не создавать новый атрибут, а просто прописать в
+значении то же самое выражение, что мы использовали в калькуляторе
+полей.
+
+\end{tcolorbox}
+
+\begin{center}
+\includegraphics[width=15.875in,height=\textheight,keepaspectratio]{images/clipboard-4085917970.png}
+\end{center}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Внимание}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+О методах классификации числовых данных мы с вами поговорим далее в
+курсе, а пока просто создадим классификацию зданий по этажности как
+указано на картинке выше.
+
+\end{tcolorbox}
+
+Для того, чтобы вручную задать диапазоны, вам нужно дважды кликнуть в
+графе значения в нужной строке и ввести нижнюю и верхнюю границы
+диапазона.
+
+Опция \emph{Связать границы классов} автоматически изменит соседний
+диапазон, чтобы между ними не было пробелов.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{На заметку}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Если вы хотите добавить или удалить классы, вы можете сделать это,
+воспользовавшись кнопками плюса и минуса, расположенными рядом с кнопкой
+\emph{Классифицировать}.
+
+\end{tcolorbox}
+
+Изменение текста легенды происходит аналогично ручному изменению границ
+классов: двойной клик в графе \emph{Легенда} на нужной строке и введение
+нужного текста с клавиатуры.
+
+\subsection{Символизация на основе
+правил}\label{ux441ux438ux43cux432ux43eux43bux438ux437ux430ux446ux438ux44f-ux43dux430-ux43eux441ux43dux43eux432ux435-ux43fux440ux430ux432ux438ux43b-1}
+
+Если вы все-таки хотите показать не только здания с известной нам
+этажностью, но и те, для которых этих данных нет, можно воспользоваться
+символизацией на основе правил.
+
+Чтобы минимизировать работу, продублируем слой с уже настроенной
+символизацией на основе диапазонов значений.
+
+\begin{center}
+\includegraphics[width=7.28125in,height=\textheight,keepaspectratio]{images/clipboard-545308472.png}
+\end{center}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Внимание}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Дубликат слоя будет ссылаться на тот же самый файл, поэтому если вы
+будете что-то редактировать в нем (форму объектов, атрибуты), то
+изменения будут отображаться в обоих слоях.
+
+\end{tcolorbox}
+
+Далее отключим фильтр слоя в полученном дубликате. Для этого откроем
+опцию \emph{Фильтр} и нажмем \emph{Очистить}.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Внимание}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Объекты с неизвестной этажностью у вас на карте пока не появятся, так
+как они не попадают ни в один из указанных диапазонов для задания стиля
+объектам, следовательно, не могут быть отрисованы.
+
+\end{tcolorbox}
+
+Для полученного дубликата слоя выберем \emph{Символизация на основе
+правил}. Так как у нас уже была настроена символизация по диапазонам
+первые три правила будут указана автоматически, вам необходимо добавить
+еще одно.
+
+\pandocbounded{\includegraphics[keepaspectratio]{images/clipboard-3472664790.png}}
+
+Для этого нужно нажать на
+\includegraphics[width=0.39583in,height=0.33333in]{images/clipboard-2350716054.png},
+после чего в открывшемся окне указать подпись (то, что будет
+использоваться легенде) и выражение для правила:
+\texttt{"level"\ is\ null}.
+
+\begin{center}
+\includegraphics[width=13.41667in,height=\textheight,keepaspectratio]{images/clipboard-378074760.png}
+\end{center}
+
+Для создания выражения, вы можете воспользоваться конструктором, который
+открывается нажатием кнопки
+\includegraphics[width=0.45833in,height=0.42708in]{images/clipboard-2105348756.png}.
+Этот конструктор аналогичен конструктору выражений в калькуляторе полей
+(за исключением создания нового поля или записи результата в
+существующее поле, так как это выражение не будет влиять на содержание
+таблицы атрибутов).
+
+\begin{center}
+\includegraphics[width=15.10417in,height=\textheight,keepaspectratio]{images/clipboard-2088068667.png}
+\end{center}
+
+В окне для задания правила вы можете выбрать цвет заливки для этих
+зданий так, чтобы он отличался от остальных.
+
+\begin{center}
+\includegraphics[width=12.86458in,height=\textheight,keepaspectratio]{images/clipboard-887581310.png}
+\end{center}
+
+\section{Импорт готовых
+стилей}\label{ux438ux43cux43fux43eux440ux442-ux433ux43eux442ux43eux432ux44bux445-ux441ux442ux438ux43bux435ux439}
+
+В QGIS кроме того, что мы можем самостоятельно создавать и настраивать
+стили, можно импортировать уже готовые стили или экспортировать
+созданные\footnote{\textbf{Sharing style items}
+  \url{https://docs.qgis.org/3.16/en/docs/user_manual/style_library/style_manager.html\#sharing-style-items}}.
+
+Это возможно благодаря тому, что описание стиля можно сохранить в
+формате XML.
+
+Готовые стили можно скачать
+\href{https://plugins.qgis.org/styles/}{здесь} или взять на гитхабе в
+\href{https://github.com/tjukanovt/qgis_styles}{подборке} Топи Тюканова.
+
+Кроме того, есть еще ресурс
+\href{http://qgis-hub.fast-page.org/styles.php}{QGIS Style hub}.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-caution-color!10!white, colframe=quarto-callout-caution-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Предупреждение}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Обратите внимание, что некоторые стили могут иметь ограничения по типу
+объектов, к которым они применяются, и, в некоторых случаях, по типу
+системы координат, в которой должен быть слой.
+
+Например, стиль слоя с выносками размеров применим только для слоев в
+\emph{прямоугольной (спроецированной) системе координат}, так как он
+использует метрические единицы.
+
+\end{tcolorbox}
+
+Как загрузить стили по ссылке можно посмотреть в видео:
+
+Загрузка готовых стилей из файла происходит аналогично, отличие только в
+том, что в качестве источника выбирается не URL, а файл.
+
+Также можно пользоваться плагином
+\href{https://plugins.qgis.org/plugins/qgis_resource_sharing/}{QGIS
+Resource sharing}
+
+
+
+
+\end{document}

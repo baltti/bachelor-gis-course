@@ -140,7 +140,7 @@ window.Quarto = {
   </li>  
         <li>
     <a class="dropdown-item" href="./basics.html">
- <span class="dropdown-text">Начало работы</span></a>
+ <span class="dropdown-text">title: “Начало работы”</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./project.html">
@@ -214,7 +214,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Начало работы</span></a>
+ <span class="menu-text">title: “Начало работы”</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -518,7 +518,8 @@ window.Quarto = {
 <p>Так как мы с вами работаем, как правило, в пределах одного города, мы можем пренебречь кривизной Земли и работать на плоскости.</p>
 </div>
 </div>
-<p>Идеальным вариантом для расчетов для нас будет система координат из семейства UTM (Universal Transverse Mercator - универсальная поперечная проекция Меркатора) – эта система координат является зональной, то есть определяется в пределах 6 градусных зон по долготе.</p>
+<p>Идеальным вариантом для расчетов для нас будет система координат из семейства UTM (Universal Transverse Mercator - универсальная поперечная проекция Меркатора) – эта система координат является зональной, то есть определяется в пределах 6 градусных зон по долготе. Нумерация зон начинается от 180 меридиана.</p>
+<p>Аналогом системам координат этого семейства в нашей стране являются системы координат Гаусса-Крюгера. Их основное отличие от UTM состоит в нумерации - здесь она начинается от Гринвичского меридиана, то есть номера зон будут отличаться на 30.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-1751020951.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
@@ -526,7 +527,8 @@ window.Quarto = {
 </div>
 <p>Так как эта система координат зональная, то есть определяется только в пределах конкретных диапазонов долгот, то необходимо определять зону, в которой расположена ваша исследуемая территория.</p>
 <p>Определить зону можно по формуле:</p>
-<p><span class="math display">\[Номер\space зоны = (Долгота + 180^\circ)/6\]</span></p>
+<p><span class="math display">\[Номер\space зоны\ (UTM) = \dfrac{Долгота + 180^\circ}{6}\]</span></p>
+<p><span class="math display">\[Номер\space зоны\ (Гаусса-Крюгера) = \dfrac{Долгота}{6}\]</span></p>
 <p>Полученное число нужно округлить в большую сторону.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -539,6 +541,20 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>Существуют специальные онлайн-калькуляторы для определения номера зоны по координатам. Например, <a href="https://www.latlong.net/lat-long-utm.html" class="uri">https://www.latlong.net/lat-long-utm.html</a></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Внимание
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Так как возникли проблемы при работе с системами координат UTM, предпочтительнее пользоваться системами координат Гаусса-Крюгера.</p>
+<p>Существует несколько вариаций этих систем координат, основанных на эллипсоидах с разными параметрами. Вам необходимо брать те, которые базируются на Государственной системе координат 2011 года (ГСК-2011). Например, для Санкт-Петербурга нужная вам система координат будет называться <strong><em>EPSG: 20906 GSK-2011 / Gauss-Kruger zone 6.</em></strong></p>
 </div>
 </div>
 <p>Открыть полный каталог систем координат для выбора нужной вам, вы можете по нажатию на кнопку <img src="images/clipboard-4003899713.png" class="img-fluid" width="49">. В этом каталоге нужно найти систему координат с тем номером зоны, который вы определили. Проще всего это сделать с помощью поиска.</p>

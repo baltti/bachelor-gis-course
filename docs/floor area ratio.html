@@ -140,7 +140,7 @@ window.Quarto = {
   </li>  
         <li>
     <a class="dropdown-item" href="./basics.html">
- <span class="dropdown-text">Начало работы</span></a>
+ <span class="dropdown-text">title: “Начало работы”</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./project.html">
@@ -214,7 +214,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Начало работы</span></a>
+ <span class="menu-text">title: “Начало работы”</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -257,9 +257,13 @@ window.Quarto = {
     <h2 id="toc-title">Содержание</h2>
    
   <ul>
-  <li><a href="#расчет-площади-зданий" id="toc-расчет-площади-зданий" class="nav-link active" data-scroll-target="#расчет-площади-зданий">Расчет площади зданий</a></li>
+  <li><a href="#расчет-площади-зданий" id="toc-расчет-площади-зданий" class="nav-link active" data-scroll-target="#расчет-площади-зданий">Расчет площади зданий</a>
+  <ul class="collapse">
+  <li><a href="#калькулятор-полей" id="toc-калькулятор-полей" class="nav-link" data-scroll-target="#калькулятор-полей">Калькулятор полей</a></li>
+  <li><a href="#модуль-calculate-geometry" id="toc-модуль-calculate-geometry" class="nav-link" data-scroll-target="#модуль-calculate-geometry">Модуль Calculate geometry</a></li>
+  </ul></li>
   <li><a href="#отрисовка-кварталов" id="toc-отрисовка-кварталов" class="nav-link" data-scroll-target="#отрисовка-кварталов">Отрисовка кварталов</a></li>
-  <li><a href="#расчет-коэффицента-застройки" id="toc-расчет-коэффицента-застройки" class="nav-link" data-scroll-target="#расчет-коэффицента-застройки">Расчет коэффицента застройки</a>
+  <li><a href="#расчет-коэффициента-застройки" id="toc-расчет-коэффициента-застройки" class="nav-link" data-scroll-target="#расчет-коэффициента-застройки">Расчет коэффициента застройки</a>
   <ul class="collapse">
   <li><a href="#использование-пространственного-объединения" id="toc-использование-пространственного-объединения" class="nav-link" data-scroll-target="#использование-пространственного-объединения">Использование пространственного объединения</a></li>
   <li><a href="#использование-функций-агрегирования" id="toc-использование-функций-агрегирования" class="nav-link" data-scroll-target="#использование-функций-агрегирования">Использование функций агрегирования</a></li>
@@ -291,6 +295,8 @@ window.Quarto = {
 
 <section id="расчет-площади-зданий" class="level1">
 <h1>Расчет площади зданий</h1>
+<section id="калькулятор-полей" class="level2">
+<h2 class="anchored" data-anchor-id="калькулятор-полей">Калькулятор полей</h2>
 <p>Для расчета площади зданий воспользуемся калькулятором полей в таблице атрибутов.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -417,6 +423,29 @@ window.Quarto = {
 </div>
 </div>
 </section>
+<section id="модуль-calculate-geometry" class="level2">
+<h2 class="anchored" data-anchor-id="модуль-calculate-geometry">Модуль Calculate geometry</h2>
+<p>Второй способ определения площади и периметра объектов - использование модуля Calculate geometry.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1030325177.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1000"></p>
+</figure>
+</div>
+<p>После установки модуля, он должен появиться у вас в виде пункта контекстного меню слоя.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1535407434.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="800"></p>
+</figure>
+</div>
+<p>В меню модуля необходимо выбрать, какие параметры вы рассчитываете, указать названия полей для записи результата, единицы измерения и точность (количество знаков после запятой).</p>
+<p>Также вы можете выбрать, как осуществлять расчеты (на плоскости или на эллипсоиде) и в какой системе координат.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2729671514.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="900"></p>
+</figure>
+</div>
+</section>
+</section>
 <section id="отрисовка-кварталов" class="level1">
 <h1>Отрисовка кварталов</h1>
 <p>Для того, чтобы определить плотность застройки нам необходимо сверить ее с какими-то территориальными единицами. Это могут быть единицы административного деления, земельные участки или кварталы.</p>
@@ -502,8 +531,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="расчет-коэффицента-застройки" class="level1">
-<h1>Расчет коэффицента застройки</h1>
+<section id="расчет-коэффициента-застройки" class="level1">
+<h1>Расчет коэффициента застройки</h1>
 <p>Что такое коэффициент застройки?</p>
 <p>Это отношение площади, занятой зданиями, к общей площади квартала или иной территориальной единицы.</p>
 <p><span class="math display">\[Коэффициент\space застройки = \dfrac{Площадь\space здания}{Площадь \space квартала}\]</span></p>

@@ -51,7 +51,7 @@ format:
     theme: flatly
     css: styles.css
     toc: true
-  
+    
 lang: ru-RU    
 language: custom.yml
 

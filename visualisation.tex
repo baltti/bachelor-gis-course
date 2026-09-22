@@ -1,0 +1,1195 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
+%
+\documentclass[
+  russian,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  %
+  %\usepackage{polyglossia}
+  %\usepackage[utf8x]{inputenc}
+  %\usepackage[english,russian]{babel}
+  %\setmainlanguage{russian}
+  %
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Создание тематических карт},
+  pdflang={ru-RU},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Содержание}
+\else
+  \newcommand\contentsname{Содержание}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Список Иллюстраций}
+\else
+  \newcommand\listfigurename{Список Иллюстраций}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Список Таблиц}
+\else
+  \newcommand\listtablename{Список Таблиц}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Рисунок}
+\else
+  \newcommand\figurename{Рисунок}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Таблица}
+\else
+  \newcommand\tablename{Таблица}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Список}
+\newcommand*\listoflistings{\listof{codelisting}{Список Каталогов}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\ifXeTeX
+  % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
+  \usepackage{polyglossia}
+  %\setmainlanguage[]{}
+  \setmainlanguage{russian}
+\else
+  \usepackage[main=russian]{babel}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\fi
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Создание тематических карт}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Уровни
+знака}\label{ux443ux440ux43eux432ux43dux438-ux437ux43dux430ux43aux430}
+
+Особенностью QGIS при создании стиля того или иного слоя является то,
+что любой символ может быть собран послойно из различных типов слоев
+знака.
+
+Такие типы слоев различны для разных видов основных геометрических
+примитивов (точек, линий и полигонов) аналогично типам символов.
+
+Следует помнить, что, как и слои проекта, эти слои перекрывают друг
+друга в порядке их перечисления: слои, находящиеся в описании выше,
+перекрывают более низкие.
+
+Для всех основных типов геометрий существует генератор геометрии, о
+котором будет рассказано отдельно.
+
+\subsection{Точечные
+объекты}\label{ux442ux43eux447ux435ux447ux43dux44bux435-ux43eux431ux44aux435ux43aux442ux44b}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{images/Снимок экрана 2025-07-07 в 13.37.10.png}}
+\end{center}
+
+По умолчанию основным типом слоя здесь будет являться \textbf{простой
+маркер}, у которого могут быть настроены:
+
+\begin{itemize}
+\item
+  размер;
+\item
+  цвет заливки;
+\item
+  прозрачность;
+\item
+  параметры смещения от истинного положения;
+\item
+  обводка - толщина и цвет;
+\item
+  форма маркера.
+
+  Все эти параметры могут быть заданы как в виде некоторого значения,
+  так и переопределены на основе данных. То есть тот или иной параметр
+  будет зависеть от значения атрибута объекта или вычисляемого выражения
+  на основе атрибута/атрибутов.
+\end{itemize}
+
+Тип слоя \emph{Маска} может быть использован при необходимости отрисовки
+точечного слоя поверх других слоев и подписей так, чтобы они его не
+перекрывали.
+
+Тип слоя \emph{Генератор геометрии} является общим для всех типов
+геометрий и подробно будет рассмотрен отдельно.
+
+Прочие типы слоев точечного символа:
+
+\begin{itemize}
+\item
+  \emph{анимированный маркер} - точечный объект, который использует
+  анимированное изображение в формате \emph{.gif} в качестве маркера
+  (могут быть настроены основные размеры маркера);
+\item
+  \emph{эллиптический маркер} - модификация простого маркера, для
+  которого можно настроить отдельно ширину и высоту;
+\item
+  \emph{маркер с заливкой} - еще одна модификация простого маркера,
+  которая позволяет использовать те же типы заливки, что и для полигона;
+\item
+  \emph{шрифтовой маркер} - маркер, внутри которого добавлен текстовый
+  символ или текст, для которого может быть отдельно настроен шрифт и
+  содержание текста (например, на основе выражения или атрибута, или
+  просто введенный текст);
+\item
+  \emph{растровый маркер} - использует растровое изображение (форматы
+  \emph{.png, .jpg, .bmp}) в качестве символа маркера;
+\item
+  \emph{SVG маркер} - маркер, который использует в качестве символа
+  векторное изображение в формате SVG (позволяет больше возможностей
+  настройки, чем растровый маркер);
+\item
+  \emph{маркер векторного поля} - кастомизируемый маркер, который может
+  быть создан на основе атрибутов:
+\end{itemize}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{images/Снимок экрана 2025-08-12 в 10.35.29.png}}
+\end{center}
+
+\begin{itemize}
+\item
+  на плоскости - маркер задается параметрами по оси X и Y;
+\item
+  полярный - маркер с параметрами длины и угла поворота;
+\item
+  только высота - маркер с одним параметром высоты для отображения
+  высоты расположения точек.
+\end{itemize}
+
+\subsection{Линейные
+объекты}\label{ux43bux438ux43dux435ux439ux43dux44bux435-ux43eux431ux44aux435ux43aux442ux44b}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{images/Снимок экрана 2025-07-07 в 13.42.20.png}}
+\end{center}
+
+Простая линия для линейных объектов похожа на простой маркер с основными
+параметрами настройки по цвету, толщине, прозрачности.
+
+Для линейных объектов также как и для остальных есть один из основных
+типов слоев
+
+\begin{itemize}
+\item
+  \emph{Генератор геометрии} и прочие, позволяющие настраивать различные
+  параметры:
+\item
+  \emph{стрелка} - линия со стрелкой на одном или обоих концах;
+\item
+  \emph{штрихи вдоль линии} - линия, которая отрисовывается короткими
+  отрезками перпендикулярными ее направлению через установленный
+  интервал;
+\item
+  \emph{интерполированная линия} - линия, которая может менять цвет и
+  толщину от одного конца к другому;
+\item
+  \emph{линия с градиентной заливкой} - линия, для которой переход в
+  заливке происходит перпендикулярно ее направлению;
+\item
+  \emph{маркерная линия} - линия, составленная из маркерных символов;
+\item
+  \emph{линия из растров} - линия, составленная из растровых маркеров.
+\end{itemize}
+
+\subsection{Полигональные/площадные
+объекты}\label{ux43fux43eux43bux438ux433ux43eux43dux430ux43bux44cux43dux44bux435ux43fux43bux43eux449ux430ux434ux43dux44bux435-ux43eux431ux44aux435ux43aux442ux44b}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{images/Снимок экрана 2025-07-07 в 13.42.50.png}}
+\end{center}
+
+Наибольшую свободу в настройке допускают полигональные символы, так как
+они могут быть отрисованы как полигоны с настраиваемой заливкой, так и в
+некоторых типах слоев как маркеры или обводки.
+
+Типом слоя по умолчанию здесь, как и в предыдущих типах объектов будет
+являться \emph{Простая заливка}, а \emph{Генератор геометрии} - общим
+типом стиля, который подробнее рассмотрен отдельно.
+
+Некоторые из прочих типов слоев для полигонов основаны на маркерах, а
+некоторые на линейных стилях.
+
+Рассмотрим прочие типы слоев для полигональных объектов:
+
+\begin{itemize}
+\item
+  \emph{Отрисовка центроидов} - вместо полигона отрисовывается только
+  маркер в его геометрическом центре;
+\item
+  \emph{Градиентная заливка} - заливка полигона заданным и настроенным
+  градиентом, который может быть настроен как на основе двух цветов, так
+  и на основе определенного цветового ряда с различными настройками
+  перехода;
+\end{itemize}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{images/Снимок экрана 2025-08-12 в 10.51.33.png}}
+\end{center}
+
+\begin{itemize}
+\item
+  \emph{Заливка штриховкой} - заливка полигона происходит не сплошным
+  цветов, а линейной штриховкой, для которой могут быть настроены как
+  параметры линии штриховки, так и параметры частоты и поворота штрихов;
+
+  \begin{center}
+  \pandocbounded{\includegraphics[keepaspectratio]{images/Снимок экрана 2025-08-12 в 10.52.55.png}}
+  \end{center}
+\item
+  \emph{Заливка точками} - полигон заполняется маркерами точечных
+  объектов с регулярным расположением;
+\end{itemize}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{images/Снимок экрана 2025-08-12 в 10.54.40.png}}
+\end{center}
+
+\begin{itemize}
+\item
+  \emph{Заливка маркерами со случайным размещением} - полигон
+  заполняется заданным числом маркеров со случайным расположением;
+\item
+  \emph{Заливка растром} - в качестве заливки используются не параметры
+  цвета, а готовое растровое изображение;
+\item
+  \emph{Заливка SVG узором} - полигон заполняется векторным изображением
+  в формате SVG (как и в случае с маркером SVG дает значительно больше
+  параметров настройки, чем простое заполнение растровым изображением);
+\item
+  \emph{Заливка градиентом из центра} - полигон заливается градиентом
+  цветов, который выстраивается от центра к границе (в отличие от просто
+  градиентной заливки, где градиент распространяется на объект в целом);
+\end{itemize}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{images/Снимок экрана 2025-08-12 в 10.57.31.png}}
+\end{center}
+
+\begin{itemize}
+\item
+  \emph{Обводка} - тип слоя полигонального объекта, построенный на
+  основе линейных типов слоев, который отображает только внешний контур
+  объекта (подробнее о них сказано выше):
+
+  \begin{itemize}
+  \item
+    \emph{Стрелка};
+  \item
+    \emph{Штрихи вдоль линии};
+  \item
+    \emph{Интерполированная линия;}
+  \item
+    \emph{Линия с градиентной заливкой;}
+  \item
+    \emph{Маркерная линия};
+  \item
+    \emph{Линия из растров;}
+  \item
+    \emph{простая линия}.
+  \end{itemize}
+\end{itemize}
+
+\section{Исходные
+данные}\label{ux438ux441ux445ux43eux434ux43dux44bux435-ux434ux430ux43dux43dux44bux435}
+
+В качестве исходнях данных мы воспользуемся числом населения в
+муниципальных округах города Москвы. Скачать данные можно по ссылке:
+\url{https://disk.yandex.ru/d/zCKHvmBDnZFwkg}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Внимание}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+В папке два файла:
+
+\begin{itemize}
+\item
+  \emph{ao.geojson} - административные округа
+\item
+  \emph{municipal\_districts.geojson} - муниципальные округа.
+\end{itemize}
+
+Скачать можно их оба сразу, но пока понадобится только второй.
+
+\end{tcolorbox}
+
+\begin{center}
+\includegraphics[width=8.11458in,height=\textheight,keepaspectratio]{images/clipboard-1585206413.png}
+\end{center}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Дополнительно}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Проект со всеми настройками стиля вы можете скачать в виде архива
+\emph{Визуализация} из той же папки, что и исходные данные, или по
+прямой ссылке \url{https://disk.yandex.ru/d/Ou8wlVtMKiJu1A}
+
+\end{tcolorbox}
+
+\section{Карта пропорциональных
+символов}\label{ux43aux430ux440ux442ux430-ux43fux440ux43eux43fux43eux440ux446ux438ux43eux43dux430ux43bux44cux43dux44bux445-ux441ux438ux43cux432ux43eux43bux43eux432}
+
+В этом типе тематических карт отображение происходит с помощью размера
+символов, который пропорционален величине показателя.
+
+\subsection{Использование слоя
+символа}\label{ux438ux441ux43fux43eux43bux44cux437ux43eux432ux430ux43dux438ux435-ux441ux43bux43eux44f-ux441ux438ux43cux432ux43eux43bux430}
+
+Как упоминалось выше каждый символ может быть составлен из нескольких
+слоев.
+
+Добавим новый слой символа с использованием кнопки
+\pandocbounded{\includegraphics[keepaspectratio]{images/clipboard-267107961.png}}
+в свойствах слоя.
+
+Тип слоя в данном случае - \emph{Центроиды}.
+
+\begin{center}
+\includegraphics[width=12.69792in,height=\textheight,keepaspectratio]{images/clipboard-316839483.png}
+\end{center}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{На заметку}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Для того, чтобы видеть изменения слоя на карте, не закрывая окно свойств
+вы можете просто нажимать \emph{Применить} (\emph{Apply}). Таким образом
+изменения будут применены, но окно останется открытым.
+
+\end{tcolorbox}
+
+\begin{center}
+\includegraphics[width=8.20833in,height=\textheight,keepaspectratio]{images/clipboard-3487492771.png}
+\end{center}
+
+Для получившихся центроидов нужно применить настройку \emph{Размещать
+маркеры внутри полигонов} (поставить галочку напротив этих слов). Ее
+использование принудительно сместить точки центроидов так, чтобы они
+всегда были внутри полигонов, так как в противном случае для некоторых
+объектов сложной формы центроиды могут попасть за пределы объекта.
+
+Опцию \emph{Рисовать маркеры на всех частях составных объектов} же
+наоборот следует отключить, потому что она будет создавать
+дополнительные маркеры для частей мультиполигонов.
+
+\begin{center}
+\includegraphics[width=12.65625in,height=\textheight,keepaspectratio]{images/clipboard-4094587037.png}
+\end{center}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Дополнительно}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Для того, чтобы убрать лишнюю информацию в виде цветовой заливки
+полигонов с вашей карты, вы можете перейти в настройки заливки и выбрать
+тип заливки \emph{Без заливки}.
+
+\includegraphics[width=12.78125in,height=\textheight,keepaspectratio]{images/clipboard-285681862.png}
+
+\end{tcolorbox}
+
+Далее нам необходимо настроить размер маркера таким образом, чтобы он
+отображал количество населения (поле атрибутивной таблицы
+``population'').
+
+Для этого перейдем в настройки простого маркера и справа от размера
+нажмем кнопку \emph{Переопределить на основе данных}.
+
+\begin{center}
+\includegraphics[width=16.8125in,height=\textheight,keepaspectratio]{images/clipboard-244403368.png}
+\end{center}
+
+Здесь нам необходимо воспользоваться опцией \textbf{Подбор}.
+
+В открывшемся окне необходимо сначала выбрать так называемый источник,
+то есть поле, по которому будет подбираться размер. У нас это поле
+``population''.
+
+Далее нужно указать минимальное и максимальное значение. Они могут быть
+заданы автоматически на основе атрибута нажатием на кнопку
+\pandocbounded{\includegraphics[keepaspectratio]{images/clipboard-628730980.png}}.
+
+\begin{center}
+\includegraphics[width=8.32292in,height=\textheight,keepaspectratio]{images/clipboard-661386998.png}
+\end{center}
+
+После того, как будут выбраны значения в правой части окна вы увидите
+маркеры варьирубщихся размеров. Именно так они и будут масштабироваться
+на вашей карте.
+
+Вы можете задать максимальный и минимальный размер символа. Желательно,
+чтобы разница в размерах символа была пропорциональна разнице между
+значениями атрибута. Например, если минимальное и максимальное значение
+отличаются в 10 раз, то и размер символов должен отличаться в столько же
+раз.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{На заметку}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Вы можете воспользоваться несколькими вариантами масштабирования, из
+которых метод Флэннери, установленный по умолчанию, будет наиболее
+оптимальным благодаря тому, что масштабирование происходит по площади
+символа таким образом, чтобы мы визуально хорошо и корректно считывали
+разницу в размерах.
+
+Прочие способы масштабирования:
+
+\begin{itemize}
+\item
+  по площади - масштабирование происходит по площади символа;
+\item
+  радиально - масштабирование происходит по радиусу круга;
+\item
+  экспоненциально.
+\end{itemize}
+
+\end{tcolorbox}
+
+После применения изменений вы увидите на карте ваши символы, размер
+которых будет пропорционален количеству населения в муниципальном
+округе.
+
+\begin{center}
+\includegraphics[width=8.375in,height=\textheight,keepaspectratio]{images/clipboard-833274769.png}
+\end{center}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Дополнительно}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Далее вы можете выбрать для своих маркеров цвет, обводку и прозрачность.
+
+Рекомендуется делать их полупрозрачными для того, чтобы при наложении
+маркеров друг на друга вы видели все символы.
+
+\includegraphics[width=11.89583in,height=\textheight,keepaspectratio]{images/clipboard-154366163.png}
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-caution-color!10!white, colframe=quarto-callout-caution-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Предупреждение}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+К сожалению, большим недостатком такого подхода является то, что вы не
+можете создать легенду для своего слоя автоматически.
+
+\end{tcolorbox}
+
+\subsection{Использование генератора
+геометрии}\label{ux438ux441ux43fux43eux43bux44cux437ux43eux432ux430ux43dux438ux435-ux433ux435ux43dux435ux440ux430ux442ux43eux440ux430-ux433ux435ux43eux43cux435ux442ux440ux438ux438}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{На заметку}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+В том случае, если вам необходимо несколько вариантов оформления вашего
+слоя, то вы можете его продублировать.
+
+\includegraphics[width=7.23958in,height=\textheight,keepaspectratio]{images/clipboard-2041145696.png}
+
+Однако следует помнить, что все эти дубликаты будут использовать один и
+тот же файл, поэтому изменения будут происходить одновременно во всех
+слоях.
+
+Продублированные слои вы можете переименовывать - это никак не меняет
+имя файла, просто присваивает слою псеводним в рамках вашего проекта.
+
+\end{tcolorbox}
+
+Для второго варианта карты пропорциональных символов воспользуемся
+\emph{Генератором геометрии}.
+
+Генератор геометрии может быть использован для создания сложных стилей
+объектов, а также визуализации объектов с использованием другого типа
+геометрического примитива (например, соединение точек одной линией по
+порядку) или отрисовки других объектов на основе исходных (например,
+отрисовки буферных зон вокруг объектов).
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Важно}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Важно помнить, что генератор геометрии не меняет тип исходных объектов
+слоя, а просто создает новый тип отрисовки объектов. То есть геометрия
+останется неизменной, изменится только отображение ее на карте. Поэтому,
+если вам необходимо создать объект с иным типом геометрии для дальнейшей
+работы на основе выражения, следует пользоваться инструментом
+\textbf{Геометрия из выражения} из панели инструментов анализа.
+
+\end{tcolorbox}
+
+В нашем случае это будет создание точек на основе наших полигонов.
+
+Удалим в дубликате нашего слоя слой символа \emph{Центроиды} и добавим
+новый, выбрав \emph{Генератор геометрии}.
+
+По умолчанию генератор будет использовать исходные геометрии объектов.
+
+\begin{center}
+\includegraphics[width=14.94792in,height=\textheight,keepaspectratio]{images/clipboard-3332758441.png}
+\end{center}
+
+В первую очередь заменим тип геометрии в генераторе на
+\emph{Точка/мультиточка}, а далее пропишем выражение для отрисовки
+точек.
+
+Выражение может быть просто прописано с клавиатуры в том поле, где
+сейчас указано \texttt{@geometry} или создано с помощью редактора
+выражений, открывающегося по кнопке
+\pandocbounded{\includegraphics[keepaspectratio]{images/clipboard-3639152108.png}}
+справа от поля с выражением.
+
+Здесь необходимо прописать следующее выражение:
+
+\begin{verbatim}
+point_on_surface(@geometry)
+\end{verbatim}
+
+\begin{center}
+\includegraphics[width=11.17708in,height=\textheight,keepaspectratio]{images/clipboard-2290703890.png}
+\end{center}
+
+В данном случае \texttt{point\_on\_surface} - это функция, создающая
+точку в центре полигона, но в том случае, если центр полигона находится
+за его пределами, точка перемещается внутрь.
+
+Результат применения генератора геометрии будет аналогичен предыдущему
+разделу.
+
+\begin{center}
+\includegraphics[width=12.1875in,height=\textheight,keepaspectratio]{images/clipboard-3594999652.png}
+\end{center}
+
+Далее настройка происходит аналогично предыдущему разделу.
+
+\begin{center}
+\includegraphics[width=14.73958in,height=\textheight,keepaspectratio]{images/clipboard-2749305334.png}
+\end{center}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Дополнительно}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Размер символов как визуальная переменная хорошо сочетается с цветом,
+который вы можете использовать для отображения того же показателя или
+другого.
+
+\end{tcolorbox}
+
+\subsection{Создание нового
+слоя}\label{ux441ux43eux437ux434ux430ux43dux438ux435-ux43dux43eux432ux43eux433ux43e-ux441ux43bux43eux44f}
+
+Ни один из перечисленных выше двух способов не позволяет сразу создать
+легенду с размерами знаков.
+
+Для создания карты пропорциональных символов так, чтобы вам было
+доступно создание легенды для карты, в первую очередь следует получить
+точечный слой на основе полигональных объектов.
+
+Для этого воспользуемся инструментом \emph{Точка на поверхности} из
+\emph{Панели инструментов анализа}.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{На заметку}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Этот инструмент дублирует инструмент \emph{Центроид} с одной небольшой
+разницей: в случае невыпуклого многоугольника при использовании
+\emph{Центроида} точка будет лежать за пределами полигона, тогда как при
+использовании \emph{Точки на поверхности} точка будет смещена внутрь.
+
+Фактически это та же самая функция, которой вы пользовались в генераторе
+геометрии.
+
+\end{tcolorbox}
+
+\begin{center}
+\includegraphics[width=9.15625in,height=\textheight,keepaspectratio]{images/clipboard-1125303675.png}
+\end{center}
+
+В результате вы получите новый слой с точечными объектами, которые будут
+иметь те же атрибуты, что и исходные полигоны.
+
+В первую очередь следует определить размер знаков.
+
+\begin{center}
+\includegraphics[width=12.1875in,height=\textheight,keepaspectratio]{images/clipboard-3621253768.png}
+\end{center}
+
+В открывшемся окне следует указать поле, по которому размер будет задан
+и его значения.
+
+\begin{center}
+\includegraphics[width=8.15625in,height=\textheight,keepaspectratio]{images/clipboard-1545387451.png}
+\end{center}
+
+Для того, чтобы размер символов был отображен в легенде, следует выбрать
+настройку \emph{Размер условных определяется данными\ldots{}}
+
+\begin{center}
+\includegraphics[width=15.05208in,height=\textheight,keepaspectratio]{images/clipboard-2320175714.png}
+\end{center}
+
+После этого вы можете настроить свою легенда и выбрать ее тип.
+
+\begin{center}
+\includegraphics[width=7.33333in,height=\textheight,keepaspectratio]{images/clipboard-2588932872.png}
+\end{center}
+
+\section{Карта плотности
+точек}\label{ux43aux430ux440ux442ux430-ux43fux43bux43eux442ux43dux43eux441ux442ux438-ux442ux43eux447ux435ux43a}
+
+В карте плотности точек количество точек будет отображать величину
+показателя.
+
+Для ее создания снова воспользуемся возможностью создания многослойных
+символов.
+
+\begin{center}
+\includegraphics[width=12.59375in,height=\textheight,keepaspectratio]{images/clipboard-4237004584.png}
+\end{center}
+
+В этом случае каждый из полигонов будет заполнен заданным количеством
+маркеров, которые будут размещены случайным образом.
+
+Так как нам необходимо, чтобы количество маркеров было пропорционально
+количеству населения, то воспользуемся опцией переопределения показателя
+из данных.
+
+\begin{center}
+\includegraphics[width=12.60417in,height=\textheight,keepaspectratio]{images/clipboard-1171644810.png}
+\end{center}
+
+В открывшемся окне воспользуемся редактором выражений.
+
+В данном случае поделим общее количество населения на 5 000, таким
+образом 1 точка на карте будет соответствовать 5 000 человек,
+проживающих в определенном муниципальном образовании.
+
+\begin{center}
+\includegraphics[width=11.38542in,height=\textheight,keepaspectratio]{images/clipboard-2725382870.png}
+\end{center}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Важно}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Рекомендуется выбирать это число таким образом, чтобы в каждом из
+исходных объектов было хотя бы несколько точек.
+
+\end{tcolorbox}
+
+\begin{center}
+\includegraphics[width=13.32292in,height=\textheight,keepaspectratio]{images/clipboard-2349470479.png}
+\end{center}
+
+Здесь еще желательно настроить размер точек таким образом, чтобы они
+были хорошо различимы на карте.
+
+В данном случае я убрала обводку точек и сделала их меньше.
+
+\begin{center}
+\includegraphics[width=13.07292in,height=\textheight,keepaspectratio]{images/clipboard-3372504525.png}
+\end{center}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{На заметку}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Обратите внимание, что вы можете настраивать стиль слоев символа
+независимо друг от друга.
+
+\end{tcolorbox}
+
+\section{Фоновая
+картограмма}\label{ux444ux43eux43dux43eux432ux430ux44f-ux43aux430ux440ux442ux43eux433ux440ux430ux43cux43cux430}
+
+Фоновая картограмма - один из самых наиболее известных типов
+тематических карт, в которых показатель отображается цветом или
+штриховкой.
+
+Для ее создания достаточно просто воспользоваться уже знакомым вам
+символом по диапазонам значений.
+
+Однако следует помнить, что при использовании фоновых картограмм
+рекомендуется брать относительные значения показатей, например, вместо
+количества населения - плотность населения на единицу площади.
+
+В наших исходных данных в таблице атрибутов приведено именно количество
+населения, поэтому необходимо перейти от него к плотности. Сделать это
+можно двумя способами: рассчитав плотность как отдельный атрибут с
+использованием калькулятора полей или воспользоваться выражением вместо
+конкретного атрибута при задании стиля символа.
+
+Для того, чтобы рассчитать плотность нам необходима площадь наших
+объектов. Рассчитаем ее с использованием модуля \textbf{Calculate
+geometry}. После его установки, он должен быть в контекстном меню слоя,
+открывающемся при клике правой кнопкой мыши.
+
+\begin{center}
+\includegraphics[width=7.90625in,height=\textheight,keepaspectratio]{images/clipboard-3064880095.png}
+\end{center}
+
+В открывшемся окне модуля выберем расчет площади \emph{area} в
+квадратных километрах и системе координат
+\texttt{EPSG:\ 32637\ -\ UTM\ zone\ 37N}.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{На заметку}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Расчет здесь производится в этой системе координат для того, чтобы
+площадь считалась корректно.
+
+\end{tcolorbox}
+
+\begin{center}
+\includegraphics[width=15.8125in,height=\textheight,keepaspectratio]{images/clipboard-1571663248.png}
+\end{center}
+
+В результате к таблице атрибутов будет добавлено новое поле со значением
+площади объектов в километрах квадратных.
+
+Для задания символики по диапазонам значений воспользуемся выражением.
+
+\begin{verbatim}
+"population" /"area"
+\end{verbatim}
+
+В этом выражении количество населения поделено на рассчитанную площадь
+муниципального образования.
+
+\begin{center}
+\includegraphics[width=11.125in,height=\textheight,keepaspectratio]{images/clipboard-1957621877.png}
+\end{center}
+
+Для того, чтобы открылся редактор выражений следует нажать на кнопку
+\pandocbounded{\includegraphics[keepaspectratio]{images/clipboard-3639152108.png}}
+справа от параметра \emph{Значение}.
+
+Вы также можете выбрать градиент, который вам больше нравится, но
+рекомендуется использовать градиенты от светлого к темному (при светлом
+фоне) или от темного к светлому (при темном фоне).
+
+\begin{center}
+\includegraphics[width=12.58333in,height=\textheight,keepaspectratio]{images/clipboard-3695402985.png}
+\end{center}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Дополнительно}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Если вы хотите, чтобы под вашими полигонами читалась подложка, то вы
+можете воспользоваться режимом смешивания.
+
+\includegraphics[width=13.45833in,height=\textheight,keepaspectratio]{images/clipboard-745426187.png}
+
+\end{tcolorbox}
+
+\section{Анаморфная
+карта}\label{ux430ux43dux430ux43cux43eux440ux444ux43dux430ux44f-ux43aux430ux440ux442ux430}
+
+Анаморфная карта предполагает отображение показателя с помощью размера
+объекта, но, в отличие от пропорциональных символов, здесь используется
+исходная геометрия объектов, которая искажается пропорционально величине
+показателя.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Важно}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Следует помнить, что в анаморфной карте искажаются форма и размер
+объектов.
+
+\end{tcolorbox}
+
+В QGIS отсутствует инструмент по умолчанию для создания анаморфной
+карты, поэтому следует воспользоваться модулем \emph{Cartogram3}. Этот
+модуль появится у вас на панели инструментов в виде значка
+\includegraphics[width=0.47917in,height=\textheight,keepaspectratio]{images/clipboard-3354138890.png}.
+
+В открывшемся окне модуля необходимо выбрать слой, для которого
+анаморфная карта рассчитывается, показатель и указать критерии остановки
+(максимальное число итераций или максимальная средняя ошибка).
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Внимание}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Чем выше значения критерия остановки, тем сильнее будет искажение в
+итоговой карте.
+
+\end{tcolorbox}
+
+\begin{center}
+\includegraphics[width=7.48958in,height=\textheight,keepaspectratio]{images/clipboard-177692038.png}
+\end{center}
+
+На полученной карте муниципальные образования с большим количеством
+населения будут ``раздуты'', а с маленьким наоборот - уменьшены.
+
+\begin{center}
+\includegraphics[width=9.58333in,height=\textheight,keepaspectratio]{images/clipboard-661011928.png}
+\end{center}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{На заметку}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Обратите внимание, что настройки стиля были унаследованы из исходного
+слоя, для которого вы строили анаморфную карту.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Внимание}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Анаморфная карта здесь создается как временный слой, поэтому не забудьте
+сохранить ее отдельно.
+
+\end{tcolorbox}
+
+\section{Несмежная
+картограмма}\label{ux43dux435ux441ux43cux435ux436ux43dux430ux44f-ux43aux430ux440ux442ux43eux433ux440ux430ux43cux43cux430}
+
+Несмежная картограмма отчасти следует принципу создания анаморфной
+карты, то есть искажает размер объектов так, чтобы он был пропорционален
+величине показателя, но здесь нарушается топология объектов, то есть они
+перестают иметь общие границы при общем сохранении формы объектов.
+
+\subsection{Генератор
+геометрии}\label{ux433ux435ux43dux435ux440ux430ux442ux43eux440-ux433ux435ux43eux43cux435ux442ux440ux438ux438}
+
+Несмежную картограмму мы создадим с использованием \emph{Генератора
+геометрии}, которы позволяет создавать объекты с измененной геометрией
+на карте, не меняя геометрии в слое.
+
+\begin{center}
+\includegraphics[width=10.5in,height=\textheight,keepaspectratio]{images/clipboard-3676440304.png}
+\end{center}
+
+Для генератора воспользуемся следующим выражением:
+
+\begin{verbatim}
+scale( $geometry, "population"/maximum("population"), "population"/maximum("population"))
+\end{verbatim}
+
+\begin{center}
+\includegraphics[width=15.96875in,height=\textheight,keepaspectratio]{images/clipboard-3586996824.png}
+\end{center}
+
+Это выражение масштабирует объекты, в качестве первого аргумента здесь
+указывается, что масштабировать, а второй и третий - это величина
+масштабирования по оси X и Y соответственно.
+
+В результате вы получите слой с отмасштабированными пропорционально
+количеству населения муниципальными образованиями.
+
+\begin{center}
+\includegraphics[width=13.98958in,height=\textheight,keepaspectratio]{images/clipboard-2808664703.png}
+\end{center}
+
+Если вы хотите, чтобы у вас отображались еще и истинные границы
+полигонов, вы можете добавить под генератор геометрии слой простой
+заливки.
+
+\begin{center}
+\includegraphics[width=14.14583in,height=\textheight,keepaspectratio]{images/clipboard-2919522853.png}
+\end{center}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{На заметку}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Большим преимуществом генератора геометрии здесь является то, что нет
+необходимости создавать новый отдельный слой с измененными геометриями
+объектов.
+
+\end{tcolorbox}
+
+\subsection{Модуль Shape
+tools}\label{ux43cux43eux434ux443ux43bux44c-shape-tools}
+
+Альтернативой использованию генератора геометрий является создание
+нового слоя с измененной геометрией.
+
+Сделать это можно с помощью модуля \emph{Shape tools}. После установки
+он появится у вас на панели инструментов.
+
+\begin{center}
+\includegraphics[width=10.21875in,height=\textheight,keepaspectratio]{images/clipboard-811190038.png}
+\end{center}
+
+Для изменения формы объектов воспользуемся инструментом \emph{Geodetic
+transformations} из модуля.
+
+\begin{center}
+\includegraphics[width=13.57292in,height=\textheight,keepaspectratio]{images/clipboard-1895223914.png}
+\end{center}
+
+После запуска инструменты вы увидите несколько параметров, которые он
+позволяет изменить:
+
+\begin{itemize}
+\item
+  rotation angle - угол поворота объектов;
+\item
+  scale factor - масштабирование;
+\item
+  translation distance - расстояние перемещения объектов;
+\item
+  translation azimuth - направление перемещения объектов;
+\item
+  translation distance units - единицы измерения расстояния переноса.
+\end{itemize}
+
+Нам необходимо масштабировать объекты, поэтому единственный параметр,
+нужный нам - \emph{scale factor}. Величина масштабирования у нас должна
+задаваться на основе выражения, поэтому воспользуемся переопределением
+из данных и опцией \emph{Изменить}.
+
+\begin{center}
+\includegraphics[width=13.86458in,height=\textheight,keepaspectratio]{images/clipboard-807778726.png}
+\end{center}
+
+В открывшемся окне редактора выражений следует ввести:
+
+\begin{verbatim}
+"population" /maximum("population")
+\end{verbatim}
+
+То есть величина масштабирования у нас будет такая же, как мы
+использовали в генераторе геометрий.
+
+\begin{center}
+\includegraphics[width=14.13542in,height=\textheight,keepaspectratio]{images/clipboard-3106870212.png}
+\end{center}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Внимание}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+По умолчанию у вас здесь будет создаваться временный слой. Если вы его
+хотите сохранить, вы можете сразу воспользоваться опцией \emph{Сохранить
+в файл}.
+
+\end{tcolorbox}
+
+В результате вы получите \textbf{новый слой} с измененными геометриями.
+
+\begin{center}
+\includegraphics[width=7.88542in,height=\textheight,keepaspectratio]{images/clipboard-2260585908.png}
+\end{center}
+
+\section{Создание
+атласа}\label{ux441ux43eux437ux434ux430ux43dux438ux435-ux430ux442ux43bux430ux441ux430}
+
+Атлас в QGIS позволяет автоматически создать несколько листов карты на
+основе какого-то условия группировки.
+
+Например, мы можем сделать атлас для нашей карты с количеством населения
+в муниципальных образованиях, где на одном листе будет показан один
+район.
+
+Для того, чтобы сделать из макета карты атлас, то есть серию карт нам
+необходимо условие группировки объектов, в качестве которого будет
+выступать административный район.
+
+Для того, чтобы создать карту населения по административным округам
+Москвы добавим в проект слой с ними (файл \emph{ao.geojson}). Объекты
+этого слоя будут нужны нам в первую очередь для того, чтобы создать
+страницы атласа и настроить некоторые элементы отображения.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{На заметку}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Как создать макет и добавить на него карту было описано в разделе
+\href{https://baltti.github.io/bachelor-gis-course/layout.html}{Оформление
+карт и макеты}.
+
+\end{tcolorbox}
+
+Создадим новый макет, в котором с помощью кнопки \emph{Настройки атласа}
+\includegraphics[width=0.66667in,height=\textheight,keepaspectratio]{images/clipboard-2062073457.png}
+создадим атлас.
+
+\begin{center}
+\includegraphics[width=5.57292in,height=\textheight,keepaspectratio]{images/clipboard-3442931193.png}
+\end{center}
+
+Страницы атласа в данном случае будут создаваться по районам.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{На заметку}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Для создания страниц атласа не обязательно, чтобы слой, по которому они
+создаются был видимым в проекте.
+
+\end{tcolorbox}
+
+Просмотр страниц атласа доступен по кнопке \emph{Предпросмотр атласа}
+\includegraphics[width=0.63542in,height=\textheight,keepaspectratio]{images/clipboard-4106886521.png}.
+
+Для того, чтобы масштаб карты подстраивался под содержимое настроим
+масштаб под объекты, определяющие страницы нашего атласа.
+
+Для этого откроем свойства карты и найдем настройку масштаба атласа.
+Нужно установить настройку масштаба атласа по размерам объектов с полем.
+Так карта будет автоматически масштабироваться на каждом листе так,
+чтобы на ней размещался только один из районов.
+
+\begin{center}
+\includegraphics[width=5.75in,height=\textheight,keepaspectratio]{images/clipboard-1173716928.png}
+\end{center}
+
+В итоге каждый лист будет центрироваться на одном из районов, а масштаб
+будет подбираться так, чтобы район целиком помещался на карту.
+
+\begin{center}
+\includegraphics[width=17.84375in,height=\textheight,keepaspectratio]{images/clipboard-959520250.png}
+\end{center}
+
+После открытия предпросмотра в панели инструментов макета вы увидите
+стрелки переключения между страницами и раскрывающийся список
+страниц/округов.
+
+\begin{center}
+\includegraphics[width=10.17708in,height=\textheight,keepaspectratio]{images/clipboard-862587843.png}
+\end{center}
+
+Для того, чтобы район был очевиднее на листе, настроим стиль объектов
+так, чтобы район листа был обведен более толстым контуром.
+
+Вернемся в основное окно программы, и настроим толщину обводки на основе
+выражения:
+
+\begin{verbatim}
+if ( @atlas_pagename =  "NAME"  ,2, 0.3)
+\end{verbatim}
+
+\begin{center}
+\includegraphics[width=12.76042in,height=\textheight,keepaspectratio]{images/clipboard-3664883044.png}
+\end{center}
+
+Это выражение с условием ``если'', в котором в качестве аргументов
+передаются:
+
+\begin{itemize}
+\item
+  условие;
+\item
+  толщина обводки в том случае, если условие выполнено;
+\item
+  толщина обводки, если условие не выполнено.
+\end{itemize}
+
+Что же значит переменная \texttt{@atlas\_pagename}? Эта переменная
+указывает на то, что для задания стиля здесь нужно использовать тот
+район, на странице которого сейчас открыт наш атлас.
+
+\begin{center}
+\includegraphics[width=14.05208in,height=\textheight,keepaspectratio]{images/clipboard-3586937319.png}
+\end{center}
+
+После этого вы увидите на карте в основном окне программы, что один из
+административных округов обведен более толстой линией, а также он
+обведен на странице атласа.
+
+\begin{center}
+\includegraphics[width=7.60417in,height=\textheight,keepaspectratio]{images/clipboard-2830535995.png}
+\end{center}
+
+\begin{center}
+\includegraphics[width=10.04167in,height=\textheight,keepaspectratio]{images/clipboard-3344463249.png}
+\end{center}
+
+Когда вы будете переходить со страницы на страницу атласа, у вас будет
+становиться более толстой обводка того округа, на страницу которого вы
+перешли.
+
+\section{Карта точечных
+объектов}\label{ux43aux430ux440ux442ux430-ux442ux43eux447ux435ux447ux43dux44bux445-ux43eux431ux44aux435ux43aux442ux43eux432}
+
+\subsection{Исходные
+данные}\label{ux438ux441ux445ux43eux434ux43dux44bux435-ux434ux430ux43dux43dux44bux435-1}
+
+Исходные данные - сведения о пунктах выдачи маркетплейсов и служб
+доставки, которые были загружены из OSM (\emph{shop - outpost}).
+
+Данные в формате \emph{geojson} (файл \textbf{shop outpost.geojson}) вы
+можете загрузить из папки по ссылке
+\url{https://disk.yandex.ru/d/bUOHR2aR6iny8w}
+
+В папке также есть дополнительная папка с названием \emph{Иконки},
+которая понадобится чуть позже.
+
+\end{document}
