@@ -92,5 +92,8 @@
   "lectures.qmd": {
     "lectures.html": "0dcd4835",
     "lectures.tex": "ec1cf981"
+  },
+  "05-vector.qmd": {
+    "05-vector.html": "88648334"
   }
 }
