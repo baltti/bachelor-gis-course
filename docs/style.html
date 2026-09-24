@@ -111,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="./basics.html">
- <span class="dropdown-text">title: “Начало работы”</span></a>
+ <span class="dropdown-text">Начало работы</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./project.html">
@@ -185,7 +185,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">title: “Начало работы”</span></a>
+ <span class="menu-text">Начало работы</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -480,6 +480,29 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>После применения фильтра количество объектов на карте и в таблице атрибутов уменьшиться, перестанут отображаться объекты, не соответствующие условию в выражении фильтрации.</p>
 <p>Также справа от названия слоя вы увидите значок <img src="images/clipboard-2168316488.png" class="img-fluid" width="36">, который предупреждает вас о том, что в этом слое включен фильтр.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Дополнительно
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Заполнить пропущенные значения с использованием среднего можно при помощи калькулятора полей и условного выражения.</p>
+<p>Выражение может быть составлено двумя способами: с помощью функции <code>if</code> и с использованием конструкции <code>CASE WHEN</code> .</p>
+<p>Пример выражения с функцией <code>if</code> (если):</p>
+<pre><code>if ("этажность" is null, mean"этажность","этажность")</code></pre>
+<p>В этом выражении на первом месте идет условие (значение атрибута “этажность” пусто), потом то, что должно происходить в случае выполнения этого условия (заполнение пустой ячейки средним значением этажности), а на последнем месте - то, что должно произойти, если условие не выполнено (имеющиеся значения этажности будут просто записаны как есть).</p>
+<p>Пример выражения с функцией <code>CASE WHEN</code>:</p>
+<pre><code>CASE WHEN
+  "этажность" is null THEN mean"этажность"
+  ELSE "этажность"
+END</code></pre>
+<p>Такое выражение позволяет указывать сколько угодно условий, не ограничиваясь только одним.</p>
+</div>
+</div>
 </section>
 <section id="настройка-стиля-по-диапазонам-значений" class="level2">
 <h2 class="anchored" data-anchor-id="настройка-стиля-по-диапазонам-значений">Настройка стиля по диапазонам значений</h2>
