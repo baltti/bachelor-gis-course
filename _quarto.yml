@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  favicon: "images/icon_small.png"
+  favicon: "images/logo_urbanistika_ITMO_itog_RUS_ikonka_black.png"
   title: "Геоинформационные системы"
   page-footer: |
         © 2026, Татьяна Балтыжакова, Институт дизайна и урбанистики, Университет ИТМО
