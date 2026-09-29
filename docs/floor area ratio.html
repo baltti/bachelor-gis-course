@@ -351,8 +351,8 @@ window.Quarto = {
 </figure>
 </div>
 <p>Само выражение:</p>
-<pre><code>area ($geometry)</code></pre>
-<p>Что значит аргумент <code>$geometry</code> в скобках?</p>
+<pre><code>area (@geometry)</code></pre>
+<p>Что значит аргумент <code>@geometry</code> (допускается использование варианта <code>$geometry</code>)в скобках?</p>
 <p>Это говорит о том, что для расчета будет использована не какая-то конкретная геометрия одного объекта, а все геометрии слоя.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -372,7 +372,7 @@ window.Quarto = {
 <p>Мы используем здесь второй вариант, так как нам необходим расчет именно в системе координат слоя. Для этого мы его и перепроецировали.</p>
 </div>
 </div>
-<p>В результате вычисления вы получите новое поле, в которое будет записана площадь.</p>
+<p>В результате вычисления вы получите новое поле, в которое будет записана рассчитанная площадь.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-2007705995.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="961"></p>
@@ -403,7 +403,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>Вы можете аналогично рассчитать периметр здания, воспользовавшись функцией <code>perimeter</code>.</p>
-<p>Общая площадь здания может быть рассчитана как произведение уже рассчитаной вами площади и количества этажей.</p>
+<p>Общая площадь здания может быть рассчитана как произведение уже рассчитаной вами площади на количества этажей.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-2704296193.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="728"></p>
@@ -421,13 +421,13 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Вы можете указать это выражение в свойствах слоя в пункте <em>Формы полей</em>, тогда при создании нового объекта площадь для него будет рассчитаваться автоматически.</p>
+<p>Вы можете указать выражение для расчета площади в свойствах слоя в пункте <em>Формы полей</em>, тогда при создании нового объекта площадь для него будет рассчитываться автоматически.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-2535272035.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1253"></p>
 </figure>
 </div>
-<p>Это будет работать для любого вашего вычисляемого поля.</p>
+<p>Так можно сделать для любого вашего вычисляемого поля.</p>
 </div>
 </div>
 </section>
@@ -439,7 +439,7 @@ window.Quarto = {
 <p><img src="images/clipboard-1030325177.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1000"></p>
 </figure>
 </div>
-<p>После установки модуля, он должен появиться у вас в виде пункта контекстного меню слоя.</p>
+<p>После установки он должен появиться у вас в виде пункта контекстного меню слоя.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-1535407434.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="800"></p>
@@ -543,7 +543,7 @@ window.Quarto = {
 <h1>Расчет коэффициента застройки</h1>
 <p>Что такое коэффициент застройки?</p>
 <p>Это отношение площади, занятой зданиями, к общей площади квартала или иной территориальной единицы.</p>
-<p><span class="math display">\[Коэффициент\space застройки = \dfrac{Площадь\space здания}{Площадь \space квартала}\]</span></p>
+<p><span class="math display">\[Коэффициент\space застройки = \dfrac{Площадь\space зданий}{Площадь \space квартала}\]</span></p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -559,7 +559,7 @@ window.Quarto = {
 </div>
 <section id="использование-пространственного-объединения" class="level2">
 <h2 class="anchored" data-anchor-id="использование-пространственного-объединения">Использование пространственного объединения</h2>
-<p>Наиболее просытм способом расчета здесь будет использование одной из функций <em>Панели инструментов анализа</em> - <em>Объединение атрибутов по расположению (сводка)</em>. Эта функция позволяет присваивать одним векторным объектам агрегированное значение атрибута других векторных объектов на основе их расположения относительно друг друга.</p>
+<p>Наиболее простым способом расчета здесь будет использование одной из функций <em>Панели инструментов анализа</em> - <em>Объединение атрибутов по расположению (сводка)</em>. Эта функция позволяет присваивать одним векторным объектам агрегированное значение атрибута других векторных объектов на основе их расположения относительно друг друга.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-2923347169.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="418"></p>
@@ -678,7 +678,7 @@ window.Quarto = {
 <p><img src="images/clipboard-579494345.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1268"></p>
 </figure>
 </div>
-<p>Что значит параметр <em>Отбросить записи, которые не могут быть объединены</em>? Если вы поставите напротив него галочку, то при объединении объектов у вас в итоговый слой не попадат кварталы, в которых нет ни одного здания, то есть те объекты исходного слоя, для которых не нашлось соответствия в слое присоединяемом.</p>
+<p>Что значит параметр <em>Отбросить записи, которые не могут быть объединены</em>? Если вы поставите напротив него галочку, то при объединении объектов у вас в итоговый слой не попадут кварталы, в которых нет ни одного здания, то есть те объекты исходного слоя, для которых не нашлось соответствия в слое присоединяемом.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -689,7 +689,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Обратите внимание, что вам снова предалагают сохранить результат в качестве временного слоя. Вы можете выбрать опцию <em>Сохранить в файл</em>.</p>
+<p>Обратите внимание, что вам снова предлагают сохранить результат в качестве временного слоя. Вы можете выбрать опцию <em>Сохранить в файл</em>.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -731,7 +731,7 @@ window.Quarto = {
 <p><img src="images/clipboard-3822729774.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1385"></p>
 </figure>
 </div>
-<pre><code>"площадь_sum" / area( $geometry) * 100</code></pre>
+<pre><code>"площадь_sum" / area( @geometry) * 100</code></pre>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -825,7 +825,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>Попробуйте самостоятельно по аналогии рассчитать коэффициент плотности застройки:</p>
-<p><span class="math display">\[Коэффициент\space плотности\space застройки = \dfrac{Общая\space площадь\space здания}{Площадь \space квартала}\]</span></p>
+<p><span class="math display">\[Коэффициент\space плотности\space застройки = \dfrac{Общая\space площадь\space зданий}{Площадь \space квартала}\]</span></p>
 <p><span class="math display">\[Общая\space площадь\space здания = Площадь\space здания*Количество\space этажей\]</span></p>
 <p>Вспомните последовательность расчетов.</p>
 <p>Подумайте, что необходимо изменить в них.</p>
