@@ -6,5 +6,5 @@ defaults:
   bootstrap:
     defaults:
       navbar-bg: "#7F00FF"
-      navbar-fg: white
-      navbar-hl: black
+      navbar-fg: black
+      navbar-hl: white

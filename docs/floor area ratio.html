@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bc349fd8d51870ee0ff29a85f8e37840.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-bc349fd8d51870ee0ff29a85f8e37840.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-bc349fd8d51870ee0ff29a85f8e37840.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f7d6df4749b79bc680f39e8ede3f45bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-f7d6df4749b79bc680f39e8ede3f45bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f7d6df4749b79bc680f39e8ede3f45bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -689,7 +689,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Обратите внимание, что вам снова предалагают сохранить результат в качестве временного слоя. Вы можете выбрать опцию сохранить в файл.</p>
+<p>Обратите внимание, что вам снова предалагают сохранить результат в качестве временного слоя. Вы можете выбрать опцию <em>Сохранить в файл</em>.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -732,6 +732,19 @@ window.Quarto = {
 </figure>
 </div>
 <pre><code>"площадь_sum" / area( $geometry) * 100</code></pre>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Важно
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Коэффициент застройки всегда будет меньше 100 процентов, потому что он показывает долю от общей площади земли, занятую зданиями.</p>
+</div>
+</div>
 </section>
 <section id="использование-функций-агрегирования" class="level2">
 <h2 class="anchored" data-anchor-id="использование-функций-агрегирования">Использование функций агрегирования</h2>
@@ -788,19 +801,6 @@ window.Quarto = {
 <figcaption>Слева - расчет суммарной площади зданий функцией агрегирования, справа - расчет с использованием пространственного объединения</figcaption>
 </figure>
 </div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-На заметку
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>На самом деле здесь вы могли бы выполнить все в один этап, просто подставив в калькулятор полей вместо поля с суммарным значением площади зданий выражение агрегирования.</p>
-</div>
-</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -811,8 +811,50 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>На самом деле здесь вы могли бы выполнить все в один этап, просто подставив в калькулятор полей вместо поля с суммарным значением площади зданий выражение агрегирования.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">На заметку</span>Задание
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Попробуйте самостоятельно по аналогии рассчитать коэффициент плотности застройки:</p>
 <p><span class="math display">\[Коэффициент\space плотности\space застройки = \dfrac{Общая\space площадь\space здания}{Площадь \space квартала}\]</span></p>
+<p><span class="math display">\[Общая\space площадь\space здания = Площадь\space здания*Количество\space этажей\]</span></p>
+<p>Вспомните последовательность расчетов.</p>
+<p>Подумайте, что необходимо изменить в них.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Важно
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Этот показатель может быть больше 1 (или 100 процентов), так как кроме площади пятна застройки еще учитывает этажность.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1206924887.png" class="img-fluid figure-img" width="1000"></p>
+<figcaption>Источник: Землеустроительный кодекс города Делтона https://library.municode.com/fl/deltona/codes/code_of_ordinances?nodeId=PTIICOOR_CH70GEPR</figcaption>
+</figure>
+</div>
+<p>Тем не менее эти два показателя взаимосвязаны. На картинке ниже показаны разные значения коэффициента застройки (сверху вниз по строкам) и плотности застройки (слева направо по столбцам) и то, как будет выглядеть примерная застройка при определенных значениях.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3741399434.png" class="img-fluid figure-img"></p>
+<figcaption>Источник: https://en.wikipedia.org/wiki/Floor_area_ratio</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
