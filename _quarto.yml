@@ -40,7 +40,7 @@ website:
         - style.qmd
         - crs.qmd
         - floor area ratio.qmd
-    #    - buffer.qmd
+        - buffer.qmd
      #   - visualisation.qmd
      #   - layout.qmd
     #    - georeferencing.qmd
