@@ -284,7 +284,7 @@ OpenRouteService - это бесплатный сервис на основе OS
 
 [^2]: **Что такое API** <https://habr.com/ru/articles/464261/>
 
-![Источник: https://habr.com/ru/articles/464261/](images/snjw46wwnvuatj0wkghyuueofao.png){alt="Источник: https://habr.com/ru/articles/464261/" fig-align="center"}
+![Источник: https://habr.com/ru/articles/464261/](images/snjw46wwnvuatj0wkghyuueofao.png){fig-align="center"}
 
 Для работы с ним вам нужно установить модуль *ORS tools*.
 
