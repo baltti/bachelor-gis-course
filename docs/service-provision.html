@@ -307,12 +307,12 @@ window.Quarto = {
   <ul>
   <li><a href="#исходные-данные" id="toc-исходные-данные" class="nav-link active" data-scroll-target="#исходные-данные">Исходные данные</a></li>
   <li><a href="#формулы-для-расчета" id="toc-формулы-для-расчета" class="nav-link" data-scroll-target="#формулы-для-расчета">Формулы для расчета</a></li>
-  <li><a href="#расчет-доступности" id="toc-расчет-доступности" class="nav-link" data-scroll-target="#расчет-доступности">Расчет доступности</a>
+  <li><a href="#оценка-доступности" id="toc-оценка-доступности" class="nav-link" data-scroll-target="#оценка-доступности">Оценка доступности</a>
   <ul class="collapse">
   <li><a href="#входные-данные" id="toc-входные-данные" class="nav-link" data-scroll-target="#входные-данные">Входные данные</a></li>
-  <li><a href="#построение-модели-расчета-доступности" id="toc-построение-модели-расчета-доступности" class="nav-link" data-scroll-target="#построение-модели-расчета-доступности">Построение модели расчета доступности</a></li>
+  <li><a href="#построение-модели-оценки-доступности" id="toc-построение-модели-оценки-доступности" class="nav-link" data-scroll-target="#построение-модели-оценки-доступности">Построение модели оценки доступности</a></li>
   </ul></li>
-  <li><a href="#расчет-обеспеченности" id="toc-расчет-обеспеченности" class="nav-link" data-scroll-target="#расчет-обеспеченности">Расчет обеспеченности</a></li>
+  <li><a href="#оценка-обеспеченности" id="toc-оценка-обеспеченности" class="nav-link" data-scroll-target="#оценка-обеспеченности">Оценка обеспеченности</a></li>
   </ul>
 </nav>
     </div>
@@ -417,8 +417,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="расчет-доступности" class="level1">
-<h1>Расчет доступности</h1>
+<section id="оценка-доступности" class="level1">
+<h1>Оценка доступности</h1>
 <p>Для построения моделей будем использовать редактор моделей.</p>
 <p>Открыть редактор моделей можно из строки меню <em>Анализ данных</em> <span class="math inline">\(\longrightarrow\)</span> <em>Конструктор моделей</em> или по клику на кнопку <em>Модели</em> в Панели инструментов анализа.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -467,8 +467,8 @@ window.Quarto = {
 </div>
 <p>При необходимости вы можете передвигать элементы модели так, чтобы их было лучше видно, и масштабировать изображение элементов в рабочем пространстве.</p>
 </section>
-<section id="построение-модели-расчета-доступности" class="level2">
-<h2 class="anchored" data-anchor-id="построение-модели-расчета-доступности">Построение модели расчета доступности</h2>
+<section id="построение-модели-оценки-доступности" class="level2">
+<h2 class="anchored" data-anchor-id="построение-модели-оценки-доступности">Построение модели оценки доступности</h2>
 <p>Для расчета доступности сервиса в первую очередь необходимо построить зоны обслуживания. Здесь мы воспользуемся буферными зонами для их построения.</p>
 <p>Размер буферных зон будет определяться градостроительными нормативами:</p>
 <ul>
@@ -478,46 +478,107 @@ window.Quarto = {
 <p>Однако, чтобы строить буферные зоны в метрических единицах измерения, сначала необходимо перепроецировать слой в плоскую прямоугольную систему координат.</p>
 <p>Проще всего воспользоваться системой координат из семейства UTM или одной из систем из группы систем координат Гаусса-Крюгера (они аналогичны, отличаются только нумерацией зон).</p>
 <p>Чтобы рассчитать номер зоны для UTM системы координат вы можете воспользоваться калькулятором по <a href="https://www.latlong.net/lat-long-utm.html">ссылке</a>.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Внимание
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Обращайте внимание на параметры инструментов на скринах.</p>
+</div>
+</div>
 <p>На вкладке <em>Алгоритмы</em> найдем нужный нам инструмент - <em>Перепроецировать слой</em> и укажем его параметры в открывшемся окне.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-1310435067.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="898"></p>
 </figure>
 </div>
-<p>Аналогично добавим перепроецирование для зданий.</p>
+<p>Следующим этапом построим буферные зоны для объектов сервиса. Для этого найдем инструмент <em>Буферизация</em>. Так как мы здесь будем использовать не исходные данные, а результат выполнения перепроецирования, то по нажатию на кнопку <img src="images/clipboard-1454870356.png" class="img-fluid" width="58"> следует выбрать пункт <em>Вывод алгоритма</em>, после чего выбрать результат перепроецирования для объектов сервиса.</p>
+<p>Далее необходимо указать расстояние - радиус обслуживания сервиса.</p>
+<p>Здесь все буферные зоны будут объединены в единый объект. Это необходимо для того, чтобы при последующих расчетах у нас не дублировалось население в накладывающихся буферных зонах.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-3388561227.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1777"></p>
+<p><img src="images/clipboard-2971639265.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1359"></p>
 </figure>
 </div>
-<p>Следующим этапом построим буферные зоны для объектов сервиса. Для этого найдем инструмент <em>Буферизация</em>. Так как мы здесь будем использовать не исходные данные, а результат выполнения перепроецирования, то по нажатию на кнопку <img src="images/clipboard-1454870356.png" class="img-fluid" width="58"> следует выбрать пункт <em>Вывод алгоритма</em>, после чего выбрать результат перепроецирования для объектов сервиса.</p>
-<p><img src="images/clipboard-2107994983.png" class="img-fluid"></p>
-<p>Далее необходимо указать расстояние - радиус обслуживания сервиса.</p>
-<p><img src="images/clipboard-2075241895.png" class="img-fluid"></p>
-<p>На следующем этапе нужно рассчитать количество населения, попавшее в радиус доступности.</p>
-<p>В данном случае пример будет показан на основе инструмента <em>Объединение атрибутов по расположению (сводка)</em>, но вы также можете воспользоваться калькулятором полей и выражением аналогично тому, как мы это делали в прошлом семестре.</p>
+<p>Для того, чтобы впоследствии считать доступность по кварталам, добавим еще один вход модели.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-3757442539.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1280"></p>
+<p><img src="images/clipboard-1347328372.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="971"></p>
+</figure>
+</div>
+<p>Эти границы кварталов нам нужны не только для последующей оценки доступности, но и для того, чтобы получить фрагменты буфера только внутри кварталов. Для этого воспользуемся инструментом <em>Пересечение</em>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2847847646.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1658"></p>
+</figure>
+</div>
+<p>Итогом этого этапа станут фрагменты общего объединенного буфера в границах кварталов. Пример показан на картинке ниже.</p>
+<p><img src="images/clipboard-2247397932.png" class="img-fluid"></p>
+<p>На следующем этапе нужно рассчитать количество населения, попавшее в радиус доступности (в нашем случае это фрагменты большого общего буфера).</p>
+<p>В данном случае пример будет показан на основе инструмента <em>Объединение атрибутов по расположению (сводка)</em>.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Внимание
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Обратите внимание, что здесь и в некоторых последующих этапах, используются названия полей (атрибутов). Они должны совпадать с названием поля в атрибутивной таблице: наличие заглавных букв и написание здесь очень важно.</p>
+</div>
+</div>
+<p><img src="images/clipboard-527814936.png" class="img-fluid"></p>
+<p>Обеспеченность в нашем случае будет рассчитываться по кварталам, поэтому отдельно необходимо рассчитать количество населения внутри кварталов. Этот расчет будет аналогичен предыдущему этапу</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3765201412.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1605"></p>
+</figure>
+</div>
+<p>Далее присвоим атрибут количества населения внутри зоны доступности нашим кварталам.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-302738410.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1601"></p>
 </figure>
 </div>
 <p>На последнем этапе составим выражение для расчета процента населения, которое находится в пределах радиуса доступности от сервиса, с использованием калькулятора полей.</p>
-<p><img src="images/clipboard-3764636610.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-4272903554.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1670"></p>
+</figure>
+</div>
+<p>Для того, чтобы добавить итоговый вывод модели, необходимо написать его название в последнем этапе (<em>Калькуляторе полей</em>) в пункте <em>Результат расчета</em>.</p>
 <p>Итоговая модель будет выглядеть, как показано на рисунке ниже.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-2376702965.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1219"></p>
+<p><img src="images/clipboard-45479318.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+На заметку
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Пример модели можете скачать по ссылке: <a href="https://github.com/baltti/bachelor-gis-course/blob/d7ca6710010c24f874449cb22148dc45023f6cb4/avaliability.model3" class="uri">https://github.com/baltti/bachelor-gis-course/blob/d7ca6710010c24f874449cb22148dc45023f6cb4/avaliability.model3</a></p>
+<p>Обратите внимание, что названия полей могут не совпадать с вашими, поэтому их необходимо проверить.</p>
+</div>
 </div>
 </section>
 </section>
-<section id="расчет-обеспеченности" class="level1">
-<h1>Расчет обеспеченности</h1>
+<section id="оценка-обеспеченности" class="level1">
+<h1>Оценка обеспеченности</h1>
 <p>Полученную модель можно дополнить расчетом обеспеченности.</p>
-<p><img src="images/clipboard-980433365.png" class="img-fluid"></p>
-<p>Ваша геомодель может иметь столько результатов, сколько вы посчитаете нужным.</p>
-<p>При необходимости каждый этап расчета может быть выведен как самостоятельный результат.</p>
-<p><img src="images/clipboard-2107511711.png" class="img-fluid"></p>
 
 
 </section>
