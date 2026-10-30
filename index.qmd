@@ -1,5 +1,5 @@
 ---
-title: "Геоинформационные системы. О курсе"
+title: "О курсе"
 date: today
 date-format: "D MMMM YYYY"
 number-sections: false

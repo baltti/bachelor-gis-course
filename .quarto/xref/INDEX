@@ -101,5 +101,8 @@
   },
   "service-provision.qmd": {
     "service-provision.html": "9888e02d"
+  },
+  "location-allocation.qmd": {
+    "location-allocation.html": "b6853a36"
   }
 }

@@ -43,6 +43,7 @@ website:
         - layout.qmd
         - buffer.qmd
         - service-provision.qmd
+        - location-allocation.qmd
         - visualisation.qmd
     #    - georeferencing.qmd
     #    - terrain.qmd
