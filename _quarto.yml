@@ -45,8 +45,9 @@ website:
         - service-provision.qmd
         - location-allocation.qmd
         - visualisation.qmd
+        - terrain.qmd
     #    - georeferencing.qmd
-    #    - terrain.qmd
+
 
 format:
   html:
