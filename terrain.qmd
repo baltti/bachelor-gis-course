@@ -674,7 +674,7 @@ $$Slope_{degree}=arctg(\dfrac{Slope_{percent}}{100})$$
 
 ![](images/clipboard-4226039794.png)
 
-![Индекс видимости](images/clipboard-1249412332.png){alt="Индекс видимости" fig-align="center" width="1505"}
+![Индекс видимости](images/clipboard-1249412332.png){fig-align="center" width="1505"}
 
 ## Расчет бассейнов видимости[^11]
 

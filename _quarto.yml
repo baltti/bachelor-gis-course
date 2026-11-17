@@ -46,7 +46,7 @@ website:
         - location-allocation.qmd
         - visualisation.qmd
         - terrain.qmd
-    #    - georeferencing.qmd
+        - georeferencing.qmd
 
 
 format:
